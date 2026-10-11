@@ -1,0 +1,266 @@
+
+/* =========================================
+   WISDOM OKOBAH — TESTIMONIALS
+   Phase 1 | Step 17
+   ========================================= */
+
+/* 01. SECTION */
+
+.testimonials {
+  padding-block: clamp(5rem, 9vw, 8rem);
+  background-color: #F0F1EB;
+}
+
+.testimonials__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+/* 02. INTRODUCTION */
+
+.testimonials__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+  gap: 1.5rem;
+}
+
+.testimonials__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin: 0 0 1.5rem;
+
+  color: var(--color-sage, #768578);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.testimonials__eyebrow::before {
+  content: "";
+  display: block;
+  flex: 0 0 1.5rem;
+
+  width: 1.5rem;
+  height: 1px;
+
+  background-color: currentColor;
+}
+
+.testimonials__title {
+  max-width: 17ch;
+  margin: 0;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(
+    --font-display,
+    Georgia,
+    serif
+  );
+
+  font-size: clamp(2.75rem, 5.5vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.testimonials__title-accent {
+  color: var(--color-sage, #768578);
+  font-style: italic;
+}
+
+.testimonials__description {
+  max-width: 34rem;
+  margin: 0;
+
+  color: #526057;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.8;
+}
+
+/* 03. GRID */
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+/* 04. CARD */
+
+.testimonials__card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+
+  background-color: var(
+    --color-background,
+    #F8F6F0
+  );
+
+  border: 1px solid rgba(28, 53, 43, 0.13);
+  border-radius: 0.375rem;
+}
+
+.testimonials__card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.testimonials__quote-mark {
+  display: block;
+
+  color: #AD854E;
+
+  font-family: var(
+    --font-display,
+    Georgia,
+    serif
+  );
+
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 0.75;
+}
+
+.testimonials__sample-label {
+  color: #526057;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* 05. QUOTE */
+
+.testimonials__quote {
+  flex: 1;
+  margin: 0 0 2.5rem;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(
+    --font-display,
+    Georgia,
+    serif
+  );
+
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.testimonials__quote p {
+  margin: 0;
+}
+
+/* 06. CARD FOOTER */
+
+.testimonials__card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  padding-top: 1.25rem;
+
+  border-top: 1px solid rgba(28, 53, 43, 0.15);
+}
+
+.testimonials__category {
+  margin: 0;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.testimonials__disclosure {
+  margin: 0;
+
+  color: #526057;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+/* 07. SECTION NOTE */
+
+.testimonials__note {
+  margin: 0;
+
+  color: #526057;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* 08. TABLET */
+
+@media (min-width: 40rem) {
+  .testimonials__grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+}
+
+/* 09. DESKTOP */
+
+@media (min-width: 64rem) {
+  .testimonials__intro {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      minmax(0, 0.9fr);
+
+    gap: 4rem;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+    gap: 1.25rem;
+  }
+}
+
+/* 10. SMALL SCREENS */
+
+@media (max-width: 24rem) {
+  .testimonials__title {
+    font-size: clamp(2.35rem, 11vw, 2.75rem);
+  }
+
+  .testimonials__card {
+    padding: 1.5rem;
+  }
+}

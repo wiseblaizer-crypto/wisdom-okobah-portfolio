@@ -1,0 +1,85 @@
+
+/* =========================================
+   WISDOM OKOBAH — LOCAL FONTS
+   Phase 1 | Step 7
+   ========================================= */
+
+/* INTER — REGULAR */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/Inter_18pt-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* INTER — MEDIUM */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/Inter_18pt-Medium.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* INTER — SEMIBOLD */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/Inter_18pt-SemiBold.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* INTER — BOLD */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/Inter_18pt-Bold.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* CORMORANT GARAMOND — REGULAR */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    url("../fonts/cormorant/CormorantGaramond-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* CORMORANT GARAMOND — MEDIUM */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    url("../fonts/cormorant/CormorantGaramond-Medium.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* CORMORANT GARAMOND — SEMIBOLD */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    url("../fonts/cormorant/CormorantGaramond-SemiBold.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}

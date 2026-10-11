@@ -1,0 +1,335 @@
+
+/* =========================================
+   WISDOM OKOBAH — SIGNATURE OFFER
+   Phase 1 | Step 15
+   ========================================= */
+
+/* 01. SECTION */
+
+.signature-offer {
+  padding-block: clamp(5rem, 9vw, 8rem);
+
+  background-color: var(
+    --color-background,
+    #F8F6F0
+  );
+}
+
+.signature-offer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+/* 02. SECTION EYEBROW */
+
+.signature-offer__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin: 0;
+
+  color: var(--color-sage, #768578);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.signature-offer__eyebrow::before {
+  content: "";
+  display: block;
+  flex: 0 0 1.5rem;
+
+  width: 1.5rem;
+  height: 1px;
+
+  background-color: currentColor;
+}
+
+/* 03. MAIN OFFER PANEL */
+
+.signature-offer__panel {
+  position: relative;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  gap: clamp(2.5rem, 5vw, 5rem);
+
+  padding: clamp(2rem, 5vw, 5rem);
+
+  background-color: var(
+    --color-primary,
+    #1C352B
+  );
+
+  border: 1px solid rgba(28, 53, 43, 0.15);
+  border-radius: 0.375rem;
+
+  color: var(--color-on-dark, #F8F6F0);
+}
+
+/* 04. OFFER INTRODUCTION */
+
+.signature-offer__content {
+  min-width: 0;
+}
+
+.signature-offer__category {
+  margin: 0 0 1.5rem;
+
+  color: var(--color-accent, #E5BC82);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.signature-offer__title {
+  max-width: 13ch;
+  margin: 0 0 1.75rem;
+
+  color: var(--color-on-dark, #F8F6F0);
+
+  font-family: var(
+    --font-display,
+    Georgia,
+    serif
+  );
+
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.signature-offer__title-accent {
+  color: var(--color-accent, #E5BC82);
+  font-style: italic;
+}
+
+.signature-offer__description {
+  max-width: 36rem;
+  margin: 0 0 1.5rem;
+
+  color: #D8E1D8;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.8;
+}
+
+.signature-offer__audience {
+  max-width: 36rem;
+  margin: 0;
+
+  color: #C7D5C9;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.signature-offer__audience strong {
+  color: var(--color-on-dark, #F8F6F0);
+  font-weight: 600;
+}
+
+/* 05. OFFER DETAILS */
+
+.signature-offer__details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+
+  border-top: 1px solid rgba(248, 246, 240, 0.22);
+}
+
+.signature-offer__details-heading {
+  margin: 0 0 1.75rem;
+
+  color: var(--color-accent, #E5BC82);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.signature-offer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.signature-offer__item {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0.875rem;
+
+  padding-block: 0.95rem;
+
+  border-bottom: 1px solid rgba(248, 246, 240, 0.15);
+}
+
+.signature-offer__item:first-child {
+  padding-top: 0;
+}
+
+.signature-offer__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.signature-offer__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  color: var(--color-accent, #E5BC82);
+
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.signature-offer__item-text {
+  color: #E4EBE3;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* 06. CTA */
+
+.signature-offer__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.875rem 1.5rem;
+
+  background-color: var(
+    --color-accent,
+    #E5BC82
+  );
+
+  border: 1px solid var(
+    --color-accent,
+    #E5BC82
+  );
+
+  border-radius: 0.25rem;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.signature-offer__cta:hover {
+  background-color: #F0CDA0;
+  border-color: #F0CDA0;
+
+  color: var(--color-primary, #1C352B);
+
+  transform: translateY(-2px);
+}
+
+.signature-offer__cta:focus-visible {
+  outline: 3px solid #F8F6F0;
+  outline-offset: 4px;
+}
+
+.signature-offer__cta-arrow {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.signature-offer__note {
+  margin: 1rem 0 0;
+
+  color: #C7D5C9;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* 07. TABLET & DESKTOP */
+
+@media (min-width: 64rem) {
+  .signature-offer__panel {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      minmax(0, 0.9fr);
+  }
+
+  .signature-offer__details {
+    padding-top: 0;
+    padding-left: clamp(2rem, 3vw, 3.5rem);
+
+    border-top: 0;
+    border-left: 1px solid rgba(248, 246, 240, 0.22);
+  }
+}
+
+/* 08. SMALL SCREENS */
+
+@media (max-width: 24rem) {
+  .signature-offer__title {
+    font-size: clamp(2.5rem, 11vw, 3rem);
+  }
+
+  .signature-offer__panel {
+    padding: 1.5rem;
+  }
+}
+
+/* 09. REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .signature-offer__cta {
+    transition: none;
+  }
+
+  .signature-offer__cta:hover {
+    transform: none;
+  }
+}
