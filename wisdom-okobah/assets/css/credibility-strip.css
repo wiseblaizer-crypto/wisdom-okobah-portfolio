@@ -1,0 +1,346 @@
+
+/* ==========================================
+   WISDOM OKOBAH — CREDIBILITY STRIP
+   Phase 1 | Step 12 — Refined Design
+
+   Clean, minimal, responsive logo showcase
+   ========================================== */
+
+
+/* ==========================================
+   01. SECTION
+   ========================================== */
+
+.credibility-strip {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  padding-block: clamp(3.5rem, 6vw, 5.5rem);
+
+  background-color: var(
+    --color-background,
+    #F8F6F0
+  );
+
+  border-top: 1px solid rgba(28, 53, 43, 0.07);
+  border-bottom: 1px solid rgba(28, 53, 43, 0.07);
+}
+
+.credibility-strip__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: clamp(2rem, 4vw, 3rem);
+
+  width: 100%;
+}
+
+
+/* ==========================================
+   02. SECTION INTRODUCTION
+   ========================================== */
+
+.credibility-strip__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.85rem;
+
+  width: 100%;
+  text-align: center;
+}
+
+.credibility-strip__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.75rem;
+
+  margin: 0;
+
+  color: var(--color-sage, #768578);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.credibility-strip__eyebrow::before,
+.credibility-strip__eyebrow::after {
+  content: "";
+
+  width: 1.25rem;
+  height: 1px;
+
+  background-color: currentColor;
+  opacity: 0.6;
+}
+
+.credibility-strip__title {
+  max-width: 34rem;
+  margin: 0;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(
+    --font-display,
+    Georgia,
+    serif
+  );
+
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 500;
+
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+
+  text-wrap: balance;
+}
+
+
+/* ==========================================
+   03. LOGO GRID
+   ========================================== */
+
+.credibility-strip__platforms {
+  display: grid;
+
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+
+  align-items: center;
+
+  column-gap: clamp(1rem, 3vw, 3rem);
+  row-gap: 1.5rem;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  border: none;
+}
+
+
+/* ==========================================
+   04. INDIVIDUAL LOGO ITEM
+   ========================================== */
+
+.credibility-strip__platform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 78px;
+
+  padding: 1rem 0.5rem;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  text-align: center;
+
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+
+/* ==========================================
+   05. LOGO IMAGE CONTROL
+   ========================================== */
+
+.credibility-strip__platform img {
+  display: block;
+
+  width: auto;
+  max-width: min(100%, 115px);
+
+  height: 34px;
+  max-height: 34px;
+
+  margin-inline: auto;
+
+  object-fit: contain;
+  object-position: center;
+
+  flex-shrink: 1;
+
+  filter: grayscale(100%);
+
+  opacity: 0.72;
+
+  transition:
+    filter 250ms ease,
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+
+/* ==========================================
+   06. HOVER INTERACTION
+   ========================================== */
+
+@media (hover: hover) {
+
+  .credibility-strip__platform:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+}
+
+
+/* ==========================================
+   07. SUPPORTING NOTE
+   ========================================== */
+
+.credibility-strip__note {
+  max-width: 38rem;
+
+  margin: 0;
+
+  color: #66736B;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.8rem;
+
+  font-weight: 400;
+  line-height: 1.75;
+
+  text-align: center;
+}
+
+
+/* ==========================================
+   08. TABLET
+   ========================================== */
+
+@media (min-width: 40rem) {
+
+  .credibility-strip__platforms {
+    grid-template-columns: repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+    row-gap: 2rem;
+  }
+
+  .credibility-strip__platform {
+    min-height: 85px;
+  }
+
+  .credibility-strip__platform img {
+    max-width: min(100%, 120px);
+    height: 38px;
+    max-height: 38px;
+  }
+
+}
+
+
+/* ==========================================
+   09. DESKTOP
+   ========================================== */
+
+@media (min-width: 64rem) {
+
+  .credibility-strip {
+    padding-block: 5rem;
+  }
+
+  .credibility-strip__inner {
+    gap: 2.75rem;
+  }
+
+  .credibility-strip__platforms {
+    column-gap: 3rem;
+    row-gap: 2.5rem;
+  }
+
+  .credibility-strip__platform {
+    min-height: 90px;
+  }
+
+  .credibility-strip__platform img {
+    max-width: min(100%, 130px);
+    height: 40px;
+    max-height: 40px;
+  }
+
+}
+
+
+/* ==========================================
+   10. SMALL MOBILE SCREENS
+   ========================================== */
+
+@media (max-width: 24rem) {
+
+  .credibility-strip {
+    padding-block: 3rem;
+  }
+
+  .credibility-strip__title {
+    font-size: 1.65rem;
+  }
+
+  .credibility-strip__platforms {
+    column-gap: 0.75rem;
+    row-gap: 1rem;
+  }
+
+  .credibility-strip__platform {
+    min-height: 65px;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .credibility-strip__platform img {
+    max-width: min(100%, 95px);
+    height: 28px;
+    max-height: 28px;
+  }
+
+}
+
+
+/* ==========================================
+   11. REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .credibility-strip__platform,
+  .credibility-strip__platform img {
+    transition: none;
+  }
+
+  .credibility-strip__platform:hover img {
+    transform: none;
+  }
+
+}
