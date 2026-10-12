@@ -46,19 +46,10 @@
 /* 14. HOMEPAGE SIGNATURE OFFER */
 @import url("./signature-offer.css");
 
-/* 15. HOMEPAGE WORKING PROCESS */
-@import url("./working-process.css");
-
-/* 16. HOMEPAGE TESTIMONIALS */
+/* HOMEPAGE TESTIMONIALS */
 @import url("./testimonials.css");
 
-/* 17. HOMEPAGE ABOUT PREVIEW */
-@import url("./about-preview.css");
-
-/* 18. HOMEPAGE FAQ */
-@import url("./faq.css");
-
-/* 19. HOMEPAGE FINAL CTA */
+/* HOMEPAGE FINAL CTA */
 @import url("./final-cta.css");
 
 /* =========================================

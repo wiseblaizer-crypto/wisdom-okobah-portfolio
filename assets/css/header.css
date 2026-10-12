@@ -8,14 +8,22 @@
    01. HEADER CONTAINER
 ----------------------------------------- */
 
+
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 16px;
   z-index: var(--z-header);
 
-  width: 100%;
+  width: calc(100% - 32px);
+  max-width: 1200px;
+
+  margin: 16px auto 0;
 
   background-color: var(--color-background);
-  border-bottom: 1px solid var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+
+  box-shadow: var(--shadow-md);
 }
 
 .site-header__inner {
@@ -386,4 +394,112 @@
 .menu-toggle[hidden],
 .mobile-nav[hidden] {
   display: none;
+}
+
+
+/* =========================================
+   PREMIUM HEADER — VISUAL REFINEMENT
+   ========================================= */
+
+/* Dark floating navigation surface */
+.site-header {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  border-radius: var(--radius-pill);
+}
+
+/* Slightly more compact navigation */
+.site-header__inner {
+  min-height: 72px;
+}
+
+/* Brand wordmark */
+.site-brand,
+.site-brand:hover {
+  color: var(--color-on-dark);
+}
+
+.site-brand__secondary {
+  color: var(--color-accent);
+}
+
+/* Desktop navigation links */
+.site-nav__link {
+  color: var(--color-on-dark);
+}
+
+.site-nav__link:hover,
+.site-nav__link[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+/* Animated underline */
+.site-nav__link::after {
+  background-color: var(--color-accent);
+}
+
+/* Champagne action button */
+.site-header__cta {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+.site-header__cta:hover {
+  background-color: var(--color-on-dark);
+  color: var(--color-primary);
+  border-color: var(--color-on-dark);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  color: var(--color-on-dark);
+  border-color: rgba(248, 246, 240, 0.35);
+  border-radius: var(--radius-pill);
+}
+
+.menu-toggle:hover {
+  background-color: rgba(248, 246, 240, 0.12);
+  border-color: var(--color-accent);
+}
+
+/* Keep the expanded mobile panel readable */
+.mobile-nav {
+  background-color: var(--color-background);
+  border-top-color: var(--color-border);
+}
+
+/* Desktop height adjustment */
+@media (min-width: 64rem) {
+  .site-header__inner {
+    min-height: 76px;
+  }
+}
+
+
+/* =========================================
+   PREMIUM HEADER — MOBILE OPEN STATE
+   ========================================= */
+
+@media (max-width: 63.999rem) {
+
+  /* Change the header shape when the menu opens */
+  .site-header:has(.menu-toggle[aria-expanded="true"]) {
+    border-radius: 24px;
+  }
+
+  /* Give the logo and menu button a clean top row */
+  .site-header__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Keep the expanded menu separate from the dark header */
+  .site-header .mobile-nav:not([hidden]) {
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    border-radius: 0 0 24px 24px;
+  }
+
 }

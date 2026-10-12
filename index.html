@@ -28,10 +28,17 @@
     href="./assets/css/main.css"
   >
 
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+  >
+
   <script
     type="module"
     src="./assets/js/main.js"
   ></script>
+
+  <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 
 <body>
@@ -251,7 +258,7 @@
     aria-labelledby="hero-title"
   >
 
-    <div class="container hero__grid">
+    <div class="container hero__grid hero__grid--premium">
 
       <!-- HERO CONTENT -->
 
@@ -261,42 +268,48 @@
           Web Designer &amp; Developer
         </p>
 
-        <h1
-          class="hero__title"
-          id="hero-title"
-        >
-          Websites that
-          <span class="hero__title-accent">
-            look exceptional
-          </span>
-          and work for your business.
-        </h1>
+        
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__greeting">
+             Hi, I'm
+            </span>
 
-        <p class="hero__description">
-          I help businesses and personal brands
-          build thoughtful, mobile-friendly
-          websites that communicate clearly
-          and make it easier for visitors
-          to take action.
-        </p>
+             <span class="hero__name">
+              Wisdom Okobah.
+             </span>
+
+             <span class="hero__statement">
+              I design digital experiences
+              that <em>mean business.</em>
+             </span>
+          </h1>
+
+   
+          <p class="hero__description">
+            I help businesses and personal brands build
+            modern, mobile-friendly websites that look
+            exceptional, communicate clearly, and make
+            it easier for visitors to take action.
+          </p>
+
 
         <!-- HERO ACTIONS -->
 
         <div class="hero__actions">
 
           <a
-            href="/contact/"
+            href="/portfolio"
             class="button button--primary button--large hero__primary-action"
           >
-            Start a Project
+            View My Work
             <span aria-hidden="true">&nearr;</span>
           </a>
 
           <a
-            href="/portfolio/"
+            href="/contact/"
             class="button button--secondary button--large hero__secondary-action"
           >
-            Explore My Work
+            Start a Project
             <span aria-hidden="true">&nearr;</span>
           </a>
 
@@ -343,6 +356,8 @@
 
       <div class="hero__visual">
 
+        <div class="hero__portrait-backdrop" aria-hidden="true"></div>
+
         <div class="hero__image-frame">
 
           
@@ -355,6 +370,57 @@
             fetchpriority="high"
             decoding="async"
            >
+
+
+          
+
+<div class="hero__floating-labels" aria-label="Website platforms">
+
+  <span class="hero__floating-label hero__floating-label--one">
+    <img
+      src="assets/images/platforms/shopify.svg"
+      alt=""
+      class="hero__platform-logo"
+      width="28"
+      height="28"
+    >
+    <span>Shopify</span>
+  </span>
+
+  <span class="hero__floating-label hero__floating-label--two">
+    <img
+      src="assets/images/platforms/wix.svg"
+      alt=""
+      class="hero__platform-logo"
+      width="28"
+      height="28"
+    >
+    <span>Wix</span>
+  </span>
+
+  <span class="hero__floating-label hero__floating-label--three">
+    <img
+      src="assets/images/platforms/squarespace.svg"
+      alt=""
+      class="hero__platform-logo"
+      width="28"
+      height="28"
+    >
+    <span>Squarespace</span>
+  </span>
+
+  <span class="hero__floating-label hero__floating-label--four">
+    <img
+      src="assets/images/platforms/godaddy.svg"
+      alt=""
+      class="hero__platform-logo"
+      width="28"
+      height="28"
+    >
+    <span>GoDaddy</span>
+  </span>
+
+</div>
 
 
         </div>
@@ -414,50 +480,88 @@
     <!-- PLATFORM LIST -->
 
     
-<ul class="credibility-strip__platforms">
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/shopify.svg"
-         alt="Shopify" loading="lazy">
-  </li>
+<!-- INFINITE PLATFORM MARQUEE -->
+<div class="credibility-strip__marquee" aria-label="Platforms and tools I work with">
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/wix.svg"
-         alt="Wix" loading="lazy">
-  </li>
+  <div class="credibility-strip__track">
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/squarespace.svg"
-         alt="Squarespace" loading="lazy">
-  </li>
+    <!-- Original logo set -->
+    <ul class="credibility-strip__platforms">
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/godaddy.svg"
-         alt="GoDaddy" loading="lazy">
-  </li>
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/shopify.svg" alt="Shopify">
+      </li>
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/meta.svg"
-         alt="Meta" loading="lazy">
-  </li>
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/wix.svg" alt="Wix">
+      </li>
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/mailchimp.svg"
-         alt="Mailchimp" loading="lazy">
-  </li>
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/squarespace.svg" alt="Squarespace">
+      </li>
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/klaviyo.svg"
-         alt="Klaviyo" loading="lazy">
-  </li>
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/godaddy.svg" alt="GoDaddy">
+      </li>
 
-  <li class="credibility-strip__platform">
-    <img src="./assets/images/platforms/google.svg"
-         alt="Google" loading="lazy">
-  </li>
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/meta.svg" alt="Meta">
+      </li>
 
-</ul>
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/mailchimp.svg" alt="Mailchimp">
+      </li>
 
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/klaviyo.svg" alt="Klaviyo">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/google.svg" alt="Google">
+      </li>
+
+    </ul>
+
+    <!-- Duplicate set for seamless looping -->
+    <ul class="credibility-strip__platforms" aria-hidden="true">
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/shopify.svg" alt="">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/wix.svg" alt="">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/squarespace.svg" alt="">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/godaddy.svg" alt="">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/meta.svg" alt="">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/mailchimp.svg" alt="">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/klaviyo.svg" alt="">
+      </li>
+
+      <li class="credibility-strip__platform">
+        <img src="./assets/images/platforms/google.svg" alt="">
+      </li>
+
+    </ul>
+
+  </div>
+</div>
 
     <!-- SUPPORTING NOTE -->
 
@@ -494,7 +598,7 @@
       </p>
 
       <h2
-        class="problem-solution__title"
+        class="problem-solution__title reveal"
         id="problem-solution-title"
       >
         Your website should be working
@@ -526,12 +630,19 @@
         class="
           problem-solution__panel
           problem-solution__panel--problem
-        "
+        reveal reveal-delay-1"
       >
-
-        <p class="problem-solution__panel-label">
+       
+      <div class="problem-solution__panel-top">
+         <p class="problem-solution__panel-label">
           The Problem
-        </p>
+         </p>
+
+        <span class="problem-solution__panel-number" aria-hidden="true">
+          01 / 02
+        </span>
+      </div>
+
 
         <h3 class="problem-solution__panel-title">
           Does any of this sound familiar?
@@ -617,12 +728,17 @@
         class="
           problem-solution__panel
           problem-solution__panel--solution
-        "
+        reveal reveal-delay-2"
       >
-
+      <div class="problem-solution__panel-top">
         <p class="problem-solution__panel-label">
           The Better Way
         </p>
+
+        <span class="problem-solution__panel-number" aria-hidden="true">
+          02 / 02
+        </span>
+      </div>
 
         <h3 class="problem-solution__panel-title">
           A website built with intention.
@@ -758,7 +874,7 @@
         </p>
 
         <h2
-          class="services-overview__title"
+          class="services-overview__title reveal"
           id="services-overview-title"
         >
           Digital experiences
@@ -780,190 +896,151 @@
 
     </div>
 
-    <!-- SERVICES GRID -->
+    
+<!-- SERVICES ACCORDION -->
 
-    <div class="services-overview__grid">
+<div class="services-accordion">
 
-      <!-- SERVICE 01 -->
+  <!-- SERVICE 01 -->
+  <details class="services-accordion__item reveal" name="portfolio-services">
 
-      <article class="service-preview">
+    <summary class="services-accordion__trigger">
+      <span class="services-accordion__number">01.</span>
 
-        <div class="service-preview__top">
+      <span class="services-accordion__name">
+        Website Design &amp; Redesign
+      </span>
 
-          <span class="service-preview__number">
-            01 / 04
-          </span>
+      <span class="services-accordion__icon" aria-hidden="true">
+        &nearr;
+      </span>
+    </summary>
 
-          <span
-            class="service-preview__arrow"
-            aria-hidden="true"
-          >
-            &nearr;
-          </span>
+    <div class="services-accordion__content">
 
-        </div>
+      <div class="services-accordion__tags">
+        <span>Website Design</span>
+        <span>Website Redesign</span>
+        <span>Responsive Layouts</span>
+      </div>
 
-        <div class="service-preview__body">
-
-          <h3 class="service-preview__title">
-            Website Design &amp; Redesign
-          </h3>
-
-          <p class="service-preview__description">
-            Modern, responsive websites that
-            communicate your brand clearly,
-            create a professional impression,
-            and make it easy for visitors
-            to explore your business.
-          </p>
-
-          <a
-            href="/services/#website-design"
-            class="service-preview__link"
-          >
-            Explore Service
-            <span aria-hidden="true">&nearr;</span>
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- SERVICE 02 -->
-
-      <article class="service-preview">
-
-        <div class="service-preview__top">
-
-          <span class="service-preview__number">
-            02 / 04
-          </span>
-
-          <span
-            class="service-preview__arrow"
-            aria-hidden="true"
-          >
-            &nearr;
-          </span>
-
-        </div>
-
-        <div class="service-preview__body">
-
-          <h3 class="service-preview__title">
-            Shopify &amp; Ecommerce
-          </h3>
-
-          <p class="service-preview__description">
-            Online stores designed around
-            your products and customers,
-            with intuitive navigation,
-            thoughtful product presentation,
-            and a smoother shopping experience.
-          </p>
-
-          <a
-            href="/services/#ecommerce"
-            class="service-preview__link"
-          >
-            Explore Service
-            <span aria-hidden="true">&nearr;</span>
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- SERVICE 03 -->
-
-      <article class="service-preview">
-
-        <div class="service-preview__top">
-
-          <span class="service-preview__number">
-            03 / 04
-          </span>
-
-          <span
-            class="service-preview__arrow"
-            aria-hidden="true"
-          >
-            &nearr;
-          </span>
-
-        </div>
-
-        <div class="service-preview__body">
-
-          <h3 class="service-preview__title">
-            Landing Pages &amp; Sales Funnels
-          </h3>
-
-          <p class="service-preview__description">
-            Focused pages and conversion
-            journeys that explain your offer,
-            reduce distractions, and guide
-            visitors toward the next step.
-          </p>
-
-          <a
-            href="/services/#landing-pages"
-            class="service-preview__link"
-          >
-            Explore Service
-            <span aria-hidden="true">&nearr;</span>
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- SERVICE 04 -->
-
-      <article class="service-preview">
-
-        <div class="service-preview__top">
-
-          <span class="service-preview__number">
-            04 / 04
-          </span>
-
-          <span
-            class="service-preview__arrow"
-            aria-hidden="true"
-          >
-            &nearr;
-          </span>
-
-        </div>
-
-        <div class="service-preview__body">
-
-          <h3 class="service-preview__title">
-            Email Campaign Design
-          </h3>
-
-          <p class="service-preview__description">
-            Visually engaging, brand-consistent
-            email campaigns and newsletters
-            designed to communicate your
-            message clearly and encourage
-            meaningful engagement.
-          </p>
-
-          <a
-            href="/services/#email-campaigns"
-            class="service-preview__link"
-          >
-            Explore Service
-            <span aria-hidden="true">&nearr;</span>
-          </a>
-
-        </div>
-
-      </article>
+      <p class="services-accordion__description">
+        Modern, responsive websites that
+        communicate your brand clearly,
+        create a professional impression,
+        and make it easy for visitors
+        to explore your business.
+      </p>
 
     </div>
+
+  </details>
+
+  <!-- SERVICE 02 -->
+  <details class="services-accordion__item reveal reveal-delay-1" name="portfolio-services" open>
+    <summary class="services-accordion__trigger">
+      <span class="services-accordion__number">02.</span>
+
+      <span class="services-accordion__name">
+        Shopify &amp; Ecommerce
+      </span>
+
+      <span class="services-accordion__icon" aria-hidden="true">
+        &nearr;
+      </span>
+    </summary>
+
+    <div class="services-accordion__content">
+
+      <div class="services-accordion__tags">
+        <span>Shopify Store Design</span>
+        <span>Store Redesign</span>
+        <span>Ecommerce Experience</span>
+      </div>
+
+      <p class="services-accordion__description">
+        Online stores designed around
+        your products and customers,
+        with intuitive navigation,
+        thoughtful product presentation,
+        and a smoother shopping experience.
+      </p>
+
+    </div>
+
+  </details>
+
+  <!-- SERVICE 03 -->
+  <details class="services-accordion__item reveal reveal-delay-2" name="portfolio-services">
+
+    <summary class="services-accordion__trigger">
+      <span class="services-accordion__number">03.</span>
+
+      <span class="services-accordion__name">
+        Landing Pages &amp; Sales Funnels
+      </span>
+
+      <span class="services-accordion__icon" aria-hidden="true">
+        &nearr;
+      </span>
+    </summary>
+
+    <div class="services-accordion__content">
+
+      <div class="services-accordion__tags">
+        <span>Landing Pages</span>
+        <span>Sales Funnels</span>
+        <span>Lead Generation</span>
+      </div>
+
+      <p class="services-accordion__description">
+        Focused pages and conversion
+        journeys that explain your offer,
+        reduce distractions, and guide
+        visitors toward the next step.
+      </p>
+
+    </div>
+
+  </details>
+
+  <!-- SERVICE 04 -->
+  <details class="services-accordion__item reveal reveal-delay-3" name="portfolio-services">
+
+    <summary class="services-accordion__trigger">
+      <span class="services-accordion__number">04.</span>
+
+      <span class="services-accordion__name">
+        Email Campaign Design
+      </span>
+
+      <span class="services-accordion__icon" aria-hidden="true">
+        &nearr;
+      </span>
+    </summary>
+
+    <div class="services-accordion__content">
+
+      <div class="services-accordion__tags">
+        <span>Email Campaigns</span>
+        <span>Newsletters</span>
+        <span>Branded Email Design</span>
+      </div>
+
+      <p class="services-accordion__description">
+        Visually engaging, brand-consistent
+        email campaigns and newsletters
+        designed to communicate your
+        message clearly and encourage
+        meaningful engagement.
+      </p>
+
+    </div>
+
+  </details>
+
+</div>
+
 
     <!-- SECTION FOOTER -->
 
@@ -1011,7 +1088,7 @@
         </p>
 
         <h2
-          class="featured-projects__title"
+          class="featured-projects__title reveal"
           id="featured-projects-title"
         >
           Selected work.
@@ -1029,9 +1106,16 @@
 
     </div>
 
-    <!-- PROJECT GRID -->
+    <!-- FEATURED PROJECTS SLIDER -->
 
-    <div class="featured-projects__grid">
+    <div
+     class="featured-projects__slider reveal reveal-delay-1"
+     id="featured-projects-slider"
+     role="region"
+     aria-roledescription="carousel"
+     aria-label="Featured portfolio projects"
+    >
+  <div class="featured-projects__track">
 
       <!-- PROJECT 01: I AM APRIL SHOWERS -->
 
@@ -1255,6 +1339,47 @@
       </article>
 
     </div>
+  </div>
+
+  
+<!-- SLIDER NAVIGATION -->
+
+<div class="featured-projects__navigation">
+
+  <p
+    class="featured-projects__counter"
+    aria-live="off"
+  >
+    <span id="project-current">01</span>
+    <span aria-hidden="true"> / </span>
+    <span id="project-total">04</span>
+  </p>
+
+  <div class="featured-projects__controls">
+
+    <button
+      type="button"
+      class="featured-projects__arrow"
+      id="project-prev"
+      aria-label="Previous project"
+      aria-controls="featured-projects-slider"
+    >
+      <span aria-hidden="true">&larr;</span>
+    </button>
+
+    <button
+      type="button"
+      class="featured-projects__arrow"
+      id="project-next"
+      aria-label="Next project"
+      aria-controls="featured-projects-slider"
+    >
+      <span aria-hidden="true">&rarr;</span>
+    </button>
+
+  </div>
+
+</div>
 
     <!-- SECTION FOOTER -->
 
@@ -1294,9 +1419,11 @@
 
   <div class="container why-work__inner">
 
+    <!-- EDITORIAL THREE-COLUMN LAYOUT -->
+     <div class="why-work__layout">
     <!-- SECTION INTRODUCTION -->
 
-    <div class="why-work__intro">
+    <div class="why-work__intro reveal">
 
       <div class="why-work__heading">
 
@@ -1307,31 +1434,41 @@
         <h2
           class="why-work__title"
           id="why-work-title"
-        >
-          A creative partner who understands
-          <span class="why-work__title-accent">
-            the bigger picture.
-          </span>
+         >
+          More than design.
+         <span class="why-work__title-accent">
+          A partner in your growth.
+         </span>
         </h2>
 
       </div>
 
       <p class="why-work__description">
-        A website isn't just another design
-        project. It's part of how your
-        business presents itself, connects
-        with people, and moves forward.
-        I bring both creative thinking
-        and practical web experience
-        to that process.
+        I don't just build websites. I help
+businesses create digital experiences
+that communicate clearly, work smoothly,
+and support their goals.
       </p>
 
     </div>
 
     <!-- BENEFITS GRID -->
+    
+<!-- PERSONAL PORTRAIT -->
 
-    <div class="why-work__grid">
+<div class="why-work__portrait reveal reveal-delay-1">
 
+  <img
+    src="assets/images/wisdom-portrait.webp"
+    alt="Portrait of Wisdom Okobah"
+    class="why-work__portrait-image"
+    loading="lazy"
+    decoding="async"
+  >
+
+</div>
+
+    <div class="why-work__grid reveal reveal-delay-2">
       <!-- BENEFIT 01 -->
 
       <article class="why-work__card">
@@ -1423,6 +1560,8 @@
 
     </div>
 
+  </div>
+
     <!-- SECTION FOOTER -->
 
     <div class="why-work__footer">
@@ -1454,9 +1593,9 @@
 </section>
 
 
+
 <!-- ======================================
      HOMEPAGE SIGNATURE OFFER
-     Phase 1 | Step 15
 ====================================== -->
 
 <section
@@ -1464,25 +1603,15 @@
   id="signature-offer"
   aria-labelledby="signature-offer-title"
 >
-
   <div class="container signature-offer__inner">
 
-    <!-- SECTION LABEL -->
+    <div class="signature-offer__showcase">
 
-    <p class="signature-offer__eyebrow">
-      The Signature Offer
-    </p>
-
-    <!-- MAIN OFFER PANEL -->
-
-    <div class="signature-offer__panel">
-
-      <!-- OFFER INTRODUCTION -->
-
+      <!-- LEFT: EDITORIAL CONTENT -->
       <div class="signature-offer__content">
 
-        <p class="signature-offer__category">
-          Website Design &amp; Redesign
+        <p class="signature-offer__eyebrow">
+          The Signature Offer
         </p>
 
         <h2
@@ -1490,146 +1619,155 @@
           id="signature-offer-title"
         >
           The Business
-          <span class="signature-offer__title-accent">
-            Website Experience.
+          <span class="signature-offer__title-gold">
+            Website
+          </span>
+          <span class="signature-offer__title-italic">
+            Experience.
           </span>
         </h2>
 
         <p class="signature-offer__description">
-          A thoughtful website built to
-          represent your brand professionally,
-          explain what you offer, and make
-          it easier for visitors to take
-          the next step.
+          A strategic website designed to represent
+          your brand professionally, communicate
+          your value clearly, and help visitors
+          take the next step.
         </p>
 
-        <p class="signature-offer__audience">
-          <strong>Designed for:</strong>
-          Businesses, entrepreneurs, and
-          personal brands looking to build
-          a new website or improve an
-          existing one.
-        </p>
+        <div class="signature-offer__benefits"
+             aria-label="Key benefits">
+          <span>
+            <i class="ri-palette-line" aria-hidden="true"></i>
+            Strategic Design
+          </span>
+
+          <span>
+            <i class="ri-smartphone-line" aria-hidden="true"></i>
+            Mobile Optimized
+          </span>
+
+          <span>
+            <i class="ri-line-chart-line" aria-hidden="true"></i>
+            Built for Growth
+          </span>
+        </div>
+
+        <div class="signature-offer__actions">
+          <a href="/contact/"
+             class="signature-offer__cta">
+            Discuss Your Project
+            <i class="ri-arrow-up-right-line"
+               aria-hidden="true"></i>
+          </a>
+
+          <a href="/services/"
+             class="signature-offer__secondary">
+            Explore My Services
+            <i class="ri-arrow-right-line"
+               aria-hidden="true"></i>
+          </a>
+        </div>
 
       </div>
 
-      <!-- OFFER DETAILS -->
+      <!-- MIDDLE: WEBSITE SHOWCASE -->
+      <div class="signature-offer__visual">
+        <div class="signature-offer__visual-orbit"
+             aria-hidden="true"></div>
 
+        <div class="signature-offer__laptop">
+          <div class="signature-offer__laptop-screen">
+            <img
+              src="assets/images/signature-offer-desktop.png"
+              alt="Desktop preview of a website design project"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="signature-offer__laptop-base"
+               aria-hidden="true"></div>
+        </div>
+
+        <div class="signature-offer__phone">
+          <div class="signature-offer__phone-screen">
+            <img
+              src="assets/images/signature-offer-mobile.png"
+              alt="Mobile preview of the same website design project"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: INCLUDED FEATURES -->
       <div class="signature-offer__details">
 
-        <h3 class="signature-offer__details-heading">
-          What We Can Focus On
-        </h3>
+        <p class="signature-offer__details-eyebrow">
+          What's Included
+        </p>
 
         <ul class="signature-offer__list">
 
           <li class="signature-offer__item">
-            <span
-              class="signature-offer__item-icon"
-              aria-hidden="true"
-            >
-              &check;
+            <span class="signature-offer__item-icon">
+              <i class="ri-pencil-ruler-2-line"
+                 aria-hidden="true"></i>
             </span>
-
-            <span class="signature-offer__item-text">
-              Brand-aligned visual design
-            </span>
+            <div>
+              <h3>Brand-Aligned Design</h3>
+              <p>A visual experience tailored to your business.</p>
+            </div>
           </li>
 
           <li class="signature-offer__item">
-            <span
-              class="signature-offer__item-icon"
-              aria-hidden="true"
-            >
-              &check;
+            <span class="signature-offer__item-icon">
+              <i class="ri-smartphone-line"
+                 aria-hidden="true"></i>
             </span>
-
-            <span class="signature-offer__item-text">
-              Mobile-friendly layouts
-              and responsive experiences
-            </span>
+            <div>
+              <h3>Responsive Experience</h3>
+              <p>Designed to work across different screen sizes.</p>
+            </div>
           </li>
 
           <li class="signature-offer__item">
-            <span
-              class="signature-offer__item-icon"
-              aria-hidden="true"
-            >
-              &check;
+            <span class="signature-offer__item-icon">
+              <i class="ri-layout-4-line"
+                 aria-hidden="true"></i>
             </span>
-
-            <span class="signature-offer__item-text">
-              Clear page structure
-              and intuitive navigation
-            </span>
+            <div>
+              <h3>Clear Website Structure</h3>
+              <p>Intuitive pages and straightforward navigation.</p>
+            </div>
           </li>
 
           <li class="signature-offer__item">
-            <span
-              class="signature-offer__item-icon"
-              aria-hidden="true"
-            >
-              &check;
+            <span class="signature-offer__item-icon">
+              <i class="ri-chat-3-line"
+                 aria-hidden="true"></i>
             </span>
-
-            <span class="signature-offer__item-text">
-              Purposeful calls to action
-              for enquiries, bookings,
-              or purchases
-            </span>
+            <div>
+              <h3>Purposeful Calls to Action</h3>
+              <p>Clear paths towards enquiries, bookings, or purchases.</p>
+            </div>
           </li>
 
           <li class="signature-offer__item">
-            <span
-              class="signature-offer__item-icon"
-              aria-hidden="true"
-            >
-              &check;
+            <span class="signature-offer__item-icon">
+              <i class="ri-settings-3-line"
+                 aria-hidden="true"></i>
             </span>
-
-            <span class="signature-offer__item-text">
-              Suitable website platform
-              setup and configuration
-            </span>
-          </li>
-
-          <li class="signature-offer__item">
-            <span
-              class="signature-offer__item-icon"
-              aria-hidden="true"
-            >
-              &check;
-            </span>
-
-            <span class="signature-offer__item-text">
-              Launch preparation
-              and practical guidance
-            </span>
+            <div>
+              <h3>Setup &amp; Launch Guidance</h3>
+              <p>Platform configuration and practical launch support.</p>
+            </div>
           </li>
 
         </ul>
 
-        <!-- PRIMARY CTA -->
-
-        <a
-          href="/contact/"
-          class="signature-offer__cta"
-          aria-label="Discuss your website project"
-        >
-          Discuss Your Project
-
-          <span
-            class="signature-offer__cta-arrow"
-            aria-hidden="true"
-          >
-            &nearr;
-          </span>
-        </a>
-
         <p class="signature-offer__note">
-          Scope, timeline, and pricing
-          are discussed based on your
-          project requirements.
+          Every project is scoped around your specific needs.
         </p>
 
       </div>
@@ -1637,212 +1775,12 @@
     </div>
 
   </div>
-
 </section>
 
 
-<!-- ======================================
-     HOMEPAGE WORKING PROCESS
-     Phase 1 | Step 16
-====================================== -->
-
-<section
-  class="working-process"
-  id="working-process"
-  aria-labelledby="working-process-title"
->
-
-  <div class="container working-process__inner">
-
-    <!-- SECTION INTRODUCTION -->
-
-    <div class="working-process__intro">
-
-      <div class="working-process__heading">
-
-        <p class="working-process__eyebrow">
-          How We'll Work Together
-        </p>
-
-        <h2
-          class="working-process__title"
-          id="working-process-title"
-        >
-          A clear process.
-          <span class="working-process__title-accent">
-            From first conversation to launch.
-          </span>
-        </h2>
-
-      </div>
-
-      <p class="working-process__description">
-        Building a website shouldn't feel
-        overwhelming. I follow a clear,
-        collaborative approach that helps
-        you understand what's happening
-        at each stage and where your
-        input is needed.
-      </p>
-
-    </div>
-
-    <!-- PROCESS TIMELINE -->
-
-    <ol class="working-process__steps">
-
-      <!-- STEP 01 -->
-
-      <li class="working-process__step">
-
-        <span
-          class="working-process__number"
-          aria-hidden="true"
-        >
-          01
-        </span>
-
-        <div class="working-process__step-content">
-
-          <h3 class="working-process__step-title">
-            Discover
-          </h3>
-
-          <p class="working-process__step-description">
-            We start with a conversation
-            about your business, your
-            audience, your goals, and
-            what your website needs
-            to accomplish.
-          </p>
-
-        </div>
-
-      </li>
-
-      <!-- STEP 02 -->
-
-      <li class="working-process__step">
-
-        <span
-          class="working-process__number"
-          aria-hidden="true"
-        >
-          02
-        </span>
-
-        <div class="working-process__step-content">
-
-          <h3 class="working-process__step-title">
-            Plan &amp; Design
-          </h3>
-
-          <p class="working-process__step-description">
-            I develop a clear direction
-            for the website's structure,
-            content, and visual experience,
-            based on the project requirements
-            we agree on.
-          </p>
-
-        </div>
-
-      </li>
-
-      <!-- STEP 03 -->
-
-      <li class="working-process__step">
-
-        <span
-          class="working-process__number"
-          aria-hidden="true"
-        >
-          03
-        </span>
-
-        <div class="working-process__step-content">
-
-          <h3 class="working-process__step-title">
-            Build &amp; Refine
-          </h3>
-
-          <p class="working-process__step-description">
-            I bring the approved direction
-            to life, develop the website,
-            and provide opportunities
-            for you to review the work
-            and share feedback.
-          </p>
-
-        </div>
-
-      </li>
-
-      <!-- STEP 04 -->
-
-      <li class="working-process__step">
-
-        <span
-          class="working-process__number"
-          aria-hidden="true"
-        >
-          04
-        </span>
-
-        <div class="working-process__step-content">
-
-          <h3 class="working-process__step-title">
-            Launch &amp; Support
-          </h3>
-
-          <p class="working-process__step-description">
-            We prepare the website for
-            launch, review the important
-            details, and discuss any
-            guidance or ongoing support
-            you may need afterward.
-          </p>
-
-        </div>
-
-      </li>
-
-    </ol>
-
-    <!-- SECTION CLOSING -->
-
-    <div class="working-process__footer">
-
-      <p class="working-process__footer-text">
-        Have a project in mind?
-        Let's start with a conversation.
-      </p>
-
-      <a
-        href="/contact/"
-        class="working-process__link"
-      >
-        Let's Talk
-
-        <span
-          class="working-process__link-arrow"
-          aria-hidden="true"
-        >
-          &nearr;
-        </span>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
 
 <!-- ======================================
-     HOMEPAGE CLIENT TESTIMONIALS
-     Phase 1 | Step 17
-     Illustrative placeholders only
+     HOMEPAGE CLIENT EXPERIENCES
 ====================================== -->
 
 <section
@@ -1850,681 +1788,134 @@
   id="testimonials"
   aria-labelledby="testimonials-title"
 >
-
   <div class="container testimonials__inner">
 
-    <!-- SECTION INTRODUCTION -->
+    <div class="testimonials__intro reveal">
+      <p class="testimonials__eyebrow">
+        Client Experiences / Selected Work
+      </p>
 
-    <div class="testimonials__intro">
+      <h2 class="testimonials__title" id="testimonials-title">
+        Built with care.
+        <span>Remembered for it.</span>
+      </h2>
 
-      <div class="testimonials__heading">
+      <p class="testimonials__description">
+        Meaningful websites are built through
+        thoughtful design, collaboration, and
+        a clear understanding of each brand.
+        Here are a few experiences from my work.
+      </p>
 
-        <p class="testimonials__eyebrow">
-          Client Experiences
-        </p>
+      <div class="testimonials__selectors"
+           role="group"
+           aria-label="Choose a client experience">
 
-        <h2
-          class="testimonials__title"
-          id="testimonials-title"
-        >
-          Good work.
-          <span class="testimonials__title-accent">
-            Better experiences.
-          </span>
-        </h2>
+        <button type="button"
+                class="testimonials__selector is-active"
+                data-testimonial-select="0"
+                aria-pressed="true">
+          <span>01</span> Hey Lady
+        </button>
+
+        <button type="button"
+                class="testimonials__selector"
+                data-testimonial-select="1"
+                aria-pressed="false">
+          <span>02</span> I Am April Showers
+        </button>
+
+        <button type="button"
+                class="testimonials__selector"
+                data-testimonial-select="2"
+                aria-pressed="false">
+          <span>03</span> Wohnplatz
+        </button>
+      </div>
+    </div>
+
+    <div class="testimonials__spotlight reveal reveal-delay-1">
+
+      <div class="testimonials__topline">
+        <span id="testimonial-type">CLIENT TESTIMONIAL</span>
+        <span id="testimonial-count">01 / 03</span>
+      </div>
+
+      <div class="testimonials__quote-symbol"
+           aria-hidden="true">“</div>
+
+      <div class="testimonials__content"
+           id="testimonial-content"
+           aria-live="polite"
+           aria-atomic="true">
+
+        <blockquote class="testimonials__quote"
+                    id="testimonial-quote">
+          A huge thank you to Wisdom @ceo_fyncrest
+          for bringing my vision for the new
+          Hey Lady™ website to life. I wanted
+          something clean, elevated, timeless,
+          and true to who Hey Lady™ is,
+          and you absolutely delivered.
+        </blockquote>
+
+        <div class="testimonials__identity">
+          <div class="testimonials__identity-mark"
+               id="testimonial-monogram"
+               aria-hidden="true">HL</div>
+
+          <div>
+            <p class="testimonials__client"
+               id="testimonial-client">
+              Laetania Richardson
+            </p>
+
+            <p class="testimonials__project"
+               id="testimonial-project">
+              Hey Lady · Website Redesign
+            </p>
+          </div>
+        </div>
 
       </div>
 
-      <p class="testimonials__description">
-        Clear communication, thoughtful
-        design, and collaboration matter.
-        These illustrative examples show
-        the kind of client feedback this
-        section is designed to feature.
-      </p>
+      <div class="testimonials__bottom">
+        <div class="testimonials__progress"
+             aria-hidden="true">
+          <span class="is-active"></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="testimonials__arrows">
+          <button
+            type="button"
+            class="testimonials__arrow"
+            id="testimonial-prev"
+            aria-label="Previous client experience"
+          >
+            <span aria-hidden="true">←</span>
+          </button>
+
+          <button
+            type="button"
+            class="testimonials__arrow"
+            id="testimonial-next"
+            aria-label="Next client experience"
+          >
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
 
     </div>
-
-    <!-- TESTIMONIAL CARDS -->
-
-    <div class="testimonials__grid">
-
-      <!-- SAMPLE 01 -->
-
-      <article class="testimonials__card">
-
-        <div class="testimonials__card-top">
-
-          <span
-            class="testimonials__quote-mark"
-            aria-hidden="true"
-          >
-            &ldquo;
-          </span>
-
-          <span class="testimonials__sample-label">
-            Sample 01
-          </span>
-
-        </div>
-
-        <blockquote class="testimonials__quote">
-          <p>
-            The process felt clear from
-            beginning to end. Every decision
-            was explained, and the final
-            website reflected what I wanted
-            for my brand.
-          </p>
-        </blockquote>
-
-        <div class="testimonials__card-footer">
-
-          <p class="testimonials__category">
-            Communication &amp; Clarity
-          </p>
-
-          <p class="testimonials__disclosure">
-            Illustrative copy — not a
-            verified client review.
-          </p>
-
-        </div>
-
-      </article>
-
-      <!-- SAMPLE 02 -->
-
-      <article class="testimonials__card">
-
-        <div class="testimonials__card-top">
-
-          <span
-            class="testimonials__quote-mark"
-            aria-hidden="true"
-          >
-            &ldquo;
-          </span>
-
-          <span class="testimonials__sample-label">
-            Sample 02
-          </span>
-
-        </div>
-
-        <blockquote class="testimonials__quote">
-          <p>
-            I wanted a website that looked
-            professional without being
-            difficult for customers to use.
-            The design brought those
-            priorities together.
-          </p>
-        </blockquote>
-
-        <div class="testimonials__card-footer">
-
-          <p class="testimonials__category">
-            Design &amp; Usability
-          </p>
-
-          <p class="testimonials__disclosure">
-            Illustrative copy — not a
-            verified client review.
-          </p>
-
-        </div>
-
-      </article>
-
-      <!-- SAMPLE 03 -->
-
-      <article class="testimonials__card">
-
-        <div class="testimonials__card-top">
-
-          <span
-            class="testimonials__quote-mark"
-            aria-hidden="true"
-          >
-            &ldquo;
-          </span>
-
-          <span class="testimonials__sample-label">
-            Sample 03
-          </span>
-
-        </div>
-
-        <blockquote class="testimonials__quote">
-          <p>
-            What stood out was the attention
-            to detail and the willingness
-            to listen. The experience felt
-            collaborative rather than
-            complicated.
-          </p>
-        </blockquote>
-
-        <div class="testimonials__card-footer">
-
-          <p class="testimonials__category">
-            Collaboration &amp; Care
-          </p>
-
-          <p class="testimonials__disclosure">
-            Illustrative copy — not a
-            verified client review.
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-    <!-- TRANSPARENCY NOTE -->
-
-    <p class="testimonials__note">
-      Note: These are sample testimonials
-      for layout demonstration and will
-      be replaced with verified client
-      feedback before publication.
-    </p>
-
   </div>
-
 </section>
 
-<!-- ======================================
-     HOMEPAGE ABOUT PREVIEW
-     Phase 1 | Step 11
-====================================== -->
-
-<section
-  class="about-preview"
-  id="about-preview"
-  aria-labelledby="about-preview-title"
->
-
-  <div class="container about-preview__inner">
-
-    <!-- ABOUT INTRODUCTION -->
-
-    <div class="about-preview__content">
-
-      <p class="about-preview__eyebrow">
-        The Person Behind the Work
-      </p>
-
-      <h2
-        class="about-preview__title"
-        id="about-preview-title"
-      >
-        Good design is
-        more than how
-        it
-        <span class="about-preview__title-accent">
-          looks.
-        </span>
-      </h2>
-
-      <p class="about-preview__description">
-        I'm Wisdom Okobah, a web designer
-        and developer helping businesses
-        and personal brands build websites
-        that feel professional, communicate
-        clearly, and are easy to use.
-      </p>
-
-      <p class="about-preview__description">
-        I work across Shopify, Wix,
-        Squarespace, and GoDaddy, combining
-        thoughtful visual design with
-        practical functionality to create
-        digital experiences shaped around
-        each client's needs.
-      </p>
-
-      <a
-        href="/about/"
-        class="about-preview__link"
-      >
-        More About Me
-
-        <span
-          class="about-preview__link-arrow"
-          aria-hidden="true"
-        >
-          &nearr;
-        </span>
-      </a>
-
-    </div>
-
-    <!-- MY APPROACH -->
-
-    <div class="about-preview__panel">
-
-      <p class="about-preview__panel-label">
-        My Approach
-      </p>
-
-      <ol class="about-preview__principles">
-
-        <!-- PRINCIPLE 01 -->
-
-        <li class="about-preview__principle">
-
-          <span
-            class="about-preview__principle-number"
-            aria-hidden="true"
-          >
-            01
-          </span>
-
-          <div>
-
-            <h3 class="about-preview__principle-title">
-              Design with purpose
-            </h3>
-
-            <p class="about-preview__principle-text">
-              Every design decision should
-              support your message, your
-              audience, and your goals.
-            </p>
-
-          </div>
-
-        </li>
-
-        <!-- PRINCIPLE 02 -->
-
-        <li class="about-preview__principle">
-
-          <span
-            class="about-preview__principle-number"
-            aria-hidden="true"
-          >
-            02
-          </span>
-
-          <div>
-
-            <h3 class="about-preview__principle-title">
-              Make it easy to use
-            </h3>
-
-            <p class="about-preview__principle-text">
-              Clear navigation, responsive
-              layouts, and intuitive
-              experiences matter as much
-              as visual appeal.
-            </p>
-
-          </div>
-
-        </li>
-
-        <!-- PRINCIPLE 03 -->
-
-        <li class="about-preview__principle">
-
-          <span
-            class="about-preview__principle-number"
-            aria-hidden="true"
-          >
-            03
-          </span>
-
-          <div>
-
-            <h3 class="about-preview__principle-title">
-              Build for real needs
-            </h3>
-
-            <p class="about-preview__principle-text">
-              The finished website should
-              fit your business, support
-              your workflow, and be
-              practical to maintain.
-            </p>
-
-          </div>
-
-        </li>
-
-      </ol>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================
-     HOMEPAGE FREQUENTLY ASKED QUESTIONS
-     Phase 1 | Step 18
-====================================== -->
-
-<section
-  class="faq"
-  id="faq"
-  aria-labelledby="faq-title"
->
-
-  <div class="container faq__inner">
-
-    <!-- FAQ INTRODUCTION -->
-
-    <div class="faq__intro">
-
-      <p class="faq__eyebrow">
-        Frequently Asked Questions
-      </p>
-
-      <h2
-        class="faq__title"
-        id="faq-title"
-      >
-        Good questions.
-        <span class="faq__title-accent">
-          Clear answers.
-        </span>
-      </h2>
-
-      <p class="faq__description">
-        Starting a website project
-        comes with questions. Here
-        are a few things you might
-        want to know before we
-        work together.
-      </p>
-
-      <a
-        href="/contact/"
-        class="faq__contact"
-      >
-        Have another question? Let's talk.
-
-        <span
-          class="faq__contact-arrow"
-          aria-hidden="true"
-        >
-          &nearr;
-        </span>
-      </a>
-
-    </div>
-
-    <!-- FAQ QUESTIONS -->
-
-    <div class="faq__list">
-
-      <!-- QUESTION 01 -->
-
-      <details class="faq__item" open>
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            How much does a website cost?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            Website pricing depends on
-            the size, features, and
-            requirements of your project.
-            After discussing what you
-            need, I can provide a
-            tailored quote.
-          </p>
-        </div>
-
-      </details>
-
-      <!-- QUESTION 02 -->
-
-      <details class="faq__item">
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            How long does a website project take?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            The timeline depends on
-            the scope of work, the
-            features involved, content
-            readiness, and feedback.
-            We'll discuss a realistic
-            schedule before the project
-            begins.
-          </p>
-        </div>
-
-      </details>
-
-      <!-- QUESTION 03 -->
-
-      <details class="faq__item">
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            Which website platforms do you work with?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            I work with Shopify, Wix,
-            Squarespace, and GoDaddy.
-            The right platform depends
-            on your business goals,
-            the type of website you
-            need, and how you plan
-            to manage it.
-          </p>
-        </div>
-
-      </details>
-
-      <!-- QUESTION 04 -->
-
-      <details class="faq__item">
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            Can you redesign my existing website?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            Yes. I can help improve
-            an existing website's
-            appearance, structure,
-            mobile experience, and
-            usability while keeping
-            your business needs
-            in focus.
-          </p>
-        </div>
-
-      </details>
-
-      <!-- QUESTION 05 -->
-
-      <details class="faq__item">
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            Do I need to provide the website content?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            It helps to have your
-            business information,
-            branding materials,
-            images, and service or
-            product details ready.
-            If you're unsure what
-            content is needed, we
-            can discuss the
-            requirements together.
-          </p>
-        </div>
-
-      </details>
-
-      <!-- QUESTION 06 -->
-
-      <details class="faq__item">
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            Can you help with an online store?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            Yes. I offer ecommerce
-            website design and store
-            setup, including Shopify
-            projects. We can discuss
-            your product catalog,
-            store structure, and
-            required functionality
-            to determine the scope.
-          </p>
-        </div>
-
-      </details>
-
-      <!-- QUESTION 07 -->
-
-      <details class="faq__item">
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            Will my website work on mobile devices?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            Responsive design is
-            an important part of
-            my approach. I design
-            with different screen
-            sizes in mind so visitors
-            can navigate and use
-            the website across
-            mobile, tablet, and
-            desktop devices.
-          </p>
-        </div>
-
-      </details>
-
-      <!-- QUESTION 08 -->
-
-      <details class="faq__item">
-
-        <summary class="faq__question">
-
-          <span class="faq__question-text">
-            Do you provide support after launch?
-          </span>
-
-          <span
-            class="faq__icon"
-            aria-hidden="true"
-          ></span>
-
-        </summary>
-
-        <div class="faq__answer">
-          <p>
-            I offer website updates
-            and ongoing support.
-            The specific support
-            arrangement depends
-            on your project's needs
-            and what we agree on
-            before or after launch.
-          </p>
-        </div>
-
-      </details>
-
-    </div>
-
-  </div>
-
-</section>
 
 
 <!-- ======================================
      HOMEPAGE FINAL CALL TO ACTION
-     Phase 1 | Step 19
 ====================================== -->
 
 <section
@@ -2532,331 +1923,189 @@
   id="final-cta"
   aria-labelledby="final-cta-title"
 >
-
   <div class="container final-cta__inner">
 
-    <!-- SECTION EYEBROW -->
+    <div class="final-cta__main">
 
-    <p class="final-cta__eyebrow">
+      <div class="final-cta__content reveal">
 
-      <span
-        class="final-cta__eyebrow-dot"
-        aria-hidden="true"
-      ></span>
+        <p class="final-cta__eyebrow">
+          <span class="final-cta__eyebrow-dot"
+                aria-hidden="true"></span>
+          Have something in mind?
+        </p>
 
-      Your Next Step
+        <h2 class="final-cta__title"
+            id="final-cta-title">
+          Let's make it
+          <span class="final-cta__title-accent">
+            happen.
+          </span>
+        </h2>
 
-    </p>
+        <p class="final-cta__description">
+          Whether you're launching something new,
+          refreshing your current website, or
+          exploring an idea, I'd love to hear
+          what you're building.
+        </p>
 
-    <!-- MAIN HEADLINE -->
+        <div class="final-cta__availability">
+          <span class="final-cta__availability-dot"
+                aria-hidden="true"></span>
+          Let's talk about your next project
+        </div>
 
-    <h2
-      class="final-cta__title"
-      id="final-cta-title"
-    >
-      Tell me what
-      <span class="final-cta__title-accent">
-        you're building.
-      </span>
-    </h2>
+      </div>
 
-    <!-- SUPPORTING COPY -->
+      <div class="final-cta__invitation reveal reveal-delay-1">
 
-    <p class="final-cta__description">
-      A new website, a redesign, or an
-      idea you're still figuring out.
-      Share what you have in mind,
-      and we can explore what makes
-      sense for your business.
-    </p>
-
-    <!-- CALL TO ACTION BUTTONS -->
-
-    <div class="final-cta__actions">
-
-      <!-- PRIMARY CTA -->
-
-      <a
-        href="/contact/"
-        class="final-cta__primary"
-      >
-        Let's Discuss Your Project
-
-        <span
-          class="final-cta__arrow"
-          aria-hidden="true"
-        >
-          &nearr;
+        <span class="final-cta__invitation-icon"
+              aria-hidden="true">
+          ↗
         </span>
-      </a>
 
-      <!-- SECONDARY CTA -->
+        <div class="final-cta__invitation-content">
+          <p class="final-cta__invitation-label">
+            YOUR NEXT STEP
+          </p>
 
-      <a
-        href="/services/"
-        class="final-cta__secondary"
-      >
-        Explore My Services
+          <h3 class="final-cta__invitation-title">
+            Great projects start
+            with a conversation.
+          </h3>
 
-        <span
-          class="final-cta__arrow"
-          aria-hidden="true"
-        >
-          &rarr;
-        </span>
-      </a>
+          <p class="final-cta__invitation-text">
+            Tell me about your goals and
+            what you need. We'll explore
+            the right way forward.
+          </p>
+        </div>
+
+        <a href="/contact/"
+           class="final-cta__primary">
+          Discuss Your Project
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
 
     </div>
 
-    <!-- REASSURANCE NOTE -->
+    <div class="final-cta__bottom">
+      <p class="final-cta__note">
+        No complicated brief needed.
+        Just tell me what you have in mind.
+      </p>
 
-    <p class="final-cta__note">
-      No need to have everything figured
-      out before reaching out.
-      A conversation is a good place
-      to start.
-    </p>
+      <a href="/portfolio/"
+         class="final-cta__secondary">
+        Explore My Work
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
 
   </div>
-
 </section>
 
 </main>
 
     
+
 <!-- ======================================
      GLOBAL SITE FOOTER
-     Phase 1 | Step 6
 ====================================== -->
 
-<footer class="site-footer">
-
-  <!-- PROJECT INVITATION -->
-
-  <section
-    class="footer-cta"
-    aria-labelledby="footer-cta-title"
-  >
-
-    <div class="container footer-cta__inner">
-
-      <div class="footer-cta__content">
-
-        <span class="footer-cta__eyebrow">
-          Have a project in mind?
-        </span>
-
-        <h2
-          class="footer-cta__title"
-          id="footer-cta-title"
-        >
-          Let's build something that
-          works for your business.
-        </h2>
-
-      </div>
-
-      <div class="footer-cta__action">
-
-        <a
-          href="/contact/"
-          class="button button--light button--large"
-        >
-          Start a Project
-          <span aria-hidden="true">&nearr;</span>
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- MAIN FOOTER -->
+<footer class="site-footer" id="site-footer">
 
   <div class="footer-main">
-
     <div class="container footer-main__grid">
 
-      <!-- BRAND INFORMATION -->
-
+      <!-- BRAND -->
       <div class="footer-brand">
-
-        <a
-          href="/"
-          class="footer-brand__link"
-          aria-label="Wisdom Okobah — Home"
-        >
-
-          <span class="footer-brand__primary">
-            WISDOM.
-          </span>
-
-          <span class="footer-brand__secondary">
-            OKOBAH
-          </span>
-
+        <a href="./" class="footer-brand__link"
+           aria-label="Wisdom Okobah — Home">
+          <span class="footer-brand__primary">WISDOM.</span>
+          <span class="footer-brand__secondary">OKOBAH</span>
         </a>
 
         <p class="footer-brand__description">
-          Web design and development for
-          businesses and personal brands
-          that value clarity, usability,
-          and thoughtful digital experiences.
+          Thoughtful websites. Clear experiences.
+          Better connections.
         </p>
 
+        <p class="footer-brand__statement">
+          Design with <em>purpose.</em>
+        </p>
       </div>
 
-      <!-- WEBSITE NAVIGATION -->
-
-      <nav
-        class="footer-nav"
-        aria-labelledby="footer-explore-title"
-      >
-
-        <h2
-          class="footer-nav__title"
-          id="footer-explore-title"
-        >
-          Explore
-        </h2>
+      <!-- EXPLORE -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h2 class="footer-nav__title">Explore</h2>
 
         <ul class="footer-nav__list">
-
-          <li>
-            <a
-              href="/"
-              class="footer-nav__link"
-            >
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/services/"
-              class="footer-nav__link"
-            >
-              Services
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/portfolio/"
-              class="footer-nav__link"
-            >
-              Portfolio
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/about/"
-              class="footer-nav__link"
-            >
-              About
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/contact/"
-              class="footer-nav__link"
-            >
-              Contact
-            </a>
-          </li>
-
+          <li><a class="footer-nav__link" href="./">Home</a></li>
+          <li><a class="footer-nav__link" href="./services/">Services</a></li>
+          <li><a class="footer-nav__link" href="./portfolio/">Portfolio</a></li>
+          <li><a class="footer-nav__link" href="./about/">About</a></li>
+          <li><a class="footer-nav__link" href="./contact/">Contact</a></li>
         </ul>
-
       </nav>
 
-      <!-- SERVICES NAVIGATION -->
-
-      <nav
-        class="footer-nav"
-        aria-labelledby="footer-services-title"
-      >
-
-        <h2
-          class="footer-nav__title"
-          id="footer-services-title"
-        >
-          Services
-        </h2>
+      <!-- SERVICES -->
+      <nav class="footer-nav" aria-label="Footer services">
+        <h2 class="footer-nav__title">Expertise</h2>
 
         <ul class="footer-nav__list">
-
           <li>
-            <a
-              href="/services/#website-design"
-              class="footer-nav__link"
-            >
+            <a class="footer-nav__link"
+               href="./services/#website-design">
               Website Design &amp; Redesign
             </a>
           </li>
-
           <li>
-            <a
-              href="/services/#ecommerce"
-              class="footer-nav__link"
-            >
+            <a class="footer-nav__link"
+               href="./services/#ecommerce">
               Shopify &amp; Ecommerce
             </a>
           </li>
-
           <li>
-            <a
-              href="/services/#landing-pages"
-              class="footer-nav__link"
-            >
+            <a class="footer-nav__link"
+               href="./services/#landing-pages">
               Landing Pages &amp; Sales Funnels
             </a>
           </li>
-
         </ul>
-
       </nav>
 
     </div>
-
   </div>
 
-  <!-- COPYRIGHT & LEGAL -->
-
+  <!-- BOTTOM BAR -->
   <div class="footer-bottom">
-
     <div class="container footer-bottom__inner">
 
       <p class="footer-bottom__copyright">
-        &copy; 2026 Wisdom Okobah.
-        All rights reserved.
+        &copy; 2026 Wisdom Okobah. All rights reserved.
       </p>
 
       <div class="footer-bottom__links">
-
-        <a
-          href="/privacy/"
-          class="footer-bottom__link"
-        >
+        <a class="footer-bottom__link" href="./privacy/">
           Privacy Policy
         </a>
 
-        <a
-          href="#main-content"
-          class="footer-bottom__link"
-        >
-          Back to Content &uarr;
+        <a class="footer-bottom__link"
+           href="#main-content">
+          Back to Top <span aria-hidden="true">↑</span>
         </a>
-
       </div>
 
     </div>
-
   </div>
 
 </footer>
-
+<script src="./assets/js/testimonials.js" defer></script>
+<script src="assets/js/featured-projects-slider.js" defer></script>
+<script src="assets/js/animations.js" defer></script>
 </body>
 </html>

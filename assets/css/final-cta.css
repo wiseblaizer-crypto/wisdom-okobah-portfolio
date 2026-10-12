@@ -1,357 +1,289 @@
 
 /* =========================================
-   WISDOM OKOBAH — HOMEPAGE FINAL CTA
-   Phase 1 | Step 19
-   ========================================= */
-
-/* 01. SECTION */
+   FINAL CTA — THE PROJECT INVITATION
+========================================= */
 
 .final-cta {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-
-  padding-block: clamp(5rem, 10vw, 9rem);
-
-  background-color: var(
-    --color-primary,
-    #1C352B
-  );
-
-  color: var(
-    --color-on-dark,
-    #F8F6F0
-  );
+  padding-block: clamp(3.5rem, 6vw, 6rem);
+  background: #1C352B;
+  color: #F8F6F0;
 }
-
-/* 02. SUBTLE BACKGROUND DETAIL */
-
-.final-cta::before {
-  content: "";
-
-  position: absolute;
-  z-index: -1;
-
-  top: -14rem;
-  right: -12rem;
-
-  width: clamp(20rem, 50vw, 42rem);
-  aspect-ratio: 1;
-
-  border: 1px solid rgba(229, 188, 130, 0.14);
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-.final-cta::after {
-  content: "";
-
-  position: absolute;
-  z-index: -1;
-
-  top: -8rem;
-  right: -6rem;
-
-  width: clamp(15rem, 35vw, 32rem);
-  aspect-ratio: 1;
-
-  border: 1px solid rgba(229, 188, 130, 0.1);
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-/* 03. CONTENT CONTAINER */
 
 .final-cta__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  max-width: 68rem;
-
-  margin-inline: auto;
-  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-/* 04. EYEBROW */
+.final-cta__main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+/* EDITORIAL CONTENT */
+
+.final-cta__content {
+  min-width: 0;
+}
 
 .final-cta__eyebrow {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.75rem;
-
-  margin: 0 0 2rem;
-
-  color: var(
-    --color-accent,
-    #E5BC82
-  );
-
-  font-family: var(
-    --font-body,
-    sans-serif
-  );
-
-  font-size: 0.75rem;
-  font-weight: 600;
+  margin: 0 0 1.75rem;
+  color: #E5BC82;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.73rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
-  line-height: 1.5;
   text-transform: uppercase;
 }
 
 .final-cta__eyebrow-dot {
-  display: inline-block;
-  flex-shrink: 0;
-
-  width: 0.5rem;
-  height: 0.5rem;
-
-  background-color: var(
-    --color-accent,
-    #E5BC82
-  );
-
+  width: 0.45rem;
+  height: 0.45rem;
   border-radius: 50%;
+  background: #E5BC82;
 }
 
-/* 05. HEADLINE */
-
 .final-cta__title {
-  max-width: 14ch;
-
-  margin: 0 0 2rem;
-
-  color: var(
-    --color-on-dark,
-    #F8F6F0
-  );
-
-  font-family: var(
-    --font-display,
-    Georgia,
-    serif
-  );
-
-  font-size: clamp(3.25rem, 8vw, 7.5rem);
+  max-width: 11ch;
+  margin: 0;
+  color: #F8F6F0;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(3.5rem, 6vw, 7rem);
   font-weight: 500;
-  line-height: 1;
+  line-height: 0.98;
   letter-spacing: -0.045em;
-  text-wrap: balance;
 }
 
 .final-cta__title-accent {
-  color: var(
-    --color-accent,
-    #E5BC82
-  );
-
+  display: block;
+  color: #E5BC82;
   font-style: italic;
 }
 
-/* 06. DESCRIPTION */
-
 .final-cta__description {
-  max-width: 39rem;
-
-  margin: 0 0 2.5rem;
-
-  color: #D9E4DB;
-
-  font-family: var(
-    --font-body,
-    sans-serif
-  );
-
-  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  max-width: 31rem;
+  margin: 1.75rem 0 0;
+  color: #C9D6CC;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.975rem;
   line-height: 1.85;
 }
 
-/* 07. ACTIONS */
+.final-cta__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  color: #E5BC82;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
 
-.final-cta__actions {
+.final-cta__availability-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #E5BC82;
+  box-shadow: 0 0 0 4px rgba(229, 188, 130, 0.12);
+}
+
+/* PROJECT INVITATION PANEL */
+
+.final-cta__invitation {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 25rem;
+  padding: clamp(1.75rem, 3.5vw, 3.5rem);
+  overflow: hidden;
+  border: 1px solid rgba(229, 188, 130, 0.2);
+  border-radius: 1.5rem;
+  background: #29483A;
+}
 
-  width: 100%;
-  max-width: 23rem;
+.final-cta__invitation::before {
+  content: "";
+  position: absolute;
+  top: -8rem;
+  right: -9rem;
+  width: 22rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(229, 188, 130, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-  gap: 1rem;
+.final-cta__invitation-icon {
+  align-self: flex-end;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid rgba(229, 188, 130, 0.4);
+  border-radius: 50%;
+  color: #E5BC82;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.final-cta__invitation-content {
+  position: relative;
+  margin-block: 2rem;
+}
+
+.final-cta__invitation-label {
+  margin: 0 0 1rem;
+  color: #E5BC82;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.final-cta__invitation-title {
+  max-width: 17ch;
+  margin: 0;
+  color: #F8F6F0;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.final-cta__invitation-text {
+  max-width: 26rem;
+  margin: 1rem 0 0;
+  color: #C9D6CC;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.75;
 }
 
 /* PRIMARY ACTION */
 
 .final-cta__primary {
-  display: inline-flex;
+  position: relative;
+  display: flex;
   align-items: center;
-  justify-content: center;
-
-  gap: 0.875rem;
-
-  min-height: 3.75rem;
-
-  padding: 1rem 1.5rem;
-
-  background-color: var(
-    --color-accent,
-    #E5BC82
-  );
-
-  border: 1px solid var(
-    --color-accent,
-    #E5BC82
-  );
-
-  border-radius: 0.25rem;
-
-  color: var(
-    --color-primary,
-    #1C352B
-  );
-
-  font-family: var(
-    --font-body,
-    sans-serif
-  );
-
-  font-size: 0.9375rem;
-  font-weight: 600;
-  line-height: 1.4;
-
-  text-align: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #E5BC82;
+  color: #1C352B;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 700;
   text-decoration: none;
-
   transition:
     background-color 200ms ease,
-    border-color 200ms ease,
     transform 200ms ease;
 }
 
+.final-cta__primary span {
+  font-size: 1.3rem;
+}
+
 .final-cta__primary:hover {
-  background-color: #F0CDA0;
-  border-color: #F0CDA0;
-
-  color: var(
-    --color-primary,
-    #1C352B
-  );
-
+  background: #F0C994;
   transform: translateY(-2px);
 }
 
-/* SECONDARY ACTION */
+/* BOTTOM ROW */
+
+.final-cta__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 4vw, 4rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(248, 246, 240, 0.2);
+}
+
+.final-cta__note {
+  max-width: 30rem;
+  margin: 0;
+  color: #C9D6CC;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
 
 .final-cta__secondary {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-
   gap: 0.75rem;
-
-  min-height: 3.5rem;
-
-  padding: 0.875rem 1.25rem;
-
-  color: var(
-    --color-on-dark,
-    #F8F6F0
-  );
-
-  font-family: var(
-    --font-body,
-    sans-serif
-  );
-
-  font-size: 0.9375rem;
-  font-weight: 500;
-  line-height: 1.5;
-
-  text-align: center;
+  color: #F8F6F0;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: rgba(229, 188, 130, 0.75);
+  text-decoration-color: #E5BC82;
   text-underline-offset: 0.4em;
-
-  transition: color 200ms ease;
+  transition: gap 200ms ease;
 }
 
 .final-cta__secondary:hover {
-  color: var(
-    --color-accent,
-    #E5BC82
-  );
+  gap: 1rem;
 }
-
-.final-cta__arrow {
-  display: inline-block;
-
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-/* 08. SUPPORTING NOTE */
-
-.final-cta__note {
-  max-width: 34rem;
-
-  margin: 2.75rem 0 0;
-  padding-top: 1.5rem;
-
-  border-top: 1px solid rgba(248, 246, 240, 0.2);
-
-  color: #D1DED3;
-
-  font-family: var(
-    --font-body,
-    sans-serif
-  );
-
-  font-size: 0.875rem;
-  line-height: 1.75;
-}
-
-/* 09. FOCUS STATES */
 
 .final-cta__primary:focus-visible,
 .final-cta__secondary:focus-visible {
-  outline: 3px solid #F8F6F0;
+  outline: 2px solid #E5BC82;
   outline-offset: 4px;
 }
 
-/* 10. TABLET & DESKTOP */
+/* DESKTOP */
 
-@media (min-width: 40rem) {
-  .final-cta__actions {
+@media (min-width: 64rem) {
+  .final-cta__main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 0.95fr);
+  }
+
+  .final-cta__bottom {
     flex-direction: row;
     align-items: center;
-
-    width: auto;
-    max-width: none;
-
-    gap: 1.5rem;
-  }
-
-  .final-cta__primary {
-    min-width: 15rem;
+    justify-content: space-between;
   }
 }
 
-/* 11. SMALL SCREENS */
+/* MOBILE */
 
-@media (max-width: 24rem) {
+@media (max-width: 47.999rem) {
+  .final-cta {
+    padding-block: 3.5rem;
+  }
+
   .final-cta__title {
-    font-size: clamp(2.75rem, 12vw, 3.25rem);
+    font-size: clamp(3.25rem, 12vw, 4.5rem);
   }
 
-  .final-cta__description {
-    font-size: 1rem;
+  .final-cta__invitation {
+    min-height: 24rem;
+    padding: 1.75rem;
+    border-radius: 1.15rem;
+  }
+
+  .final-cta__invitation-icon {
+    width: 3rem;
+    height: 3rem;
   }
 }
-
-/* 12. REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
   .final-cta__primary,
