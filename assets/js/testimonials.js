@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
       monogram: "AS"
     },
     {
-      type: "PROJECT SPOTLIGHT",
+      type: "CLIENT TESTIMONIAL",
       quote:
-        "A modern e-commerce experience developed for Wohnplatz, a Swiss-owned brand, with a focus on clear product presentation, intuitive navigation, mobile-friendly shopping, and a polished visual identity.",
+        "Wisdom brought a thoughtful and professional approach to the development of our Wohnplatz e-commerce website. The design feels modern, clean, and aligned with our brand, while making it easy for customers to explore our products. We appreciate the attention to detail and the care put into creating a polished shopping experience.",
       client: "Wohnplatz.ch",
-      project: "Swiss-owned Brand · E-commerce Development",
+      project: "Swiss-owned E-commerce Brand",
       monogram: "W"
     }
   ];
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const monogram = section.querySelector("#testimonial-monogram");
   const type = section.querySelector("#testimonial-type");
   const count = section.querySelector("#testimonial-count");
+  const content = section.querySelector("#testimonial-content");
 
   const selectors = [
     ...section.querySelectorAll("[data-testimonial-select]")
@@ -52,6 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let activeIndex = 0;
 
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
   function showEntry(index) {
     activeIndex = (index + entries.length) % entries.length;
 
@@ -63,6 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
     monogram.textContent = entry.monogram;
     type.textContent = entry.type;
 
+    if (content && !reducedMotion.matches) {
+      content.classList.remove("is-entering");
+      void content.offsetWidth;
+      content.classList.add("is-entering");
+    }
+
     count.textContent =
       `${String(activeIndex + 1).padStart(2, "0")} / ` +
       `${String(entries.length).padStart(2, "0")}`;
@@ -70,7 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
     selectors.forEach((button, i) => {
       const isActive = i === activeIndex;
       button.classList.toggle("is-active", isActive);
-      button.setAttribute("aria-pressed", String(isActive));
+      if (isActive) {
+        button.setAttribute("aria-current", "true");
+      } else {
+        button.removeAttribute("aria-current");
+      }
     });
 
     progress.forEach((bar, i) => {

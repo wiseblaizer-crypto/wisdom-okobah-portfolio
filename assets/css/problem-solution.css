@@ -1,7 +1,6 @@
 
 /* =========================================
    WISDOM OKOBAH — PROBLEM & SOLUTION
-   Lesson 5.2 | Premium Editorial Redesign
    ========================================= */
 
 /* 01. SECTION FOUNDATION */
@@ -99,8 +98,8 @@
   border-radius: clamp(1.25rem, 2vw, 2rem);
 
   transition:
-    transform 350ms ease,
-    box-shadow 350ms ease;
+    transform var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard);
 }
 
 .problem-solution__panel-top {
@@ -344,7 +343,7 @@
   text-decoration-color: #E5BC82;
   text-underline-offset: 0.4em;
 
-  transition: gap 200ms ease;
+  transition: gap var(--duration-fast) var(--ease-standard);
 }
 
 .problem-solution__link:hover,

@@ -452,8 +452,7 @@
   }
 
   .hero__name {
-    font-size: clamp(2.6rem, 10vw, 4rem);
-    overflow-wrap: normal;
+    font-size: clamp(2.35rem, 8.5vw, 3.5rem);
   }
 
   .hero__statement {
@@ -462,8 +461,20 @@
   }
 
   .hero__description {
+    width: 100%;
+    max-width: 100%;
     font-size: 1rem;
     line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  .hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero__actions .button {
+    width: 100%;
   }
 
   .hero__visual,
@@ -525,35 +536,35 @@
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
   }
 }
 
 /* Apply the floating animation */
 .hero__floating-label {
-  animation: heroFloat 5s ease-in-out infinite;
+  animation: heroFloat 6s var(--ease-standard) infinite;
   will-change: transform;
 }
 
 /* Give each platform a different rhythm */
 .hero__floating-label--one {
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-delay: 0s;
 }
 
 .hero__floating-label--two {
-  animation-duration: 6s;
-  animation-delay: -1.2s;
+  animation-duration: 7s;
+  animation-delay: -1.5s;
 }
 
 .hero__floating-label--three {
-  animation-duration: 5.5s;
-  animation-delay: -2.4s;
+  animation-duration: 6.5s;
+  animation-delay: -3s;
 }
 
 .hero__floating-label--four {
-  animation-duration: 6.5s;
-  animation-delay: -0.8s;
+  animation-duration: 7.5s;
+  animation-delay: -1s;
 }
 
 
@@ -565,12 +576,12 @@
 @keyframes heroReveal {
   from {
     opacity: 0;
-    transform: translateY(22px);
+    translate: 0 var(--motion-reveal-distance);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
   }
 }
 
@@ -584,36 +595,36 @@
   .hero__capabilities,
   .hero__visual {
     animation-name: heroReveal;
-    animation-duration: 0.8s;
-    animation-timing-function: ease-out;
+    animation-duration: var(--motion-reveal-duration);
+    animation-timing-function: var(--ease-emphasized);
     animation-fill-mode: both;
     animation-iteration-count: 1;
   }
 
   /* Staggered entrance */
   .hero__eyebrow {
-    animation-delay: 0.1s;
+    animation-delay: var(--motion-stagger);
   }
 
   .hero__title {
-    animation-delay: 0.2s;
+    animation-delay: calc(var(--motion-stagger) * 2);
   }
 
   .hero__description {
-    animation-delay: 0.35s;
+    animation-delay: calc(var(--motion-stagger) * 3);
   }
 
   .hero__actions {
-    animation-delay: 0.5s;
+    animation-delay: calc(var(--motion-stagger) * 4);
   }
 
   .hero__capabilities {
-    animation-delay: 0.65s;
+    animation-delay: calc(var(--motion-stagger) * 5);
   }
 
   .hero__visual {
-    animation-delay: 0.3s;
-    animation-duration: 1s;
+    animation-delay: calc(var(--motion-stagger) * 3);
+    animation-duration: calc(var(--motion-reveal-duration) + 100ms);
   }
 }
 

@@ -17,11 +17,7 @@
 
   <meta name="theme-color" content="#1C352B">
 
-  <meta name="robots" content="noindex, nofollow">
-
-  <title>
-    Component Preview | Wisdom Okobah
-  </title>
+  <title>Wisdom Okobah | Web Designer &amp; Developer</title>
 
   <link
     rel="stylesheet"
@@ -46,7 +42,6 @@
 
 <!-- ======================================
      GLOBAL SITE HEADER
-     Phase 1 | Step 5
 ====================================== -->
 
 <header class="site-header">
@@ -56,7 +51,7 @@
     <!-- BRAND WORDMARK -->
 
     <a
-      href="/"
+      href="./"
       class="site-brand"
       aria-label="Wisdom Okobah — Home"
     >
@@ -80,7 +75,7 @@
 
         <li class="site-nav__item">
           <a
-            href="/"
+            href="./"
             class="site-nav__link"
             aria-current="page"
           >
@@ -90,7 +85,7 @@
 
         <li class="site-nav__item">
           <a
-            href="/services/"
+            href="#services"
             class="site-nav__link"
           >
             Services
@@ -99,7 +94,7 @@
 
         <li class="site-nav__item">
           <a
-            href="/portfolio/"
+            href="#featured-projects"
             class="site-nav__link"
           >
             Work
@@ -108,7 +103,7 @@
 
         <li class="site-nav__item">
           <a
-            href="/about/"
+            href="#about"
             class="site-nav__link"
           >
             About
@@ -124,7 +119,7 @@
     <div class="site-header__actions">
 
       <a
-        href="/contact/"
+        href="#contact"
         class="button button--primary site-header__cta"
       >
         Start a Project
@@ -173,7 +168,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="/"
+            href="./"
             class="mobile-nav__link"
             aria-current="page"
           >
@@ -186,7 +181,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="/services/"
+            href="#services"
             class="mobile-nav__link"
           >
             Services
@@ -198,7 +193,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="/portfolio/"
+            href="#featured-projects"
             class="mobile-nav__link"
           >
             Work
@@ -210,7 +205,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="/about/"
+            href="#about"
             class="mobile-nav__link"
           >
             About
@@ -227,7 +222,7 @@
       <div class="mobile-nav__actions">
 
         <a
-          href="/contact/"
+          href="#contact"
           class="button button--primary mobile-nav__cta"
         >
           Start a Project
@@ -246,7 +241,6 @@
   
 <!-- ======================================
      HOMEPAGE MAIN CONTENT
-     Phase 1 | Step 8
 ====================================== -->
 
 <main id="main-content">
@@ -255,6 +249,7 @@
 
   <section
     class="hero"
+    id="about"
     aria-labelledby="hero-title"
   >
 
@@ -298,7 +293,7 @@
         <div class="hero__actions">
 
           <a
-            href="/portfolio"
+            href="#featured-projects"
             class="button button--primary button--large hero__primary-action"
           >
             View My Work
@@ -306,7 +301,7 @@
           </a>
 
           <a
-            href="/contact/"
+            href="#contact"
             class="button button--secondary button--large hero__secondary-action"
           >
             Start a Project
@@ -367,6 +362,7 @@
             class="hero__image"
             width="800"
             height="1000"
+            loading="eager"
             fetchpriority="high"
             decoding="async"
            >
@@ -448,7 +444,6 @@
    
 <!-- ======================================
      HOMEPAGE CREDIBILITY STRIP
-     Phase 1 | Step 12
 ====================================== -->
 
 <section
@@ -578,7 +573,6 @@
 
 <!-- ======================================
      HOMEPAGE PROBLEM & SOLUTION
-     Phase 1 | Step 13
 ====================================== -->
 
 <section
@@ -852,7 +846,6 @@
 
 <!-- ======================================
      HOMEPAGE SERVICES OVERVIEW
-     Phase 1 | Step 9
 ====================================== -->
 
 <section
@@ -902,7 +895,7 @@
 <div class="services-accordion">
 
   <!-- SERVICE 01 -->
-  <details class="services-accordion__item reveal" name="portfolio-services">
+  <details class="services-accordion__item reveal" id="website-design" name="portfolio-services">
 
     <summary class="services-accordion__trigger">
       <span class="services-accordion__number">01.</span>
@@ -937,7 +930,7 @@
   </details>
 
   <!-- SERVICE 02 -->
-  <details class="services-accordion__item reveal reveal-delay-1" name="portfolio-services" open>
+  <details class="services-accordion__item reveal reveal-delay-1" id="ecommerce" name="portfolio-services" open>
     <summary class="services-accordion__trigger">
       <span class="services-accordion__number">02.</span>
 
@@ -971,7 +964,7 @@
   </details>
 
   <!-- SERVICE 03 -->
-  <details class="services-accordion__item reveal reveal-delay-2" name="portfolio-services">
+  <details class="services-accordion__item reveal reveal-delay-2" id="landing-pages" name="portfolio-services">
 
     <summary class="services-accordion__trigger">
       <span class="services-accordion__number">03.</span>
@@ -1051,7 +1044,7 @@
       </p>
 
       <a
-        href="/services/"
+        href="#services"
         class="services-overview__all-link"
       >
         Explore All Services
@@ -1067,7 +1060,6 @@
     
 <!-- ======================================
      HOMEPAGE FEATURED PROJECTS
-     Phase 1 | Step 10
 ====================================== -->
 
 <section
@@ -1114,6 +1106,7 @@
      role="region"
      aria-roledescription="carousel"
      aria-label="Featured portfolio projects"
+     aria-describedby="project-status"
     >
   <div class="featured-projects__track">
 
@@ -1160,7 +1153,7 @@
           </p>
 
           <a
-            href="/portfolio/iamaprilshowers/"
+            href="#featured-projects"
             class="project-card__link"
             aria-label="View I Am April Showers project"
           >
@@ -1215,7 +1208,7 @@
           </p>
 
           <a
-            href="/portfolio/wohnplatz/"
+            href="#featured-projects"
             class="project-card__link"
             aria-label="View Wohnplatz project"
           >
@@ -1271,7 +1264,7 @@
           </p>
 
           <a
-            href="/portfolio/inspyreone/"
+            href="#featured-projects"
             class="project-card__link"
             aria-label="View InspyreOne project"
           >
@@ -1326,7 +1319,7 @@
           </p>
 
           <a
-            href="/portfolio/heylady/"
+            href="#featured-projects"
             class="project-card__link"
             aria-label="View HeyLady project"
           >
@@ -1354,6 +1347,13 @@
     <span aria-hidden="true"> / </span>
     <span id="project-total">04</span>
   </p>
+
+  <p
+    class="visually-hidden"
+    id="project-status"
+    aria-live="polite"
+    aria-atomic="true"
+  ></p>
 
   <div class="featured-projects__controls">
 
@@ -1391,7 +1391,7 @@
       </p>
 
       <a
-        href="/portfolio/"
+         href="#featured-projects"
         class="featured-projects__footer-link"
       >
         View Portfolio
@@ -1408,7 +1408,6 @@
 
 <!-- ======================================
      HOMEPAGE WHY WORK WITH ME
-     Phase 1 | Step 14
 ====================================== -->
 
 <section
@@ -1462,6 +1461,8 @@ and support their goals.
     src="assets/images/wisdom-portrait.webp"
     alt="Portrait of Wisdom Okobah"
     class="why-work__portrait-image"
+    width="800"
+    height="1000"
     loading="lazy"
     decoding="async"
   >
@@ -1573,7 +1574,7 @@ and support their goals.
       </p>
 
       <a
-        href="/portfolio/"
+        href="#featured-projects"
         class="why-work__link"
       >
         Explore My Work
@@ -1653,14 +1654,14 @@ and support their goals.
         </div>
 
         <div class="signature-offer__actions">
-          <a href="/contact/"
+          <a href="#contact"
              class="signature-offer__cta">
             Discuss Your Project
             <i class="ri-arrow-up-right-line"
                aria-hidden="true"></i>
           </a>
 
-          <a href="/services/"
+          <a href="#services"
              class="signature-offer__secondary">
             Explore My Services
             <i class="ri-arrow-right-line"
@@ -1680,6 +1681,8 @@ and support their goals.
             <img
               src="assets/images/signature-offer-desktop.png"
               alt="Desktop preview of a website design project"
+              width="900"
+              height="667"
               loading="lazy"
               decoding="async"
             >
@@ -1693,6 +1696,8 @@ and support their goals.
             <img
               src="assets/images/signature-offer-mobile.png"
               alt="Mobile preview of the same website design project"
+              width="244"
+              height="500"
               loading="lazy"
               decoding="async"
             >
@@ -1814,21 +1819,19 @@ and support their goals.
         <button type="button"
                 class="testimonials__selector is-active"
                 data-testimonial-select="0"
-                aria-pressed="true">
+                aria-current="true">
           <span>01</span> Hey Lady
         </button>
 
         <button type="button"
                 class="testimonials__selector"
-                data-testimonial-select="1"
-                aria-pressed="false">
+                data-testimonial-select="1">
           <span>02</span> I Am April Showers
         </button>
 
         <button type="button"
                 class="testimonials__selector"
-                data-testimonial-select="2"
-                aria-pressed="false">
+                data-testimonial-select="2">
           <span>03</span> Wohnplatz
         </button>
       </div>
@@ -1909,6 +1912,44 @@ and support their goals.
       </div>
 
     </div>
+
+    <noscript>
+      <div class="testimonials__no-js-list" aria-label="Client experiences">
+        <article class="testimonials__no-js-entry">
+          <p class="testimonials__no-js-type">Client testimonial</p>
+          <blockquote>
+            A huge thank you to Wisdom @ceo_fyncrest for bringing my vision for the new
+            Hey Lady&trade; website to life. I wanted something clean, elevated, timeless,
+            and true to who Hey Lady&trade; is, and you absolutely delivered.
+          </blockquote>
+          <p><strong>Laetania Richardson</strong><br>Hey Lady &middot; Website Redesign</p>
+        </article>
+
+        <article class="testimonials__no-js-entry">
+          <p class="testimonials__no-js-type">Client testimonial</p>
+          <blockquote>
+            Working with Wisdom was an absolute pleasure from start to finish. He brought my
+            vision for IAmAprilShowers.com to life with incredible creativity, professionalism,
+            and attention to detail, and the final result exceeded every expectation I had. If
+            you&rsquo;re looking for someone who truly cares about delivering excellence, I highly
+            recommend Wisdom&mdash;you won&rsquo;t be disappointed.
+          </blockquote>
+          <p><strong>April Showers</strong><br>I Am April Showers &middot; Website Redesign</p>
+        </article>
+
+        <article class="testimonials__no-js-entry">
+          <p class="testimonials__no-js-type">
+            Client testimonial</p>
+          <blockquote>
+            Wisdom brought a thoughtful and professional approach to the development of our
+            Wohnplatz e-commerce website. The design feels modern, clean, and aligned with our
+            brand, while making it easy for customers to explore our products. We appreciate the
+            attention to detail and the care put into creating a polished shopping experience.
+          </blockquote>
+          <p><strong>Wohnplatz.ch</strong><br>Swiss-owned E-commerce Brand</p>
+        </article>
+      </div>
+    </noscript>
   </div>
 </section>
 
@@ -1920,7 +1961,7 @@ and support their goals.
 
 <section
   class="final-cta"
-  id="final-cta"
+  id="contact"
   aria-labelledby="final-cta-title"
 >
   <div class="container final-cta__inner">
@@ -1982,7 +2023,7 @@ and support their goals.
           </p>
         </div>
 
-        <a href="/contact/"
+        <a href="#contact"
            class="final-cta__primary">
           Discuss Your Project
           <span aria-hidden="true">↗</span>
@@ -1998,7 +2039,7 @@ and support their goals.
         Just tell me what you have in mind.
       </p>
 
-      <a href="/portfolio/"
+      <a href="#featured-projects"
          class="final-cta__secondary">
         Explore My Work
         <span aria-hidden="true">→</span>
@@ -2045,10 +2086,10 @@ and support their goals.
 
         <ul class="footer-nav__list">
           <li><a class="footer-nav__link" href="./">Home</a></li>
-          <li><a class="footer-nav__link" href="./services/">Services</a></li>
-          <li><a class="footer-nav__link" href="./portfolio/">Portfolio</a></li>
-          <li><a class="footer-nav__link" href="./about/">About</a></li>
-          <li><a class="footer-nav__link" href="./contact/">Contact</a></li>
+          <li><a class="footer-nav__link" href="#services">Services</a></li>
+          <li><a class="footer-nav__link" href="#featured-projects">Portfolio</a></li>
+          <li><a class="footer-nav__link" href="#about">About</a></li>
+          <li><a class="footer-nav__link" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -2059,19 +2100,19 @@ and support their goals.
         <ul class="footer-nav__list">
           <li>
             <a class="footer-nav__link"
-               href="./services/#website-design">
+               href="#website-design">
               Website Design &amp; Redesign
             </a>
           </li>
           <li>
             <a class="footer-nav__link"
-               href="./services/#ecommerce">
+               href="#ecommerce">
               Shopify &amp; Ecommerce
             </a>
           </li>
           <li>
             <a class="footer-nav__link"
-               href="./services/#landing-pages">
+               href="#landing-pages">
               Landing Pages &amp; Sales Funnels
             </a>
           </li>
@@ -2090,9 +2131,9 @@ and support their goals.
       </p>
 
       <div class="footer-bottom__links">
-        <a class="footer-bottom__link" href="./privacy/">
-          Privacy Policy
-        </a>
+        <span class="footer-bottom__link footer-bottom__link--coming-soon">
+          Privacy Policy — Coming Soon
+        </span>
 
         <a class="footer-bottom__link"
            href="#main-content">

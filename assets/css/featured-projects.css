@@ -1,7 +1,6 @@
 
 /* =========================================
    WISDOM OKOBAH — FEATURED PROJECTS
-   Phase 1 | Step 10
    ========================================= */
 
 .featured-projects {
@@ -87,8 +86,8 @@
   align-items: stretch;
   gap: 0;
 
-  transition: transform 700ms
-    cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-reveal-duration)
+    var(--ease-emphasized);
 }
 
 .featured-projects__track > .project-card {
@@ -154,7 +153,7 @@
   border-radius: 0.4rem;
   box-shadow: 0 15px 35px rgba(28, 53, 43, 0.09);
 
-  transition: transform 250ms ease;
+  transition: transform var(--duration-normal) var(--ease-standard);
 }
 
 .project-card__browser-bar {
@@ -208,7 +207,7 @@
   border-radius: 0.3rem;
   box-shadow: 0 15px 35px rgba(28, 53, 43, 0.12);
 
-  transition: transform 300ms ease;
+  transition: transform var(--duration-normal) var(--ease-standard);
 }
 
 .project-card:hover .project-card__image {
@@ -272,7 +271,7 @@
   text-decoration-color: transparent;
   text-underline-offset: 0.3em;
 
-  transition: gap 200ms ease;
+  transition: gap var(--duration-fast) var(--ease-standard);
 }
 
 .project-card__link:hover,
@@ -333,10 +332,10 @@
   cursor: pointer;
 
   transition:
-    background-color 250ms ease,
-    color 250ms ease,
-    border-color 250ms ease,
-    transform 250ms ease;
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
 }
 
 .featured-projects__arrow:hover {
@@ -359,6 +358,20 @@
 
 .featured-projects__arrow:last-child:hover {
   background: #294B3D;
+}
+
+html:not(.js-enabled) .featured-projects__slider {
+  overflow: visible;
+}
+
+html:not(.js-enabled) .featured-projects__track {
+  display: grid;
+  gap: 1rem;
+  transform: none !important;
+}
+
+html:not(.js-enabled) .featured-projects__navigation {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

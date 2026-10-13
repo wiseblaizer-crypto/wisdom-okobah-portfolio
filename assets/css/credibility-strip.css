@@ -1,7 +1,6 @@
 
 /* =========================================
    WISDOM OKOBAH — CREDIBILITY MARQUEE
-   Lesson 4.2 | Premium Scrolling Logos
    ========================================= */
 
 /* 01. SECTION */
@@ -115,7 +114,7 @@
   width: max-content;
   max-width: none;
 
-  animation: credibilityScroll 35s linear infinite;
+  animation: credibilityScroll var(--motion-marquee-duration) linear infinite;
 }
 
 /* Each list must occupy its natural width */
@@ -163,8 +162,8 @@
   opacity: 0.72;
 
   transition:
-    filter 250ms ease,
-    opacity 250ms ease;
+    filter var(--duration-normal) var(--ease-standard),
+    opacity var(--duration-normal) var(--ease-standard);
 }
 
 /* 06. SEAMLESS ANIMATION */
@@ -217,7 +216,7 @@
 
   .credibility-strip__track {
     --marquee-gap: 2.25rem;
-    animation-duration: 28s;
+    animation-duration: 30s;
   }
 
   .credibility-strip__platform {

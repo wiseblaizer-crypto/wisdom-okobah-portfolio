@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "project-total"
   );
 
+  const status = document.getElementById(
+    "project-status"
+  );
+
   const navigation = document.querySelector(
     ".featured-projects__navigation"
   );
@@ -46,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ) {
     return;
   }
+
+  slider.tabIndex = 0;
 
   /* ---------------------------------------
      SLIDER SETTINGS
@@ -86,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
      DISPLAY SELECTED PROJECT
   --------------------------------------- */
 
-  function showSlide(index) {
+  function showSlide(index, announce = false) {
     currentIndex =
       (index + totalSlides) % totalSlides;
 
@@ -98,6 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
       currentCounter.textContent = formatNumber(
         currentIndex + 1
       );
+    }
+
+    if (announce && status) {
+      status.textContent = `Project ${currentIndex + 1} of ${totalSlides}`;
     }
 
     slides.forEach((slide, slideIndex) => {
@@ -151,12 +161,12 @@ document.addEventListener("DOMContentLoaded", () => {
   --------------------------------------- */
 
   previousButton.addEventListener("click", () => {
-    showSlide(currentIndex - 1);
+    showSlide(currentIndex - 1, true);
     startAutoplay();
   });
 
   nextButton.addEventListener("click", () => {
-    showSlide(currentIndex + 1);
+    showSlide(currentIndex + 1, true);
     startAutoplay();
   });
 
@@ -233,7 +243,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (Math.abs(difference) > 50) {
         showSlide(
-          currentIndex + (difference > 0 ? 1 : -1)
+          currentIndex + (difference > 0 ? 1 : -1),
+          true
         );
       }
 
@@ -246,6 +257,25 @@ document.addEventListener("DOMContentLoaded", () => {
   slider.addEventListener("touchcancel", () => {
     isHovered = false;
     startAutoplay();
+  });
+
+  slider.addEventListener("keydown", (event) => {
+    if (event.target !== slider) return;
+
+    const keyActions = {
+      ArrowLeft: () => showSlide(currentIndex - 1, true),
+      ArrowRight: () => showSlide(currentIndex + 1, true),
+      Home: () => showSlide(0, true),
+      End: () => showSlide(totalSlides - 1, true)
+    };
+
+    const action = keyActions[event.key];
+
+    if (action) {
+      event.preventDefault();
+      action();
+      startAutoplay();
+    }
   });
 
   /* ---------------------------------------

@@ -1,7 +1,6 @@
 
 /* =========================================
    WISDOM OKOBAH — SERVICES ACCORDION
-   Lesson 6.2 | Premium Editorial Design
    ========================================= */
 
 /* 01. SECTION */
@@ -98,9 +97,9 @@
   color: #1C352B;
 
   transition:
-    background-color 300ms ease,
-    border-color 300ms ease,
-    box-shadow 300ms ease;
+    background-color var(--duration-normal) var(--ease-standard),
+    border-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard);
 }
 
 .services-accordion__item[open] {
@@ -190,8 +189,8 @@
   line-height: 1;
 
   transition:
-    transform 250ms ease,
-    background-color 250ms ease;
+    transform var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
 }
 
 .services-accordion__item[open]
@@ -377,25 +376,21 @@
    SMOOTH ACCORDION EXPANSION
    ========================================= */
 
-.services-accordion__item {
-  interpolate-size: allow-keywords;
-}
+@supports (interpolate-size: allow-keywords) and (selector(details::details-content)) {
+  .services-accordion__item {
+    interpolate-size: allow-keywords;
+  }
 
-.services-accordion__item::details-content {
-  block-size: 0;
-  overflow: hidden;
-
-  transition:
-    block-size 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    content-visibility 0.45s allow-discrete;
-}
-
-.services-accordion__item[open]::details-content {
-  block-size: auto;
-}
-
-@media (prefers-reduced-motion: reduce) {
   .services-accordion__item::details-content {
-    transition: none;
+    block-size: 0;
+    overflow: hidden;
+
+    transition:
+      block-size var(--duration-slow) var(--ease-emphasized),
+      content-visibility var(--duration-slow) allow-discrete;
+  }
+
+  .services-accordion__item[open]::details-content {
+    block-size: auto;
   }
 }

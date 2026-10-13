@@ -112,8 +112,8 @@
   line-height: 1.5;
   text-decoration: none;
   transition:
-    color 200ms ease,
-    transform 200ms ease;
+    color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
 }
 
 .footer-nav__link:hover {
@@ -155,7 +155,7 @@
   font-family: var(--font-body, sans-serif);
   font-size: 0.75rem;
   text-decoration: none;
-  transition: color 200ms ease;
+  transition: color var(--duration-fast) var(--ease-standard);
 }
 
 .footer-bottom__link:hover {

@@ -123,7 +123,7 @@
   border: 0;
   border-bottom: 1px solid rgba(28, 53, 43, 0.15);
 
-  transition: padding-left 250ms ease;
+  transition: padding-left var(--duration-normal) var(--ease-standard);
 }
 
 .why-work__card:first-child {
@@ -201,7 +201,7 @@
   text-decoration-color: #E5BC82;
   text-underline-offset: 0.4em;
 
-  transition: gap 200ms ease;
+  transition: gap var(--duration-fast) var(--ease-standard);
 }
 
 .why-work__link:hover {

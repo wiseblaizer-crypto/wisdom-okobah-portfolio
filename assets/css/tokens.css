@@ -164,12 +164,16 @@
      13. TRANSITIONS
   --------------------------------------- */
 
-  --duration-fast: 150ms;
-  --duration-normal: 250ms;
-  --duration-slow: 400ms;
+  --duration-fast: 180ms;
+  --duration-normal: 280ms;
+  --duration-slow: 420ms;
+  --motion-reveal-duration: 650ms;
+  --motion-stagger: 100ms;
+  --motion-reveal-distance: 1.125rem;
+  --motion-marquee-duration: 36s;
 
-  --ease-standard:
-    cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.22, 1, 0.36, 1);
 
   /* ---------------------------------------
      14. Z-INDEX SCALE

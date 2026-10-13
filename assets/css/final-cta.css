@@ -188,8 +188,8 @@
   font-weight: 700;
   text-decoration: none;
   transition:
-    background-color 200ms ease,
-    transform 200ms ease;
+    background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
 }
 
 .final-cta__primary span {
@@ -233,7 +233,7 @@
   text-decoration: underline;
   text-decoration-color: #E5BC82;
   text-underline-offset: 0.4em;
-  transition: gap 200ms ease;
+  transition: gap var(--duration-fast) var(--ease-standard);
 }
 
 .final-cta__secondary:hover {

@@ -135,9 +135,9 @@
   font-weight: 600;
   text-decoration: none;
   transition:
-    background 200ms ease,
-    color 200ms ease,
-    transform 200ms ease;
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
 }
 
 .signature-offer__cta {
@@ -475,6 +475,17 @@
 
   .signature-offer__details {
     padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  .signature-offer__content,
+  .signature-offer__details {
+    padding-inline: 1.25rem;
+  }
+
+  .signature-offer__visual {
+    min-height: 19rem;
   }
 }
 
