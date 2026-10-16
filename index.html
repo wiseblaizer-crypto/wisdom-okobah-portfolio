@@ -11,9 +11,9 @@
   >
 
   <meta
-    name="description"
-    content="Wisdom Okobah — web designer and developer."
-  >
+  name="description"
+  content="Wisdom Okobah is a web designer and developer creating modern, mobile-friendly websites and digital experiences for businesses and personal brands."
+>
 
   <meta name="theme-color" content="#1C352B">
 
@@ -33,8 +33,6 @@
     type="module"
     src="./assets/js/main.js"
   ></script>
-
-  <link rel="stylesheet" href="assets/css/animations.css">
 
   <!-- Website favicon -->
 <link
@@ -56,36 +54,23 @@
   href="./assets/images/logo/apple-touch-icon.png"
 >
 
-<!-- Social sharing information -->
-<meta
-  property="og:type"
-  content="website"
->
+  <!-- Domain-independent social sharing metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wisdom Okobah | Web Designer &amp; Developer">
+  <meta property="og:description" content="Modern, mobile-friendly websites and digital experiences for businesses and personal brands.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wisdom Okobah | Web Designer &amp; Developer">
+  <meta name="twitter:description" content="Modern, mobile-friendly websites and digital experiences for businesses and personal brands.">
 
-<meta
-  property="og:title"
-  content="Wisdom Okobah | Web Designer & Developer"
->
-
-<meta
-  property="og:description"
-  content="I help businesses and personal brands build modern, mobile-friendly websites that look exceptional and turn visitors into customers."
->
-
-<meta
-  property="og:image"
-  content="https://YOUR-DOMAIN.com/assets/images/logo/og-image.jpg"
->
-
-<meta
-  name="twitter:card"
-  content="summary_large_image"
->
-
-<meta
-  name="twitter:image"
-  content="https://YOUR-DOMAIN.com/assets/images/logo/og-image.jpg"
->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Wisdom Okobah",
+      "jobTitle": "Web Designer and Developer",
+      "description": "Web designer and developer creating modern, mobile-friendly websites and digital experiences for businesses and personal brands."
+    }
+  </script>
 
 </head>
 
@@ -137,7 +122,7 @@
 
         <li class="site-nav__item">
           <a
-            href="#services"
+            href="./services/"
             class="site-nav__link"
           >
             Services
@@ -146,7 +131,7 @@
 
         <li class="site-nav__item">
           <a
-            href="#featured-projects"
+            href="./work/"
             class="site-nav__link"
           >
             Work
@@ -155,7 +140,7 @@
 
         <li class="site-nav__item">
           <a
-            href="#about"
+            href="./about/"
             class="site-nav__link"
           >
             About
@@ -171,7 +156,7 @@
     <div class="site-header__actions">
 
       <a
-        href="contact/"
+        href="./contact/"
         class="button button--primary site-header__cta"
       >
         Start a Project
@@ -233,7 +218,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="#services"
+            href="./services/"
             class="mobile-nav__link"
           >
             Services
@@ -245,7 +230,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="#featured-projects"
+            href="./work/"
             class="mobile-nav__link"
           >
             Work
@@ -257,7 +242,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="#about"
+            href="./about/"
             class="mobile-nav__link"
           >
             About
@@ -1204,14 +1189,9 @@
             and browsing experience.
           </p>
 
-          <a
-            href="#featured-projects"
-            class="project-card__link"
-            aria-label="View I Am April Showers project"
-          >
-            View Project
-            <span aria-hidden="true">&nearr;</span>
-          </a>
+          <span class="project-card__link project-card__link--pending">
+            Case study coming soon
+          </span>
 
         </div>
 
@@ -1259,14 +1239,9 @@
             customer-facing shopping pages.
           </p>
 
-          <a
-            href="#featured-projects"
-            class="project-card__link"
-            aria-label="View Wohnplatz project"
-          >
-            View Project
-            <span aria-hidden="true">&nearr;</span>
-          </a>
+          <span class="project-card__link project-card__link--pending">
+            Case study coming soon
+          </span>
 
         </div>
 
@@ -1315,14 +1290,9 @@
             browsing experience.
           </p>
 
-          <a
-            href="#featured-projects"
-            class="project-card__link"
-            aria-label="View InspyreOne project"
-          >
-            View Project
-            <span aria-hidden="true">&nearr;</span>
-          </a>
+          <span class="project-card__link project-card__link--pending">
+            Case study coming soon
+          </span>
 
         </div>
 
@@ -1370,14 +1340,9 @@
             be added to its case study.
           </p>
 
-          <a
-            href="#featured-projects"
-            class="project-card__link"
-            aria-label="View HeyLady project"
-          >
-            View Project
-            <span aria-hidden="true">&nearr;</span>
-          </a>
+          <span class="project-card__link project-card__link--pending">
+            Case study coming soon
+          </span>
 
         </div>
 
@@ -1713,7 +1678,7 @@ and support their goals.
                aria-hidden="true"></i>
           </a>
 
-          <a href="#services"
+          <a href="./services/"
              class="signature-offer__secondary">
             Explore My Services
             <i class="ri-arrow-right-line"
@@ -2105,98 +2070,121 @@ and support their goals.
 
     
 
-<!-- ======================================
-     GLOBAL SITE FOOTER
-====================================== -->
-
+<!-- WISDOM OKOBAH — GLOBAL FOOTER -->
 <footer class="site-footer" id="site-footer">
 
+  <!-- Main footer -->
   <div class="footer-main">
     <div class="container footer-main__grid">
 
-      <!-- BRAND -->
+      <!-- Brand identity -->
       <div class="footer-brand">
-        <a href="./" class="footer-brand__link"
-           aria-label="Wisdom Okobah — Home">
-          <span class="footer-brand__primary">WISDOM.</span>
-          <span class="footer-brand__secondary">OKOBAH</span>
+
+        <a
+          href="../"
+          class="footer-brand__link"
+          aria-label="Wisdom Okobah — Home"
+        >
+          <span class="footer-brand__primary">
+            WISDOM.
+          </span>
+          <span class="footer-brand__secondary">
+            OKOBAH
+          </span>
         </a>
 
         <p class="footer-brand__description">
-          Thoughtful websites. Clear experiences.
-          Better connections.
+          Web designer &amp; developer. Helping people
+          turn ideas into useful digital experiences.
         </p>
 
-        <p class="footer-brand__statement">
+        <p class="footer-brand__signature">
           Design with <em>purpose.</em>
         </p>
+
       </div>
 
-      <!-- EXPLORE -->
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <h2 class="footer-nav__title">Explore</h2>
+      <!-- Page navigation -->
+      <nav
+        class="footer-nav"
+        aria-label="Footer navigation"
+      >
+        <h2 class="footer-heading">Explore</h2>
 
         <ul class="footer-nav__list">
-          <li><a class="footer-nav__link" href="./">Home</a></li>
-          <li><a class="footer-nav__link" href="#services">Services</a></li>
-          <li><a class="footer-nav__link" href="#featured-projects">Portfolio</a></li>
-          <li><a class="footer-nav__link" href="#about">About</a></li>
-          <li><a class="footer-nav__link" href="contact/">Contact</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../services/">Services</a></li>
+          <li><a href="../work/">Work</a></li>
+          <li><a href="../about/">About</a></li>
+          <li><a href="../contact/">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- SERVICES -->
-      <nav class="footer-nav" aria-label="Footer services">
-        <h2 class="footer-nav__title">Expertise</h2>
+      <!-- Social media -->
+      <div class="footer-socials">
 
-        <ul class="footer-nav__list">
+        <h2 class="footer-heading">Connect</h2>
+
+        <p class="footer-socials__description">
+          Find me on social media.
+        </p>
+
+        <!-- Replace these spans with real profile
+             links when your URLs are available. -->
+
+        <ul
+          class="footer-socials__list"
+          aria-label="Social media platforms"
+        >
           <li>
-            <a class="footer-nav__link"
-               href="#website-design">
-              Website Design &amp; Redesign
-            </a>
+            <span class="footer-social footer-social--pending">
+              Instagram
+            </span>
           </li>
+
           <li>
-            <a class="footer-nav__link"
-               href="#ecommerce">
-              Shopify &amp; Ecommerce
-            </a>
+            <span class="footer-social footer-social--pending">
+              LinkedIn
+            </span>
           </li>
+
           <li>
-            <a class="footer-nav__link"
-               href="#landing-pages">
-              Landing Pages &amp; Sales Funnels
-            </a>
+            <span class="footer-social footer-social--pending">
+              X / Twitter
+            </span>
+          </li>
+
+          <li>
+            <span class="footer-social footer-social--pending">
+              GitHub
+            </span>
           </li>
         </ul>
-      </nav>
+
+      </div>
 
     </div>
   </div>
 
-  <!-- BOTTOM BAR -->
+  <!-- Copyright strip -->
   <div class="footer-bottom">
     <div class="container footer-bottom__inner">
 
       <p class="footer-bottom__copyright">
-        &copy; 2026 Wisdom Okobah. All rights reserved.
+        &copy; 2026 Wisdom Okobah.
+        All rights reserved.
       </p>
 
-      <div class="footer-bottom__links">
-        <span class="footer-bottom__link footer-bottom__link--coming-soon">
-          Privacy Policy — Coming Soon
-        </span>
-
-        <a class="footer-bottom__link"
-           href="#main-content">
-          Back to Top <span aria-hidden="true">↑</span>
-        </a>
-      </div>
+      <p class="footer-bottom__note">
+        Independent web designer &amp; developer.
+      </p>
 
     </div>
   </div>
 
 </footer>
+<!-- END GLOBAL FOOTER -->
+
 <script src="./assets/js/testimonials.js" defer></script>
 <script src="assets/js/featured-projects-slider.js" defer></script>
 <script src="assets/js/animations.js" defer></script>
