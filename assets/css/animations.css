@@ -1,0 +1,112 @@
+
+/* =========================================
+   REUSABLE SCROLL REVEAL ANIMATIONS
+   ========================================= */
+
+.js-animations .reveal {
+  opacity: 0;
+  translate: 0 var(--motion-reveal-distance);
+  will-change: opacity, translate;
+
+  transition:
+    opacity var(--motion-reveal-duration) var(--ease-emphasized),
+    translate var(--motion-reveal-duration) var(--ease-emphasized);
+}
+
+.js-animations .reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  will-change: auto;
+}
+
+.reveal-delay-1 {
+  transition-delay: var(--motion-stagger);
+}
+
+.reveal-delay-2 {
+  transition-delay: calc(var(--motion-stagger) * 2);
+}
+
+.reveal-delay-3 {
+  transition-delay: calc(var(--motion-stagger) * 3);
+}
+
+.reveal-delay-4 {
+  transition-delay: calc(var(--motion-stagger) * 4);
+}
+
+/* Page heroes use the same motion language without relying on JavaScript. */
+@keyframes page-hero-reveal {
+  from {
+    opacity: 0;
+    translate: 0 var(--motion-reveal-distance);
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .services-hero__eyebrow,
+  .work-hero__eyebrow,
+  .about-hero__eyebrow,
+  .contact-hero__content {
+    animation: page-hero-reveal 500ms var(--ease-emphasized) both;
+  }
+
+  .services-hero__title,
+  .work-hero__title,
+  .about-hero__title,
+  .contact-hero__visual {
+    animation: page-hero-reveal 600ms var(--ease-emphasized) 80ms both;
+  }
+
+  .services-hero__description,
+  .work-hero__description,
+  .about-hero__lead,
+  .about-hero__description,
+  .services-hero__visual,
+  .work-hero__visual,
+  .about-hero__portrait {
+    animation: page-hero-reveal 650ms var(--ease-emphasized) 160ms both;
+  }
+
+  .services-hero__actions,
+  .work-hero__actions,
+  .about-hero__actions {
+    animation: page-hero-reveal 500ms var(--ease-emphasized) 240ms both;
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    translate: none;
+    will-change: auto;
+    transition: none;
+  }
+
+  .services-hero__eyebrow,
+  .services-hero__title,
+  .services-hero__description,
+  .services-hero__actions,
+  .services-hero__visual,
+  .work-hero__eyebrow,
+  .work-hero__title,
+  .work-hero__description,
+  .work-hero__actions,
+  .work-hero__visual,
+  .about-hero__eyebrow,
+  .about-hero__title,
+  .about-hero__lead,
+  .about-hero__description,
+  .about-hero__actions,
+  .about-hero__portrait,
+  .contact-hero__content,
+  .contact-hero__visual {
+    animation: none;
+  }
+}

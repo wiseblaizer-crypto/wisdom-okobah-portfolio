@@ -1,0 +1,297 @@
+
+/* =========================================
+   FINAL CTA — THE PROJECT INVITATION
+========================================= */
+
+.final-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(3.5rem, 6vw, 6rem);
+  background: #1C352B;
+  color: #F8F6F0;
+}
+
+.final-cta__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta__main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+/* EDITORIAL CONTENT */
+
+.final-cta__content {
+  min-width: 0;
+}
+
+.final-cta__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.75rem;
+  color: #E5BC82;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.final-cta__eyebrow-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #E5BC82;
+}
+
+.final-cta__title {
+  max-width: 11ch;
+  margin: 0;
+  color: #F8F6F0;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(3.5rem, 6vw, 7rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.final-cta__title-accent {
+  display: block;
+  color: #E5BC82;
+  font-style: italic;
+}
+
+.final-cta__description {
+  max-width: 31rem;
+  margin: 1.75rem 0 0;
+  color: #C9D6CC;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.975rem;
+  line-height: 1.85;
+}
+
+.final-cta__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  color: #E5BC82;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.final-cta__availability-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #E5BC82;
+  box-shadow: 0 0 0 4px rgba(229, 188, 130, 0.12);
+}
+
+/* PROJECT INVITATION PANEL */
+
+.final-cta__invitation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 25rem;
+  padding: clamp(1.75rem, 3.5vw, 3.5rem);
+  overflow: hidden;
+  border: 1px solid rgba(229, 188, 130, 0.2);
+  border-radius: 1.5rem;
+  background: #29483A;
+}
+
+.final-cta__invitation::before {
+  content: "";
+  position: absolute;
+  top: -8rem;
+  right: -9rem;
+  width: 22rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(229, 188, 130, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.final-cta__invitation-icon {
+  align-self: flex-end;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid rgba(229, 188, 130, 0.4);
+  border-radius: 50%;
+  color: #E5BC82;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.final-cta__invitation-content {
+  position: relative;
+  margin-block: 2rem;
+}
+
+.final-cta__invitation-label {
+  margin: 0 0 1rem;
+  color: #E5BC82;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.final-cta__invitation-title {
+  max-width: 17ch;
+  margin: 0;
+  color: #F8F6F0;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.final-cta__invitation-text {
+  max-width: 26rem;
+  margin: 1rem 0 0;
+  color: #C9D6CC;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+/* PRIMARY ACTION */
+
+.final-cta__primary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #E5BC82;
+  color: #1C352B;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.final-cta__primary span {
+  font-size: 1.3rem;
+}
+
+.final-cta__primary:hover {
+  background: #F0C994;
+  transform: translateY(-2px);
+}
+
+/* BOTTOM ROW */
+
+.final-cta__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 4vw, 4rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(248, 246, 240, 0.2);
+}
+
+.final-cta__note {
+  max-width: 30rem;
+  margin: 0;
+  color: #C9D6CC;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.final-cta__secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #F8F6F0;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #E5BC82;
+  text-underline-offset: 0.4em;
+  transition: gap var(--duration-fast) var(--ease-standard);
+}
+
+.final-cta__secondary:hover {
+  gap: 1rem;
+}
+
+.final-cta__primary:focus-visible,
+.final-cta__secondary:focus-visible {
+  outline: 2px solid #E5BC82;
+  outline-offset: 4px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 64rem) {
+  .final-cta__main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 0.95fr);
+  }
+
+  .final-cta__bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 47.999rem) {
+  .final-cta {
+    padding-block: 3.5rem;
+  }
+
+  .final-cta__title {
+    font-size: clamp(3.25rem, 12vw, 4.5rem);
+  }
+
+  .final-cta__invitation {
+    min-height: 24rem;
+    padding: 1.75rem;
+    border-radius: 1.15rem;
+  }
+
+  .final-cta__invitation-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .final-cta__primary,
+  .final-cta__secondary {
+    transition: none;
+  }
+
+  .final-cta__primary:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,520 @@
+
+/* =========================================
+   WISDOM OKOBAH — GLOBAL HEADER
+   ========================================= */
+
+/* -----------------------------------------
+   01. HEADER CONTAINER
+----------------------------------------- */
+
+
+.site-header {
+  position: sticky;
+  top: 16px;
+  z-index: var(--z-header);
+
+  width: calc(100% - 32px);
+  max-width: 1200px;
+
+  margin: 16px auto 0;
+
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+
+  box-shadow: var(--shadow-md);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+
+  min-height: 80px;
+}
+
+/* -----------------------------------------
+   02. BRAND WORDMARK
+----------------------------------------- */
+
+.site-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--color-primary);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.site-brand:hover {
+  color: var(--color-primary);
+}
+
+.site-brand__primary {
+  display: block;
+
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.site-brand__secondary {
+  display: block;
+  margin-top: 0.35rem;
+
+  color: var(--color-sage);
+
+  font-size: 0.625rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.32em;
+  line-height: 1.2;
+}
+
+/* -----------------------------------------
+   03. DESKTOP NAVIGATION
+----------------------------------------- */
+
+.site-nav {
+  display: none;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2rem);
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-nav__item {
+  margin: 0;
+}
+
+.site-nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 44px;
+  padding-block: var(--space-2);
+
+  color: var(--color-text);
+
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: 1.4;
+  text-decoration: none;
+
+  transition:
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.site-nav__link::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+
+  height: 2px;
+  background-color: var(--color-primary);
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  transition:
+    transform var(--duration-normal) var(--ease-standard);
+}
+
+.site-nav__link:hover {
+  color: var(--color-primary);
+}
+
+.site-nav__link:hover::after,
+.site-nav__link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.site-nav__link[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}
+
+/* -----------------------------------------
+   04. DESKTOP HEADER ACTION
+----------------------------------------- */
+
+.site-header__actions {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.site-header__cta {
+  white-space: nowrap;
+}
+
+/* -----------------------------------------
+   05. MOBILE MENU TOGGLE
+----------------------------------------- */
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+
+  min-width: 48px;
+  min-height: 48px;
+  padding: var(--space-2) var(--space-3);
+
+  background: transparent;
+  color: var(--color-primary);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
+}
+
+.menu-toggle:hover {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-sage);
+}
+
+.menu-toggle__icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.menu-toggle__line {
+  position: absolute;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  background-color: currentColor;
+  border-radius: 2px;
+
+  transition:
+    top var(--duration-normal) var(--ease-standard),
+    transform var(--duration-normal) var(--ease-standard),
+    opacity var(--duration-fast) var(--ease-standard);
+}
+
+.menu-toggle__line:nth-child(1) {
+  top: 2px;
+}
+
+.menu-toggle__line:nth-child(2) {
+  top: 8px;
+}
+
+.menu-toggle__line:nth-child(3) {
+  top: 14px;
+}
+
+/* Open state: transform into an X */
+
+.menu-toggle[aria-expanded="true"]
+.menu-toggle__line:nth-child(1) {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"]
+.menu-toggle__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"]
+.menu-toggle__line:nth-child(3) {
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+/* -----------------------------------------
+   06. MOBILE NAVIGATION PANEL
+----------------------------------------- */
+
+/*
+  No-JavaScript fallback:
+  Navigation stays visible on smaller screens.
+*/
+
+.mobile-nav {
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+/*
+  JavaScript adds .js-enabled to <html>.
+  The menu then starts collapsed.
+*/
+
+.js-enabled .mobile-nav[hidden] {
+  display: none;
+}
+
+.mobile-nav__inner {
+  padding-block: var(--space-4) var(--space-8);
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.mobile-nav__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+
+  min-height: 56px;
+  padding-block: var(--space-3);
+
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+
+  transition:
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.mobile-nav__link:hover,
+.mobile-nav__link[aria-current="page"] {
+  color: var(--color-primary);
+}
+
+.mobile-nav__link[aria-current="page"] {
+  font-weight: var(--weight-semibold);
+}
+
+.mobile-nav__arrow {
+  color: var(--color-sage);
+  font-size: var(--text-xl);
+  line-height: 1;
+}
+
+.mobile-nav__actions {
+  margin-top: var(--space-8);
+}
+
+.mobile-nav__cta {
+  width: 100%;
+}
+
+/* -----------------------------------------
+   07. NO-JAVASCRIPT FALLBACK
+----------------------------------------- */
+
+.no-js .menu-toggle {
+  display: none;
+}
+
+/* -----------------------------------------
+   08. DESKTOP LAYOUT
+----------------------------------------- */
+
+@media (min-width: 64rem) {
+  .site-header__inner {
+    min-height: 96px;
+  }
+
+  .site-nav {
+    display: block;
+  }
+
+  .site-header__actions {
+    display: flex;
+  }
+
+  .menu-toggle,
+  .mobile-nav,
+  .no-js .mobile-nav {
+    display: none;
+  }
+}
+
+/* -----------------------------------------
+   09. REDUCED MOTION
+----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav__link,
+  .site-nav__link::after,
+  .menu-toggle,
+  .menu-toggle__line,
+  .mobile-nav__link {
+    transition: none;
+  }
+}
+
+
+/* Respect native hidden attributes */
+
+.menu-toggle[hidden],
+.mobile-nav[hidden] {
+  display: none;
+}
+
+
+/* =========================================
+   PREMIUM HEADER — VISUAL REFINEMENT
+   ========================================= */
+
+/* Dark floating navigation surface */
+.site-header {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  border-radius: var(--radius-pill);
+}
+
+/* Slightly more compact navigation */
+.site-header__inner {
+  min-height: 72px;
+}
+
+/* Brand wordmark */
+.site-brand,
+.site-brand:hover {
+  color: var(--color-on-dark);
+}
+
+.site-brand__secondary {
+  color: var(--color-accent);
+}
+
+/* Desktop navigation links */
+.site-nav__link {
+  color: var(--color-on-dark);
+}
+
+.site-nav__link:hover,
+.site-nav__link[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+/* Animated underline */
+.site-nav__link::after {
+  background-color: var(--color-accent);
+}
+
+/* Champagne action button */
+.site-header__cta {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+.site-header__cta:hover {
+  background-color: var(--color-on-dark);
+  color: var(--color-primary);
+  border-color: var(--color-on-dark);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  color: var(--color-on-dark);
+  border-color: rgba(248, 246, 240, 0.35);
+  border-radius: var(--radius-pill);
+}
+
+.menu-toggle:hover {
+  background-color: rgba(248, 246, 240, 0.12);
+  border-color: var(--color-accent);
+}
+
+/* Keep the expanded mobile panel readable */
+.mobile-nav {
+  background-color: var(--color-background);
+  border-top-color: var(--color-border);
+}
+
+/* Desktop height adjustment */
+@media (min-width: 64rem) {
+  .site-header__inner {
+    min-height: 76px;
+  }
+}
+
+
+/* =========================================
+   PREMIUM HEADER — MOBILE OPEN STATE
+   ========================================= */
+
+@media (max-width: 63.999rem) {
+
+  /* Change the header shape when the menu opens */
+  .site-header:has(.menu-toggle[aria-expanded="true"]) {
+    border-radius: 24px;
+  }
+
+  /* Give the logo and menu button a clean top row */
+  .site-header__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Keep the expanded menu separate from the dark header */
+  .site-header .mobile-nav:not([hidden]) {
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    border-radius: 0 0 24px 24px;
+  }
+
+}
+
+/* PERSONAL BRAND LOGO */
+
+.site-brand__logo {
+  display: block;
+  width: 90px;
+  height: 78px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .site-brand__logo {
+    width: 65px;
+    height: 58px;
+  }
+}

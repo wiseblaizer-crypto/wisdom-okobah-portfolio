@@ -1,0 +1,1933 @@
+
+/* ==========================================
+   WISDOM OKOBAH — WORK PAGE
+   CLEAN CONSOLIDATED STYLESHEET
+========================================== */
+
+.work-page {
+  --work-gold: #B18B52;
+  --work-line: #CFD6CB;
+
+  background: var(--color-ivory);
+  color: var(--color-primary);
+  overflow-x: clip;
+}
+
+
+/* ==========================================
+   01. EDITORIAL HERO
+========================================== */
+
+.work-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(5rem, 9vw, 9rem);
+  background: var(--color-ivory);
+}
+
+.work-hero__inner {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.work-hero__content,
+.work-hero__visual {
+  min-width: 0;
+}
+
+.work-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 2.25rem;
+  font: 600 0.6875rem/1.6 var(--font-body);
+  letter-spacing: 0.19em;
+}
+
+.work-hero__eyebrow-line {
+  width: 34px;
+  height: 1px;
+  background: var(--work-gold);
+}
+
+.work-hero__title {
+  max-width: 780px;
+  margin: 0;
+  font: 500 clamp(4.25rem, 7.4vw, 8.75rem)/0.87 var(--font-display);
+  letter-spacing: -0.055em;
+}
+
+.work-hero__title em {
+  display: block;
+  color: var(--color-sage);
+  font-weight: 400;
+}
+
+.work-hero__period {
+  color: var(--work-gold);
+}
+
+.work-hero__description {
+  max-width: 490px;
+  margin: 2.5rem 0 0;
+  color: var(--color-text-muted);
+  font: 400 clamp(0.975rem, 1.3vw, 1.1rem)/1.85 var(--font-body);
+}
+
+.work-hero__actions {
+  margin-top: 2.25rem;
+}
+
+.work-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  min-height: 56px;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-ivory);
+  font: 600 0.875rem/1.4 var(--font-body);
+  text-decoration: none;
+  transition:
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+.work-hero__button:hover {
+  background: var(--color-primary-hover);
+  color: var(--color-ivory);
+  transform: translateY(-3px);
+}
+
+.work-hero__button span {
+  font-size: 1.15rem;
+}
+
+.work-hero__signature {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: clamp(3.5rem, 6vw, 6rem);
+  color: var(--color-text-muted);
+  font: 500 0.625rem/1.8 var(--font-body);
+  letter-spacing: 0.14em;
+}
+
+.work-hero__signature-line {
+  flex: 0 0 38px;
+  height: 1px;
+  background: var(--color-sage);
+}
+
+.work-hero__signature-divider {
+  padding-inline: 0.5rem;
+  color: var(--work-gold);
+}
+
+
+/* ==========================================
+   02. HERO ARTWORK
+========================================== */
+
+.work-hero__art {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 0.88;
+  min-height: 420px;
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 3px;
+  background: #1C352B;
+  color: #F8F6F0;
+  box-shadow:
+    18px 22px 0 rgba(118, 133, 120, 0.13),
+    0 24px 65px rgba(28, 53, 43, 0.13);
+}
+
+.work-hero__art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 72% 37%,
+      rgba(229, 188, 130, 0.13),
+      transparent 49%
+    );
+  pointer-events: none;
+}
+
+.work-hero__art-top,
+.work-hero__art-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.work-hero__art-top {
+  color: var(--color-accent);
+}
+
+.work-hero__art-bottom {
+  margin-top: auto;
+  color: rgba(248, 246, 240, 0.75);
+  font-size: 0.5625rem;
+  font-weight: 500;
+}
+
+.work-hero__art-orbit {
+  position: absolute;
+  inset: 13% 8% 14%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(248, 246, 240, 0.18);
+  border-radius: 50%;
+}
+
+.work-hero__art-orbit::before,
+.work-hero__art-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(229, 188, 130, 0.24);
+  border-radius: 50%;
+}
+
+.work-hero__art-orbit::after {
+  inset: 26%;
+  border-color: rgba(248, 246, 240, 0.15);
+}
+
+.work-hero__art-circle {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 42%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.work-hero__art-circle span {
+  font: italic 500 clamp(4rem, 9vw, 9rem)/1 var(--font-display);
+  letter-spacing: -0.09em;
+}
+
+.work-hero__art-word {
+  position: absolute;
+  z-index: 2;
+  top: 69%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  font: 500 clamp(3.5rem, 7vw, 7.5rem)/1 var(--font-display);
+  letter-spacing: -0.065em;
+  white-space: nowrap;
+}
+
+.work-hero__art-word span,
+.work-hero__art-corner {
+  color: var(--color-accent);
+}
+
+.work-hero__art-corner {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  font-size: 1.75rem;
+}
+
+.work-hero__visual-caption {
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--color-text-muted);
+  font: 500 0.625rem/1.6 var(--font-body);
+  letter-spacing: 0.12em;
+  text-align: right;
+}
+
+.work-hero__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 92px;
+  border-top: 1px solid var(--color-border);
+}
+
+.work-hero__bottom-label {
+  font: 600 0.625rem/1.6 var(--font-body);
+  letter-spacing: 0.14em;
+}
+
+.work-hero__bottom-mark {
+  color: var(--work-gold);
+  font-size: 1.8rem;
+}
+
+
+/* ==========================================
+   03. SELECTED WORK INTRODUCTION
+========================================== */
+
+.work-page .services-work {
+  padding-block: clamp(6rem, 10vw, 10rem);
+  background: var(--color-ivory);
+}
+
+.work-page .services-work__intro {
+  max-width: 1100px;
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.work-page .services-work__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.75rem;
+  color: #A57C46;
+  font: 700 0.6875rem/1.6 var(--font-body);
+  letter-spacing: 0.17em;
+}
+
+.work-page .services-work__eyebrow::before {
+  content: "";
+  width: 35px;
+  height: 1px;
+  background: var(--work-gold);
+}
+
+.work-page .services-work__heading {
+  margin: 0;
+  font: 500 clamp(4.2rem, 8.5vw, 9rem)/0.9 var(--font-display);
+  letter-spacing: -0.065em;
+}
+
+.work-page .services-work__heading em {
+  display: block;
+  color: var(--color-sage);
+  font-weight: 400;
+}
+
+.work-page .services-work__description {
+  max-width: 530px;
+  margin: 2.5rem 0 0;
+  color: var(--color-text-muted);
+  font: 400 1rem/1.95 var(--font-body);
+}
+
+
+/* ==========================================
+   04. REUSABLE PROJECT LAYOUT
+========================================== */
+
+.work-page .services-work__projects {
+  display: grid;
+  gap: clamp(6rem, 10vw, 10rem);
+}
+
+.work-page .services-project {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(0, 0.8fr);
+  align-items: start;
+  gap: clamp(2rem, 4.5vw, 5rem);
+  padding-top: clamp(3rem, 5vw, 5rem);
+  border-top: 1px solid var(--work-line);
+}
+
+/* Alternating project arrangement */
+
+.work-page .services-project--reverse {
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 1.2fr);
+}
+
+.work-page .services-project__content,
+.work-page .services-project__media {
+  min-width: 0;
+}
+
+/* All project details stay in one column */
+
+.work-page .services-project__content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.work-page .services-project__content > * {
+  min-width: 0;
+}
+
+
+/* ==========================================
+   05. PREMIUM BROWSER PRESENTATION
+========================================== */
+
+.work-page .services-project__media {
+  padding: clamp(1rem, 2.2vw, 2rem);
+  border-radius: 6px;
+  background: var(--color-primary);
+  box-shadow:
+    0 25px 60px rgba(28, 53, 43, 0.14);
+}
+
+.work-page .project-browser {
+  overflow: hidden;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.22);
+}
+
+.work-page .project-browser__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 48px;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #E0E4E0;
+  background: #F5F6F3;
+}
+
+.work-page .project-browser__dots {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 5px;
+}
+
+.work-page .project-browser__dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.work-page .project-browser__dots span:nth-child(1) {
+  background: #ED6A5F;
+}
+
+.work-page .project-browser__dots span:nth-child(2) {
+  background: #F4BF50;
+}
+
+.work-page .project-browser__dots span:nth-child(3) {
+  background: #61C454;
+}
+
+.work-page .project-browser__label {
+  min-width: 0;
+  overflow: hidden;
+  color: #526058;
+  font: 600 0.6875rem/1.4 var(--font-body);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   06. SCROLLABLE WEBSITE SCREENSHOTS
+========================================== */
+
+.work-page .project-browser__viewport {
+  height: clamp(420px, 49vw, 680px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #FFFFFF;
+  scrollbar-width: thin;
+  scrollbar-color: var(--work-gold) #E9EDE7;
+}
+
+.work-page .project-browser__image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.work-page .project-browser__hint {
+  margin: 1.25rem 0 0;
+  color: #D6E0D7;
+  font: 500 0.6875rem/1.6 var(--font-body);
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.work-page .project-browser__hint::before {
+  content: "↓";
+  margin-right: 0.5rem;
+  color: var(--color-accent);
+}
+
+
+/* ==========================================
+   07. PROJECT INFORMATION
+========================================== */
+
+.work-page .services-project__eyebrow {
+  margin: 0.4rem 0 1.5rem;
+  color: #A57C46;
+  font: 700 0.6875rem/1.6 var(--font-body);
+  letter-spacing: 0.16em;
+}
+
+.work-page .services-project__title {
+  margin: 0;
+  color: var(--color-primary);
+  font: 500 clamp(3.6rem, 5.2vw, 6rem)/0.95 var(--font-display);
+  letter-spacing: -0.055em;
+  overflow-wrap: break-word;
+}
+
+.work-page .services-project__description {
+  margin: 1.5rem 0 0;
+  color: var(--color-text-muted);
+  font: 400 0.95rem/1.9 var(--font-body);
+}
+
+
+/* ==========================================
+   08. PROJECT DETAILS & PLATFORM LOGOS
+========================================== */
+
+.work-page .services-project__details {
+  display: grid;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--work-line);
+}
+
+.work-page .services-project__detail {
+  display: grid;
+  grid-template-columns:
+    minmax(85px, 0.32fr)
+    minmax(0, 0.68fr);
+  align-items: center;
+  gap: 1rem;
+  min-height: 68px;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--work-line);
+}
+
+.work-page .services-project__detail > span {
+  color: #718074;
+  font: 500 0.6875rem/1.5 var(--font-body);
+}
+
+.work-page .services-project__detail > strong {
+  min-width: 0;
+  color: var(--color-primary);
+  font: 600 0.8125rem/1.55 var(--font-body);
+}
+
+.work-page .services-project__platform {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.work-page .services-project__platform-logo {
+  display: block;
+  width: auto;
+  max-width: 125px;
+  height: 30px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/* ==========================================
+   09. PROJECT CASE STUDY
+========================================== */
+
+.work-page .services-project__story {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.work-page .services-project__story-item {
+  min-width: 0;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--work-gold);
+}
+
+.work-page .services-project__story-item h4 {
+  margin: 0 0 0.75rem;
+  color: var(--color-primary);
+  font: 500 1.8rem/1.2 var(--font-display);
+}
+
+.work-page .services-project__story-item p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font: 400 0.875rem/1.85 var(--font-body);
+}
+
+
+/* ==========================================
+   10. PROJECT HIGHLIGHTS
+========================================== */
+
+.work-page .services-project__features {
+  margin-top: 3rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--work-line);
+  border-bottom: 1px solid var(--work-line);
+}
+
+.work-page .services-project__features h4 {
+  margin: 0 0 1.25rem;
+  color: var(--color-primary);
+  font: 500 1.9rem/1.2 var(--font-display);
+}
+
+.work-page .services-project__features ul {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-page .services-project__features li {
+  position: relative;
+  padding-left: 1.45rem;
+  color: #43574A;
+  font: 500 0.8125rem/1.65 var(--font-body);
+}
+
+.work-page .services-project__features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #77927A;
+}
+
+
+/* ==========================================
+   11. PROJECT TAGS
+========================================== */
+
+.work-page .services-project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.75rem;
+}
+
+.work-page .services-project__tags span {
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--work-line);
+  border-radius: 999px;
+  color: #47604F;
+  font: 500 0.6875rem/1.4 var(--font-body);
+}
+
+
+/* ==========================================
+   12. PROJECT LINKS & AVAILABILITY
+========================================== */
+
+.work-page .services-project__visit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-start;
+  gap: 2rem;
+  min-height: 54px;
+  margin-top: 2rem;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-ivory);
+  font: 600 0.8125rem/1.4 var(--font-body);
+  text-decoration: none;
+  transition:
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+.work-page .services-project__visit:hover {
+  background: var(--color-primary-hover);
+  color: var(--color-ivory);
+  transform: translateY(-2px);
+}
+
+.work-page .services-project__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  color: #68786C;
+  font: 500 0.75rem/1.6 var(--font-body);
+}
+
+.work-page .services-project__availability-dot {
+  flex: 0 0 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--work-gold);
+}
+
+
+/* ==========================================
+   13. KEYBOARD ACCESSIBILITY
+========================================== */
+
+.work-page .services-project__visit:focus-visible,
+.work-page .work-hero__button:focus-visible,
+.work-page .project-browser__viewport:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+
+/* ==========================================
+   14. STICKY BROWSER — LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1024px) and (min-height: 850px) {
+
+  .work-page .services-project__media {
+    position: sticky;
+    top: 115px;
+  }
+
+}
+
+
+/* ==========================================
+   15. TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 1023px) {
+
+  .work-hero {
+    padding-top: 5rem;
+  }
+
+  .work-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .work-hero__content {
+    max-width: 760px;
+  }
+
+  .work-hero__title {
+    font-size: clamp(4.5rem, 10vw, 7rem);
+  }
+
+  .work-hero__visual {
+    width: 100%;
+    max-width: 650px;
+    margin-inline: auto;
+  }
+
+  .work-hero__art {
+    aspect-ratio: 1.12;
+  }
+
+  .work-hero__art-word {
+    font-size: clamp(4rem, 10vw, 7rem);
+  }
+
+  /* Both project layouts stack vertically */
+
+  .work-page .services-project,
+  .work-page .services-project--reverse {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  /* Browser appears before project information */
+
+  .work-page .services-project__media {
+    position: static;
+    order: -1;
+  }
+
+  .work-page .services-project__content {
+    max-width: 720px;
+  }
+
+  .work-page .project-browser__viewport {
+    height: clamp(400px, 65vw, 620px);
+  }
+
+}
+
+
+/* ==========================================
+   16. MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 639px) {
+
+  .work-hero {
+    padding-top: 4rem;
+  }
+
+  .work-hero__inner {
+    gap: 3.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .work-hero__eyebrow {
+    margin-bottom: 1.75rem;
+    font-size: 0.6rem;
+  }
+
+  .work-hero__eyebrow-line {
+    width: 24px;
+  }
+
+  .work-hero__title {
+    font-size: clamp(3.65rem, 14vw, 5.75rem);
+    line-height: 0.92;
+  }
+
+  .work-hero__description {
+    margin-top: 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .work-hero__actions {
+    margin-top: 2rem;
+  }
+
+  .work-hero__button {
+    min-height: 52px;
+    gap: 1.5rem;
+  }
+
+  .work-hero__signature {
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    font-size: 0.56rem;
+  }
+
+  .work-hero__art {
+    min-height: 340px;
+    aspect-ratio: 0.95;
+    padding: 1.25rem;
+  }
+
+  .work-hero__art-top {
+    font-size: 0.5rem;
+  }
+
+  .work-hero__art-bottom {
+    font-size: 0.46rem;
+  }
+
+  .work-hero__art-circle span {
+    font-size: clamp(4rem, 18vw, 6.5rem);
+  }
+
+  .work-hero__art-word {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .work-hero__visual-caption {
+    font-size: 0.5rem;
+  }
+
+  .work-hero__bottom {
+    min-height: 80px;
+  }
+
+  .work-hero__bottom-label {
+    font-size: 0.52rem;
+  }
+
+  .work-hero__bottom-label:last-child {
+    display: none;
+  }
+
+  /* Portfolio introduction */
+
+  .work-page .services-work {
+    padding-block: 5rem 6rem;
+  }
+
+  .work-page .services-work__intro {
+    margin-bottom: 3rem;
+  }
+
+  .work-page .services-work__eyebrow {
+    font-size: 0.6rem;
+  }
+
+  .work-page .services-work__heading {
+    font-size: clamp(3.35rem, 12vw, 5rem);
+    line-height: 0.97;
+  }
+
+  .work-page .services-work__description {
+    margin-top: 1.75rem;
+    font-size: 0.94rem;
+  }
+
+  /* Project layout */
+
+  .work-page .services-project {
+    gap: 2.5rem;
+    padding-top: 3rem;
+  }
+
+  .work-page .services-project__media {
+    padding: 0.75rem;
+  }
+
+  .work-page .project-browser__toolbar {
+    min-height: 40px;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .work-page .project-browser__dots span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .work-page .project-browser__label {
+    font-size: 0.6rem;
+  }
+
+  .work-page .project-browser__viewport {
+    height: 390px;
+  }
+
+  .work-page .project-browser__hint {
+    font-size: 0.6rem;
+  }
+
+  /* Project content */
+
+  .work-page .services-project__title {
+    font-size: clamp(3.4rem, 13vw, 5.2rem);
+  }
+
+  .work-page .services-project__description {
+    font-size: 0.94rem;
+  }
+
+  .work-page .services-project__detail {
+    grid-template-columns:
+      90px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .work-page .services-project__features,
+  .work-page .services-project__story {
+    margin-top: 2.5rem;
+  }
+
+  .work-page .services-project__tags span {
+    font-size: 0.625rem;
+  }
+
+}
+
+
+/* ==========================================
+   17. REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-page .services-project__visit,
+  .work-page .work-hero__button {
+    transition: none;
+  }
+
+  .work-page .services-project__visit:hover,
+  .work-page .work-hero__button:hover {
+    transform: none;
+  }
+
+}
+
+
+/* ============================================
+   WISDOM OKOBAH — CREATIVE WORK MARQUEE
+============================================ */
+
+.work-page .work-marquee {
+  --marquee-gap: 1.25rem;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: clamp(5rem, 9vw, 9rem) 0;
+
+  background: #1C352B;
+  color: #F8F6F0;
+}
+
+
+/* SECTION HEADING */
+
+.work-marquee__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 3rem;
+
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.work-marquee__intro {
+  max-width: 850px;
+}
+
+.work-marquee__eyebrow {
+  margin: 0 0 1.75rem;
+
+  color: #E5BC82;
+
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+.work-marquee__title {
+  margin: 0;
+
+  color: #F8F6F0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(4.5rem, 8vw, 9rem);
+  font-weight: 500;
+
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+.work-marquee__title em {
+  display: block;
+
+  color: #E5BC82;
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+.work-marquee__description {
+  max-width: 480px;
+
+  margin: 2rem 0 0;
+
+  color: #CBD6CB;
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+
+  line-height: 1.85;
+}
+
+.work-marquee__decoration {
+  color: #E5BC82;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1;
+
+  opacity: 0.8;
+}
+
+
+/* ============================================
+   MARQUEE TRACK
+============================================ */
+
+.work-marquee__viewport {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  /* Subtle fade at the edges */
+
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
+}
+
+.work-marquee__track {
+  display: flex;
+  align-items: stretch;
+
+  width: max-content;
+
+  animation:
+    work-marquee-scroll 48s linear infinite;
+}
+
+.work-marquee__group {
+  display: flex;
+  align-items: stretch;
+
+  flex: 0 0 auto;
+
+  gap: var(--marquee-gap);
+
+  padding-right: var(--marquee-gap);
+}
+
+
+/* ============================================
+   ARTWORK CARDS
+============================================ */
+
+.work-marquee__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  height: clamp(270px, 30vw, 390px);
+
+  margin: 0;
+  padding: 0.75rem;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(229, 188, 130, 0.15);
+  border-radius: 5px;
+
+  background: #324B3E;
+
+  transition:
+    border-color 300ms ease,
+    background-color 300ms ease;
+}
+
+
+/* MIXED IMAGE FORMATS */
+
+.work-marquee__item--portrait {
+  width: clamp(215px, 22vw, 295px);
+}
+
+.work-marquee__item--square {
+  width: clamp(260px, 30vw, 390px);
+}
+
+.work-marquee__item--wide {
+  width: clamp(340px, 40vw, 520px);
+}
+
+
+/* ACTUAL CREATIVE IMAGES */
+
+.work-marquee__item img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* SUBTLE HOVER TREATMENT */
+
+.work-marquee__item:hover {
+  border-color: rgba(229, 188, 130, 0.6);
+  background: #3D5849;
+}
+
+
+/* ============================================
+   CONTINUOUS ANIMATION
+============================================ */
+
+@keyframes work-marquee-scroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* PAUSE WHEN VISITOR INTERACTS */
+
+.work-marquee__viewport:hover
+.work-marquee__track,
+
+.work-marquee__viewport:focus-within
+.work-marquee__track {
+  animation-play-state: paused;
+}
+
+
+/* ============================================
+   SECTION FOOTER
+============================================ */
+
+.work-marquee__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: clamp(3rem, 5vw, 5rem);
+  padding-top: 1.5rem;
+
+  border-top:
+    1px solid rgba(248, 246, 240, 0.18);
+}
+
+.work-marquee__footer span {
+  color: #CBD6CB;
+
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+  line-height: 1.7;
+}
+
+
+/* KEYBOARD FOCUS */
+
+.work-marquee__viewport:focus-visible {
+  outline: 2px solid #E5BC82;
+  outline-offset: 4px;
+}
+
+
+/* ============================================
+   RESPONSIVE TABLET
+============================================ */
+
+@media (max-width: 1023px) {
+
+  .work-marquee__title {
+    font-size: clamp(4rem, 9vw, 7rem);
+  }
+
+  .work-marquee__decoration {
+    font-size: 3.5rem;
+  }
+
+}
+
+
+/* ============================================
+   RESPONSIVE MOBILE
+============================================ */
+
+@media (max-width: 639px) {
+
+  .work-page .work-marquee {
+    --marquee-gap: 0.75rem;
+
+    padding: 5rem 0;
+  }
+
+  .work-marquee__header {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .work-marquee__eyebrow {
+    font-size: 0.6rem;
+  }
+
+  .work-marquee__title {
+    font-size: clamp(3.6rem, 13vw, 5.2rem);
+  }
+
+  .work-marquee__description {
+    font-size: 0.94rem;
+    margin-top: 1.5rem;
+  }
+
+  .work-marquee__decoration {
+    display: none;
+  }
+
+  .work-marquee__item {
+    height: 285px;
+    padding: 0.5rem;
+  }
+
+  .work-marquee__item--portrait {
+    width: 210px;
+  }
+
+  .work-marquee__item--square {
+    width: 280px;
+  }
+
+  .work-marquee__item--wide {
+    width: 350px;
+  }
+
+  .work-marquee__track {
+    animation-duration: 40s;
+  }
+
+  .work-marquee__footer {
+    margin-top: 3rem;
+  }
+
+  .work-marquee__footer span {
+    font-size: 0.55rem;
+  }
+
+}
+
+
+/* ============================================
+   ACCESSIBILITY — REDUCED MOTION
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-marquee__track {
+    animation: none;
+  }
+
+  .work-marquee__viewport {
+    overflow-x: auto;
+
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .work-marquee__group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .work-marquee__item {
+    transition: none;
+  }
+
+}
+
+/* ==========================================
+   LESSON 08 — PREMIUM CLOSING CTA
+========================================== */
+
+.work-page .work-cta {
+  position: relative;
+  isolation: isolate;
+
+  overflow: hidden;
+
+  padding-top: clamp(6rem, 10vw, 11rem);
+
+  background: var(--color-ivory, #F8F6F0);
+  color: var(--color-primary, #1C352B);
+}
+
+
+/* ------------------------------------------
+   MAIN LAYOUT
+------------------------------------------ */
+
+.work-cta__inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(0, 0.8fr);
+
+  align-items: end;
+
+  gap: clamp(3rem, 8vw, 9rem);
+
+  padding-bottom: clamp(6rem, 10vw, 10rem);
+}
+
+
+/* ------------------------------------------
+   EYEBROW
+------------------------------------------ */
+
+.work-cta__eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin: 0 0 2.5rem;
+
+  color: #A67E49;
+
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  line-height: 1.6;
+}
+
+.work-cta__eyebrow-line {
+  display: block;
+
+  width: 36px;
+  height: 1px;
+
+  background: #B18B52;
+}
+
+
+/* ------------------------------------------
+   MAIN EDITORIAL TYPOGRAPHY
+------------------------------------------ */
+
+.work-cta__heading-wrap {
+  min-width: 0;
+}
+
+.work-cta__title {
+  margin: 0;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(4.3rem, 7.5vw, 9rem);
+  font-weight: 500;
+
+  letter-spacing: -0.065em;
+  line-height: 0.91;
+}
+
+.work-cta__title em {
+  display: block;
+
+  color: var(--color-sage, #7B8C7D);
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+.work-cta__title > span {
+  color: #B18B52;
+}
+
+
+/* ------------------------------------------
+   RIGHT-SIDE CONTENT
+------------------------------------------ */
+
+.work-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+
+  padding-bottom: 0.5rem;
+}
+
+.work-cta__symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 76px;
+  height: 76px;
+
+  margin-bottom: clamp(2rem, 4vw, 4rem);
+
+  border: 1px solid #C9D2C7;
+  border-radius: 50%;
+
+  color: #B18B52;
+
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.work-cta__lead {
+  margin: 0;
+
+  color: var(--color-primary, #1C352B);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.work-cta__description {
+  max-width: 420px;
+
+  margin: 1.5rem 0 0;
+
+  color: var(--color-text-muted, #627168);
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+
+  line-height: 1.95;
+}
+
+
+/* ------------------------------------------
+   PRIMARY CONTACT BUTTON
+------------------------------------------ */
+
+.work-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  min-height: 60px;
+
+  margin-top: 2.5rem;
+  padding: 1.05rem 1.75rem;
+
+  border: 1px solid #1C352B;
+  border-radius: 100px;
+
+  background: #1C352B;
+  color: #F8F6F0;
+
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+  text-decoration: none;
+
+  transition:
+    background-color 250ms ease,
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.work-cta__button span {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.work-cta__button:hover {
+  background: #2D4B3D;
+  color: #F8F6F0;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(28, 53, 43, 0.13);
+}
+
+.work-cta__button:focus-visible {
+  outline: 3px solid #B18B52;
+  outline-offset: 4px;
+}
+
+
+/* ------------------------------------------
+   SMALL SIGNATURE TEXT
+------------------------------------------ */
+
+.work-cta__note {
+  margin: 1.5rem 0 0;
+
+  color: #819184;
+
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  line-height: 1.6;
+}
+
+
+/* ------------------------------------------
+   BOTTOM BRAND STRIP
+------------------------------------------ */
+
+.work-cta__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1.5rem;
+
+  min-height: 110px;
+
+  border-top: 1px solid #D0D8CF;
+
+  color: #64776A;
+
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+  line-height: 1.7;
+}
+
+.work-cta__footer-star {
+  color: #B18B52;
+  font-size: 2rem;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 1023px) {
+
+  .work-cta__inner {
+    grid-template-columns: 1fr;
+
+    gap: 4rem;
+  }
+
+  .work-cta__heading-wrap {
+    max-width: 760px;
+  }
+
+  .work-cta__title {
+    font-size: clamp(4.5rem, 10vw, 7rem);
+  }
+
+  .work-cta__content {
+    max-width: 580px;
+  }
+
+  .work-cta__symbol {
+    margin-bottom: 2rem;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 639px) {
+
+  .work-page .work-cta {
+    padding-top: 5rem;
+  }
+
+  .work-cta__inner {
+    gap: 3rem;
+
+    padding-bottom: 5rem;
+  }
+
+  .work-cta__eyebrow {
+    gap: 0.75rem;
+
+    margin-bottom: 2rem;
+
+    font-size: 0.6rem;
+  }
+
+  .work-cta__eyebrow-line {
+    width: 24px;
+  }
+
+  .work-cta__title {
+    font-size: clamp(3.6rem, 13vw, 5.5rem);
+
+    line-height: 0.95;
+  }
+
+  .work-cta__symbol {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 1.75rem;
+
+    font-size: 1.6rem;
+  }
+
+  .work-cta__lead {
+    font-size: 2rem;
+  }
+
+  .work-cta__description {
+    font-size: 0.94rem;
+    line-height: 1.85;
+  }
+
+  .work-cta__button {
+    min-height: 54px;
+
+    max-width: 100%;
+
+    padding: 0.95rem 1.35rem;
+
+    gap: 1.25rem;
+
+    font-size: 0.8rem;
+  }
+
+  .work-cta__footer {
+    min-height: 90px;
+
+    gap: 1rem;
+
+    font-size: 0.55rem;
+  }
+
+  .work-cta__footer-star {
+    font-size: 1.5rem;
+  }
+
+  .work-cta__footer span:last-child {
+    max-width: 160px;
+    text-align: right;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-cta__button {
+    transition: none;
+  }
+
+  .work-cta__button:hover {
+    transform: none;
+  }
+
+}
+
+/* ==========================================
+   WORK PAGE — SYNCHRONIZED PROJECT PANELS
+   Compact desktop case-study presentation
+========================================== */
+
+@media (min-width: 1024px) {
+
+  .work-page .services-project {
+    align-items: stretch;
+  }
+
+  /* Equal-height media and information panels */
+
+  .work-page .services-project__media,
+  .work-page .services-project__content {
+    box-sizing: border-box;
+    height: clamp(520px, 76vh, 690px);
+    min-height: 0;
+    min-width: 0;
+  }
+
+  /* Browser frame stays within its own panel */
+
+  .work-page .services-project__media {
+    position: relative;
+    top: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
+
+  .work-page .project-browser {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .work-page .project-browser__toolbar {
+    flex: 0 0 auto;
+  }
+
+  .work-page .project-browser__viewport {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .work-page .project-browser__hint {
+    flex: 0 0 auto;
+  }
+
+  /* Compact scrollable project information */
+
+  .work-page .services-project__content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding-right: clamp(0.5rem, 1.3vw, 1.25rem);
+
+    scrollbar-width: thin;
+    scrollbar-color: #B18B52 #E5EAE2;
+    scrollbar-gutter: stable;
+  }
+
+  .work-page .services-project__content::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .work-page .services-project__content::-webkit-scrollbar-track {
+    background: #E5EAE2;
+  }
+
+  .work-page .services-project__content::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #B18B52;
+  }
+
+  /* Preserve the live website CTA */
+
+  .work-page .services-project__visit {
+    flex: 0 0 auto;
+    align-self: flex-start;
+  }
+
+  /* Slightly tighter case-study spacing */
+
+  .work-page .services-project__details {
+    margin-top: 2rem;
+  }
+
+  .work-page .services-project__story {
+    margin-top: 2.25rem;
+    gap: 1.75rem;
+  }
+
+  .work-page .services-project__features {
+    margin-top: 2.25rem;
+  }
+
+  .work-page .services-project__tags {
+    margin-top: 1.5rem;
+  }
+
+}
+
+
+/* ==========================================
+   TABLET AND MOBILE
+   Restore normal document flow
+========================================== */
+
+@media (max-width: 1023px) {
+
+  .work-page .services-project__content,
+  .work-page .services-project__media {
+    height: auto;
+    max-height: none;
+  }
+
+  .work-page .services-project__content {
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .work-page .services-project__media {
+    position: static;
+  }
+
+  .work-page .project-browser__viewport {
+    height: clamp(360px, 60vw, 580px);
+  }
+
+}
+
+@media (max-width: 639px) {
+
+  .work-page .project-browser__viewport {
+    height: 390px;
+  }
+
+}
+
+
+/* Tighter spacing between website projects */
+
+.work-page .services-work__projects {
+  gap: clamp(3rem, 5vw, 5rem);
+}
+
+.work-page .services-project {
+  padding-top: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+/* Keyboard focus for scrollable project details */
+
+.work-page .services-project__content:focus-visible {
+  outline: 2px solid #B18B52;
+  outline-offset: -3px;
+}

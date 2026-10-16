@@ -1,0 +1,125 @@
+/* Final shared polish: layered after component styles to preserve the design system. */
+
+html {
+  scroll-padding-top: 7.5rem;
+}
+
+section {
+  scroll-margin-top: 7.5rem;
+}
+
+.featured-projects__inner,
+.services-overview__inner,
+.why-work__inner {
+  gap: var(--section-content-gap);
+}
+
+.featured-projects__intro,
+.services-overview__intro {
+  gap: var(--section-intro-gap);
+}
+
+.project-card__media,
+.signature-offer__content,
+.signature-offer__details {
+  min-width: 0;
+}
+
+.button,
+.site-header__cta,
+.signature-offer__cta,
+.contact-whatsapp__button,
+.contact-closing__button {
+  transition:
+    transform var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard),
+    background-color var(--duration-normal) var(--ease-standard),
+    color var(--duration-normal) var(--ease-standard);
+}
+
+.button:hover,
+.site-header__cta:hover,
+.signature-offer__cta:hover,
+.contact-whatsapp__button:hover,
+.contact-closing__button:hover {
+  box-shadow: 0 12px 24px rgba(28, 53, 43, 0.14);
+}
+
+.project-card,
+.why-work__card,
+.services-accordion__item {
+  transition:
+    transform var(--duration-normal) var(--ease-emphasized),
+    box-shadow var(--duration-normal) var(--ease-emphasized),
+    border-color var(--duration-normal) var(--ease-standard);
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-md);
+  }
+
+  .project-card:hover .project-card__image {
+    transform: scale(1.035);
+  }
+}
+
+.project-card__link--pending {
+  color: var(--color-sage);
+  cursor: default;
+  text-decoration: none;
+}
+
+.mobile-nav {
+  transform-origin: top;
+}
+
+.js-enabled .mobile-nav:not([hidden]) {
+  animation: mobileMenuIn var(--duration-normal) var(--ease-emphasized) both;
+}
+
+@keyframes mobileMenuIn {
+  from { opacity: 0; translate: 0 -0.5rem; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+.services-accordion__item[open] {
+  animation: accordionOpen var(--duration-normal) var(--ease-emphasized) both;
+}
+
+@keyframes accordionOpen {
+  from { box-shadow: none; }
+  to { box-shadow: 0 18px 40px rgba(28, 53, 43, 0.13); }
+}
+
+@media (max-width: 39.999rem) {
+  .featured-projects__navigation,
+  .testimonials__bottom {
+    gap: 1rem;
+  }
+
+  .hero__image-caption {
+    font-size: 0.65rem;
+  }
+
+  .signature-offer__actions > * {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-enabled .mobile-nav:not([hidden]),
+  .services-accordion__item[open] {
+    animation: none;
+  }
+
+  .project-card,
+  .why-work__card,
+  .services-accordion__item,
+  .button,
+  .site-header__cta,
+  .signature-offer__cta {
+    transition: none;
+  }
+}
