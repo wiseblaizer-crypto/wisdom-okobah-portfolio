@@ -21,27 +21,21 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Selected Web Design &amp; Development Work | Wisdom Okobah">
   <meta property="og:description" content="Browse selected website design, Shopify, e-commerce, and digital experience projects by Wisdom Okobah.">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Selected Web Design &amp; Development Work | Wisdom Okobah">
   <meta name="twitter:description" content="Browse selected website design, Shopify, e-commerce, and digital experience projects by Wisdom Okobah.">
 
   <!-- Shared design system -->
-  <link
-    rel="stylesheet"
-    href="../assets/css/main.css"
-  >
+  <link rel="stylesheet" href="../assets/css/work.bundle.css">
 
   <!-- Work page stylesheet -->
-  <link
-    rel="stylesheet"
-    href="../assets/css/work.css"
-  >
-  
-  
+
+
+
 <link
   rel="icon"
-  type="image/x-icon"
-  href="../assets/images/logo/favicon.ico"
+  type="image/png"
+  href="../assets/images/logo/favicon-32.png"
 >
 
 <!-- Work portfolio screenshot auto-scroll -->
@@ -58,9 +52,20 @@
     src="../assets/js/main.js"
   ></script>
 
+
+  <link rel="canonical" href="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/work/">
+  <meta property="og:url" content="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/work/">
+  <meta property="og:image" content="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/assets/images/logo/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wisdom Okobah — Web Designer and Developer">
+  <meta property="og:site_name" content="Wisdom Okobah">
+  <meta name="twitter:image" content="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/assets/images/logo/og-image.jpg">
+  <link rel="preload" href="../assets/fonts/cormorant/CormorantGaramond-variable.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="work-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
 
@@ -74,12 +79,10 @@
   aria-label="Wisdom Okobah — Home"
 >
   <img
-    src="../assets/images/logo/logo-dark-header.png"
+    src="../assets/images/logo/logo-dark-header-180w.webp"
     alt="Wisdom Okobah Logo"
     class="site-brand__logo"
-    width="90"
-    height="78"
-  >
+   width="180" height="150">
 </a>
 
     <!-- DESKTOP NAVIGATION -->
@@ -111,9 +114,7 @@
 
         <li class="site-nav__item">
           <a
-            href="./"
-            class="site-nav__link"
-            aria-current="page"
+            href="../work/" class="site-nav__link" aria-current="page"
           >
             Work
           </a>
@@ -197,7 +198,7 @@
         </li>
 
         <li class="mobile-nav__item">
-          
+
 <a
   href="../services/"
   class="mobile-nav__link"
@@ -212,9 +213,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="./"
-            class="mobile-nav__link"
-            aria-current="page"
+            href="../work/" class="mobile-nav__link" aria-current="page"
           >
             Work
             <span class="mobile-nav__arrow" aria-hidden="true">
@@ -257,9 +256,9 @@
 
 </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
 
-    
+
 <!-- =====================================
      WORK PAGE — HERO
 ===================================== -->
@@ -434,18 +433,19 @@
         and developed, the tools behind them,
         and the solutions created for each brand.
       </p>
+<button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false" hidden>Play animations</button>
 
     </div>
 
     <!-- All Website Projects -->
     <div class="services-work__projects">
 
-      
+
 <!-- =====================================
      PROJECT 01 — INSPYREONE
 ===================================== -->
 
-<article class="services-project">
+<article class="services-project" id="project-inspyreone">
 
   <!-- LEFT: SCROLLABLE WEBSITE PREVIEW -->
   <div class="services-project__media">
@@ -477,27 +477,26 @@
       >
 
         <img
-          src="../assets/images/projects/inspyreonefullpreview.png"
+          src="../assets/images/projects/inspyreonefullpreview-1000w.webp"
           alt="Screenshot of the InspyreOne website"
           class="project-browser__image"
           loading="lazy"
           decoding="async"
-        >
+         width="1000" height="5386" srcset="../assets/images/projects/inspyreonefullpreview-640w.webp 640w, ../assets/images/projects/inspyreonefullpreview-1000w.webp 1000w" sizes="(min-width: 1024px) 50vw, 100vw">
 
       </div>
 
     </div>
 
    <p class="project-browser__hint">
-  Auto-scrolling preview — hover to pause,
-  or scroll manually to explore.
+  Scroll to explore the design. Optional animation can be enabled below.
 </p>
 
 
   </div>
 
   <!-- RIGHT: PROJECT INFORMATION -->
-  <div class="services-project__content">
+  <div class="services-project__content" tabindex="0" role="region" aria-label="Project details">
 
     <p class="services-project__eyebrow">
       01 / WEBSITE REDESIGN
@@ -517,7 +516,7 @@
 
     <div class="services-project__details">
 
-      
+
 <div class="services-project__detail">
   <span>Platform</span>
 
@@ -527,7 +526,7 @@
       alt="Shopify"
       class="services-project__platform-logo"
       loading="lazy"
-    >
+     width="448" height="512">
   </div>
 </div>
 
@@ -545,7 +544,7 @@
 
     </div>
 
-    
+
 <!-- Project case study -->
 
 <div class="services-project__story">
@@ -588,7 +587,7 @@
 
 </div>
 
-    
+
     <div class="services-project__tags">
       <span>Website Redesign</span>
       <span>UI/UX</span>
@@ -611,7 +610,7 @@
 
 
 
-      
+
 <!-- =====================================
      PROJECT 02 — WOHNPLATZ
 ===================================== -->
@@ -624,7 +623,7 @@
 
   <!-- LEFT: PROJECT INFORMATION -->
 
-  <div class="services-project__content">
+  <div class="services-project__content" tabindex="0" role="region" aria-label="Project details">
 
     <p class="services-project__eyebrow">
       02 / E-COMMERCE DEVELOPMENT
@@ -660,7 +659,7 @@
             alt="Shopify"
             class="services-project__platform-logo"
             loading="lazy"
-          >
+           width="448" height="512">
 
         </div>
 
@@ -830,12 +829,12 @@
       >
 
         <img
-          src="../assets/images/projects/wohnplatzfullpreview.png"
+          src="../assets/images/projects/wohnplatzfullpreview-1000w.webp"
           alt="Preview of the Wohnplatz e-commerce storefront"
           class="project-browser__image"
           loading="lazy"
           decoding="async"
-        >
+         width="1000" height="3506" srcset="../assets/images/projects/wohnplatzfullpreview-640w.webp 640w, ../assets/images/projects/wohnplatzfullpreview-1000w.webp 1000w" sizes="(min-width: 1024px) 50vw, 100vw">
 
       </div>
 
@@ -853,7 +852,7 @@
 </article>
 
 
-  
+
 <!-- =====================================
      PROJECT 03 — IMAGES BY OWEN
 ===================================== -->
@@ -895,20 +894,19 @@
       >
 
         <img
-          src="../assets/images/projects/imagesbyowenfullpreview.png"
+          src="../assets/images/projects/imagesbyowenfullpreview-1000w.webp"
           alt="Full-page Images by Owen Shopify storefront featuring landscape photography, nature collections, wall art and gallery categories"
           class="project-browser__image"
           loading="lazy"
           decoding="async"
-        >
+         width="1000" height="4384" srcset="../assets/images/projects/imagesbyowenfullpreview-640w.webp 640w, ../assets/images/projects/imagesbyowenfullpreview-1000w.webp 1000w" sizes="(min-width: 1024px) 50vw, 100vw">
 
       </div>
 
     </div>
 
     <p class="project-browser__hint">
-      Auto-scrolling preview — hover to pause
-      or scroll manually to explore.
+      Scroll to explore the design. Optional animation can be enabled below.
     </p>
 
   </div>
@@ -916,7 +914,7 @@
 
   <!-- RIGHT: PROJECT INFORMATION -->
 
-  <div class="services-project__content">
+  <div class="services-project__content" tabindex="0" role="region" aria-label="Project details">
 
     <p class="services-project__eyebrow">
       03 / PHOTOGRAPHY E-COMMERCE
@@ -953,7 +951,7 @@
             alt="Shopify"
             class="services-project__platform-logo"
             loading="lazy"
-          >
+           width="448" height="512">
 
         </div>
 
@@ -1083,7 +1081,7 @@
 </article>
 
 
-  
+
 
 <!-- PROJECT 04 — I AM APRIL SHOWERS -->
 
@@ -1095,7 +1093,7 @@
 
   <!-- LEFT: PROJECT INFORMATION -->
 
-  <div class="services-project__content">
+  <div class="services-project__content" tabindex="0" role="region" aria-label="Project details">
 
     <p class="services-project__eyebrow">
       04 / PERSONAL BRAND WEBSITE
@@ -1129,7 +1127,7 @@
             alt="Squarespace"
             class="services-project__platform-logo"
             loading="lazy"
-          >
+           width="512" height="512">
         </div>
       </div>
 
@@ -1251,19 +1249,18 @@
         tabindex="0"
       >
         <img
-          src="../assets/images/projects/iamaprilshowersfullpreview.png"
+          src="../assets/images/projects/iamaprilshowersfullpreview-1000w.webp"
           alt="I Am April Showers personal brand website redesign"
           class="project-browser__image"
           loading="lazy"
           decoding="async"
-        >
+         width="1000" height="7775" srcset="../assets/images/projects/iamaprilshowersfullpreview-640w.webp 640w, ../assets/images/projects/iamaprilshowersfullpreview-1000w.webp 1000w" sizes="(min-width: 1024px) 50vw, 100vw">
       </div>
 
     </div>
 
     <p class="project-browser__hint">
-      Auto-scrolling preview — hover to pause
-      or scroll manually to explore.
+      Scroll to explore the design. Optional animation can be enabled below.
     </p>
 
   </div>
@@ -1271,7 +1268,7 @@
 </article>
 
 
-      
+
 <!-- =====================================
      PROJECT 05 — HEYLADY
 ===================================== -->
@@ -1318,12 +1315,12 @@
       >
 
         <img
-          src="../assets/images/projects/heyladyfullpreview.png"
+          src="../assets/images/projects/heyladyfullpreview-1000w.webp"
           alt="HeyLady fashion and lifestyle Shopify storefront featuring editorial photography, shopping navigation and brand messaging"
           class="project-browser__image"
           loading="lazy"
           decoding="async"
-        >
+         width="1000" height="9019" srcset="../assets/images/projects/heyladyfullpreview-640w.webp 640w, ../assets/images/projects/heyladyfullpreview-1000w.webp 1000w" sizes="(min-width: 1024px) 50vw, 100vw">
 
       </div>
 
@@ -1341,7 +1338,7 @@
 
   <!-- RIGHT: PROJECT INFORMATION -->
 
-  <div class="services-project__content">
+  <div class="services-project__content" tabindex="0" role="region" aria-label="Project details">
 
     <p class="services-project__eyebrow">
       05 / FASHION &amp; LIFESTYLE
@@ -1382,7 +1379,7 @@
             alt="Shopify"
             class="services-project__platform-logo"
             loading="lazy"
-          >
+           width="448" height="512">
 
         </div>
 
@@ -1513,7 +1510,7 @@
         aria-hidden="true"
       ></span>
 
-      Live website link to be added
+      Design preview
 
     </p>
 
@@ -1527,7 +1524,7 @@
   </div>
 </section>
 
-  
+
 
 <!-- ======================================
      CREATIVE WORK MARQUEE
@@ -1589,149 +1586,233 @@
 
         <figure class="work-marquee__item work-marquee__item--portrait">
           <img
-            src="../assets/images/creative/design-01.png"
-            alt="Creative portfolio design one"
+            src="../assets/images/creative/design-01-800w.webp"
+            alt="NFL jersey promotion for Middlemen Merch"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-01-480w.webp 480w, ../assets/images/creative/design-01-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--square">
           <img
-            src="../assets/images/creative/design-02.png"
-            alt="Creative portfolio design two"
+            src="../assets/images/creative/design-02-800w.webp"
+            alt="Prepared food and cake menu for Mitra’s"
             loading="lazy"
-          >
+           width="800" height="915" srcset="../assets/images/creative/design-02-480w.webp 480w, ../assets/images/creative/design-02-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--wide">
           <img
-            src="../assets/images/creative/design-03.png"
-            alt="Creative portfolio design three"
+            src="../assets/images/creative/design-03-800w.webp"
+            alt="PunchUp boxing glove advertisement"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-03-480w.webp 480w, ../assets/images/creative/design-03-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--portrait">
           <img
-            src="../assets/images/creative/design-04.png"
-            alt="Creative portfolio design four"
+            src="../assets/images/creative/design-04-800w.webp"
+            alt="NFL team jersey collection graphic"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-04-480w.webp 480w, ../assets/images/creative/design-04-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--square">
           <img
-            src="../assets/images/creative/design-05.png"
-            alt="Creative portfolio design five"
+            src="../assets/images/creative/design-05-800w.webp"
+            alt="PunchUp boxing glove sale graphic"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-05-480w.webp 480w, ../assets/images/creative/design-05-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--wide">
           <img
-            src="../assets/images/creative/design-06.png"
-            alt="Creative portfolio design six"
+            src="../assets/images/creative/design-06-800w.webp"
+            alt="Middlemen Merch jersey offer"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-06-480w.webp 480w, ../assets/images/creative/design-06-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--portrait">
           <img
-            src="../assets/images/creative/design-07.png"
-            alt="Creative portfolio design seven"
+            src="../assets/images/creative/design-07-800w.webp"
+            alt="PunchUp athlete and boxing glove advertisement"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-07-480w.webp 480w, ../assets/images/creative/design-07-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--square">
           <img
-            src="../assets/images/creative/design-08.png"
-            alt="Creative portfolio design eight"
+            src="../assets/images/creative/design-08-800w.webp"
+            alt="NFL premium jersey promotional graphic"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-08-480w.webp 480w, ../assets/images/creative/design-08-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--wide">
           <img
-            src="../assets/images/creative/design-09.png"
-            alt="Creative portfolio design nine"
+            src="../assets/images/creative/design-09-800w.webp"
+            alt="PunchUp Muay Thai glove feature graphic"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-09-480w.webp 480w, ../assets/images/creative/design-09-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--portrait">
           <img
-            src="../assets/images/creative/design-10.png"
-            alt="Creative portfolio design ten"
+            src="../assets/images/creative/design-10-800w.webp"
+            alt="Middlemen Merch jersey special offer"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-10-480w.webp 480w, ../assets/images/creative/design-10-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--square">
           <img
-            src="../assets/images/creative/design-11.png"
-            alt="Creative portfolio design eleven"
+            src="../assets/images/creative/design-11-800w.webp"
+            alt="PunchUp Muay Thai glove advertisement"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-11-480w.webp 480w, ../assets/images/creative/design-11-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--wide">
           <img
-            src="../assets/images/creative/design-12.png"
-            alt="Creative portfolio design twelve"
+            src="../assets/images/creative/design-12-800w.webp"
+            alt="Collection of PunchUp combat sports advertisements"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-12-480w.webp 480w, ../assets/images/creative/design-12-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
           <figure class="work-marquee__item work-marquee__item--square">
           <img
-            src="../assets/images/creative/design-13.png"
-            alt="Creative portfolio design thirteen"
+            src="../assets/images/creative/design-13-800w.webp"
+            alt="Medical social media campaign on a phone mockup"
             loading="lazy"
-          >
+           width="800" height="800" srcset="../assets/images/creative/design-13-480w.webp 480w, ../assets/images/creative/design-13-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--wide">
           <img
-            src="../assets/images/creative/design-14.png"
-            alt="Creative portfolio design fourteen"
+            src="../assets/images/creative/design-14-800w.webp"
+            alt="Mitra’s catering services and menu flyer"
             loading="lazy"
-          >
+           width="800" height="929" srcset="../assets/images/creative/design-14-480w.webp 480w, ../assets/images/creative/design-14-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
       </div>
 
 
       <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
 
-      <div
-        class="work-marquee__group"
-        aria-hidden="true"
-      >
+      <div class="work-marquee__group" aria-hidden="true">
 
         <figure class="work-marquee__item work-marquee__item--portrait">
-          <img src="../assets/images/creative/design-01.png" alt="">
+          <img
+            src="../assets/images/creative/design-01-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-01-480w.webp 480w, ../assets/images/creative/design-01-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--square">
-          <img src="../assets/images/creative/design-02.png" alt="">
+          <img
+            src="../assets/images/creative/design-02-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="915" srcset="../assets/images/creative/design-02-480w.webp 480w, ../assets/images/creative/design-02-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--wide">
-          <img src="../assets/images/creative/design-03.png" alt="">
+          <img
+            src="../assets/images/creative/design-03-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-03-480w.webp 480w, ../assets/images/creative/design-03-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--portrait">
-          <img src="../assets/images/creative/design-04.png" alt="">
+          <img
+            src="../assets/images/creative/design-04-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-04-480w.webp 480w, ../assets/images/creative/design-04-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--square">
-          <img src="../assets/images/creative/design-05.png" alt="">
+          <img
+            src="../assets/images/creative/design-05-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-05-480w.webp 480w, ../assets/images/creative/design-05-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
         <figure class="work-marquee__item work-marquee__item--wide">
-          <img src="../assets/images/creative/design-06.png" alt="">
+          <img
+            src="../assets/images/creative/design-06-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-06-480w.webp 480w, ../assets/images/creative/design-06-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
         </figure>
 
+        <figure class="work-marquee__item work-marquee__item--portrait">
+          <img
+            src="../assets/images/creative/design-07-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-07-480w.webp 480w, ../assets/images/creative/design-07-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
+
+        <figure class="work-marquee__item work-marquee__item--square">
+          <img
+            src="../assets/images/creative/design-08-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-08-480w.webp 480w, ../assets/images/creative/design-08-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
+
+        <figure class="work-marquee__item work-marquee__item--wide">
+          <img
+            src="../assets/images/creative/design-09-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-09-480w.webp 480w, ../assets/images/creative/design-09-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
+
+        <figure class="work-marquee__item work-marquee__item--portrait">
+          <img
+            src="../assets/images/creative/design-10-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-10-480w.webp 480w, ../assets/images/creative/design-10-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
+
+        <figure class="work-marquee__item work-marquee__item--square">
+          <img
+            src="../assets/images/creative/design-11-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-11-480w.webp 480w, ../assets/images/creative/design-11-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
+
+        <figure class="work-marquee__item work-marquee__item--wide">
+          <img
+            src="../assets/images/creative/design-12-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-12-480w.webp 480w, ../assets/images/creative/design-12-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
+
+          <figure class="work-marquee__item work-marquee__item--square">
+          <img
+            src="../assets/images/creative/design-13-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="800" srcset="../assets/images/creative/design-13-480w.webp 480w, ../assets/images/creative/design-13-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
+
+        <figure class="work-marquee__item work-marquee__item--wide">
+          <img
+            src="../assets/images/creative/design-14-800w.webp"
+            alt=""
+            loading="lazy"
+           width="800" height="929" srcset="../assets/images/creative/design-14-480w.webp 480w, ../assets/images/creative/design-14-800w.webp 800w" sizes="(min-width: 1024px) 520px, 90vw">
+        </figure>
       </div>
 
     </div>
@@ -1871,7 +1952,7 @@
     <div class="footer-main"><div class="container footer-main__grid">
       <div class="footer-brand"><a href="../" class="footer-brand__link" aria-label="Wisdom Okobah — Home"><span class="footer-brand__primary">WISDOM.</span><span class="footer-brand__secondary">OKOBAH</span></a><p class="footer-brand__description">Web designer &amp; developer. Helping people turn ideas into useful digital experiences.</p><p class="footer-brand__signature">Design with <em>purpose.</em></p></div>
       <nav class="footer-nav" aria-label="Footer navigation"><h2 class="footer-heading">Explore</h2><ul class="footer-nav__list"><li><a href="../">Home</a></li><li><a href="../services/">Services</a></li><li><a href="../work/">Work</a></li><li><a href="../about/">About</a></li><li><a href="../contact/">Contact</a></li></ul></nav>
-      <div class="footer-socials"><h2 class="footer-heading">Connect</h2><p class="footer-socials__description">Find me on social media.</p><ul class="footer-socials__list" aria-label="Social media platforms"><li><span class="footer-social footer-social--pending">Instagram</span></li><li><span class="footer-social footer-social--pending">LinkedIn</span></li><li><span class="footer-social footer-social--pending">X / Twitter</span></li><li><span class="footer-social footer-social--pending">GitHub</span></li></ul></div>
+      <div class="footer-socials"><h2 class="footer-heading">Connect</h2><p class="footer-socials__description">Explore my code or discuss your project.</p><ul class="footer-socials__list"><li><a class="footer-social" href="https://github.com/wiseblaizer-crypto" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li><li><a class="footer-social" href="../contact/">Start a project <span aria-hidden="true">↗</span></a></li></ul><button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false" hidden>Play animations</button></div>
     </div></div>
     <div class="footer-bottom"><div class="container footer-bottom__inner"><p class="footer-bottom__copyright">&copy; 2026 Wisdom Okobah. All rights reserved.</p><p class="footer-bottom__note">Independent web designer &amp; developer.</p></div></div>
   </footer>

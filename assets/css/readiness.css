@@ -1,0 +1,136 @@
+/* Shared navigation, interaction, and progressive enhancement refinements. */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: #1C352B;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+main:focus { outline: none; }
+.motion-toggle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid currentColor;
+  border-radius: 0.35rem;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.motion-toggle[hidden] { display: none; }
+.motion-toggle:disabled { opacity: 0.8; cursor: default; }
+.footer-socials .motion-toggle { margin-top: 1.25rem; }
+.inline-icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.signature-offer__feature .inline-icon { color: inherit; }
+.featured-projects__controls { flex-wrap: wrap; }
+.featured-projects__navigation { flex-wrap: wrap; }
+.contact-form__fallback { margin-top: 1.25rem; }
+
+/* Keep the original palette while making small text readable on light surfaces. */
+:root { --color-sage: #59695C; }
+.hero__statement em,
+.problem-solution__title-accent,
+.services-overview__title-accent,
+.services-accordion__number,
+.signature-offer__eyebrow,
+.signature-offer__title-gold,
+.testimonials__eyebrow,
+.testimonials__selector span,
+.work-page .services-work__eyebrow,
+.work-page .services-project__eyebrow {
+  color: #825D30;
+}
+.problem-solution__panel--problem .problem-solution__panel-label,
+.problem-solution__panel--problem .problem-solution__panel-number,
+.work-page .services-project__detail > span,
+.work-page .services-project__availability {
+  color: #536358;
+}
+.services-bento__card--commerce .services-bento__description {
+  color: #314D3E;
+}
+.why-work__card-number,
+.services-showcase__label,
+.services-section__eyebrow,
+.services-work__eyebrow,
+.work-preview__category,
+.services-faq__eyebrow,
+.contact-whatsapp__eyebrow,
+.contact-whatsapp__message--incoming .contact-whatsapp__message-label,
+.contact-process__eyebrow,
+.work-cta__note,
+.work-cta__footer {
+  color: #536358;
+}
+.work-cta__eyebrow { color: #825D30; }
+.problem-solution__panel--problem .problem-solution__panel-number {
+  opacity: 1;
+}
+.signature-offer__benefits .inline-icon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+  border: 1px solid #A77B3F;
+  border-radius: 50%;
+  color: #825D30;
+}
+
+/* A still, horizontally scrollable gallery is the default experience. */
+html:not(.motion-enabled) .credibility-strip__track,
+html:not(.motion-enabled) .work-marquee__track {
+  animation-play-state: paused;
+  transform: none;
+}
+html:not(.motion-enabled) .credibility-strip__marquee,
+html:not(.motion-enabled) .work-marquee__viewport {
+  overflow-x: auto;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+html:not(.motion-enabled) .credibility-strip__platforms[aria-hidden="true"],
+html:not(.motion-enabled) .work-marquee__group[aria-hidden="true"] {
+  display: none;
+}
+.motion-enabled .credibility-strip__track,
+.motion-enabled .work-marquee__track {
+  animation-play-state: running;
+}
+.motion-enabled .credibility-strip__marquee:hover .credibility-strip__track,
+.motion-enabled .credibility-strip__marquee:focus-within .credibility-strip__track,
+.motion-enabled .work-marquee__viewport:hover .work-marquee__track,
+.motion-enabled .work-marquee__viewport:focus-within .work-marquee__track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .featured-projects__track { transition: none; }
+}
+@media (max-width: 63.999rem) {
+  .site-header .mobile-nav {
+    max-height: calc(100dvh - 120px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}

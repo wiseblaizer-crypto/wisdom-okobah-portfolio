@@ -3,6 +3,9 @@ const form = document.querySelector("#contact-form");
 const urlInput = document.querySelector("#reference-url");
 const statusMessage = document.querySelector("#form-status");
 
+// Preserve native validation if this script cannot initialize.
+if (form) form.noValidate = true;
+
 // ==========================================
 // 1. NORMALIZE WEBSITE URL
 // ==========================================
@@ -81,6 +84,15 @@ function clearFieldError(field) {
 function validateField(field) {
     clearFieldError(field);
 
+    if (field.matches('input[type="text"], input[type="email"], textarea')) {
+        field.value = field.value.trim();
+    }
+
+    if (field.type === "url" && field.value && !/^https?:\/\//i.test(field.value)) {
+        showFieldError(field, "Enter a website address starting with http:// or https://.");
+        return false;
+    }
+
     if (field.checkValidity()) {
         return true;
     }
@@ -110,6 +122,7 @@ const submitButton = document.querySelector("#contact-submit");
 
 form?.addEventListener("submit", async (event) => {
     event.preventDefault();
+    normalizeUrl();
 
     // Prevent duplicate submissions.
     if (submitButton?.disabled) return;
@@ -174,9 +187,12 @@ form?.addEventListener("submit", async (event) => {
         statusMessage.dataset.state = "loading";
     }
 
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15000);
     try {
         const response = await fetch(endpoint, {
             method: "POST",
+            signal: controller.signal,
             body: new FormData(form),
             headers: {
                 Accept: "application/json"
@@ -205,13 +221,16 @@ form?.addEventListener("submit", async (event) => {
 
         if (statusMessage) {
             statusMessage.textContent =
-                "Your enquiry could not be sent. Please try again.";
+                error.name === "AbortError"
+                    ? "The request timed out. Your details are still here. Please try again or message me on WhatsApp below."
+                    : "Your enquiry could not be sent. Your details are still here. Please try again or message me on WhatsApp below.";
             statusMessage.dataset.state = "error";
         }
 
         // Keep all entered values so the visitor can retry.
 
     } finally {
+        window.clearTimeout(timeout);
         if (submitButton) {
             submitButton.disabled = false;
             submitButton.textContent = "Send Project Enquiry";

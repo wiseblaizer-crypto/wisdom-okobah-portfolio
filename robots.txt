@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Add an absolute Sitemap directive after the production domain is confirmed.
+Sitemap: https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/sitemap.xml
