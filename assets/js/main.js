@@ -74,3 +74,39 @@ function initializeMobileNavigation() {
 }
 
 initializeMobileNavigation();
+
+/* Motion stays opt-in. Every toggle reflects the same persistent choice. */
+const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+const motionToggles = [...document.querySelectorAll("[data-motion-toggle]")];
+let motionRequested = false;
+try {
+  motionRequested = localStorage.getItem("portfolio-motion") === "enabled";
+} catch {
+  // Navigation and controls still work when storage is unavailable.
+}
+
+function updateMotion() {
+  const enabled = motionRequested && !motionPreference.matches;
+  document.documentElement.classList.toggle("motion-enabled", enabled);
+  motionToggles.forEach((button) => {
+    button.hidden = false;
+    button.disabled = motionPreference.matches;
+    button.setAttribute("aria-pressed", String(enabled));
+    button.textContent = motionPreference.matches
+      ? "Reduced motion enabled"
+      : enabled ? "Pause animations" : "Play animations";
+  });
+  document.dispatchEvent(new Event("motionchange"));
+}
+
+motionToggles.forEach((button) => {
+  button.addEventListener("click", () => {
+    motionRequested = !document.documentElement.classList.contains("motion-enabled");
+    try {
+      localStorage.setItem("portfolio-motion", motionRequested ? "enabled" : "paused");
+    } catch { /* Storage is optional. */ }
+    updateMotion();
+  });
+});
+motionPreference.addEventListener("change", updateMotion);
+updateMotion();

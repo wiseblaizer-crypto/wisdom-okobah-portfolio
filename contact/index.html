@@ -7,12 +7,30 @@
 
     <title>Contact | Wisdom Okobah</title>
 
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/contact.bundle.css">
+
     <script type="module" src="../assets/js/contact.js"></script>
     <script type="module" src="../assets/js/main.js"></script>
+  <meta name="description" content="Discuss your website, redesign, e-commerce, or branding project with Wisdom Okobah. Send an enquiry or start a conversation on WhatsApp.">
+  <meta name="theme-color" content="#1C352B">
+  <link rel="icon" href="../assets/images/logo/favicon-32.png" sizes="32x32">
+
+  <link rel="canonical" href="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/contact/">
+  <meta property="og:url" content="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/contact/">
+  <meta property="og:image" content="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/assets/images/logo/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wisdom Okobah — Web Designer and Developer">
+  <meta property="og:site_name" content="Wisdom Okobah">
+  <meta name="twitter:image" content="https://wiseblaizer-crypto.github.io/wisdom-okobah-portfolio/assets/images/logo/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Wisdom Okobah">
+  <meta property="og:description" content="Discuss your website, redesign, e-commerce, or branding project with Wisdom Okobah. Send an enquiry or start a conversation on WhatsApp.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../assets/fonts/cormorant/CormorantGaramond-variable.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- ======================================
      GLOBAL SITE HEADER
@@ -22,18 +40,18 @@
 
   <div class="container site-header__inner">
 
-    <a
-  href="./"
+<!-- BRAND LOGO -->
+
+<a
+  href="../"
   class="site-brand"
   aria-label="Wisdom Okobah — Home"
 >
   <img
-    src="../assets/images/logo/logo-dark-header.png"
+    src="../assets/images/logo/logo-dark-header-180w.webp"
     alt="Wisdom Okobah Logo"
     class="site-brand__logo"
-    width="90"
-    height="78"
-  >
+   width="180" height="150">
 </a>
 
     <!-- DESKTOP NAVIGATION -->
@@ -47,7 +65,7 @@
 
         <li class="site-nav__item">
           <a
-            href="./"
+            href="../"
             class="site-nav__link"
           >
             Home
@@ -56,7 +74,7 @@
 
         <li class="site-nav__item">
           <a
-            href="#services"
+            href="../services/"
             class="site-nav__link"
           >
             Services
@@ -65,7 +83,7 @@
 
         <li class="site-nav__item">
           <a
-            href="#featured-projects"
+            href="../work/"
             class="site-nav__link"
           >
             Work
@@ -74,7 +92,7 @@
 
         <li class="site-nav__item">
           <a
-            href="#about"
+            href="../about/"
             class="site-nav__link"
           >
             About
@@ -90,7 +108,7 @@
     <div class="site-header__actions">
 
       <a
-        href="#contact"
+        href="#project-enquiry"
         class="button button--primary site-header__cta"
       >
         Start a Project
@@ -139,9 +157,8 @@
 
         <li class="mobile-nav__item">
           <a
-            href="./"
+            href="../"
             class="mobile-nav__link"
-            aria-current="page"
           >
             Home
             <span class="mobile-nav__arrow" aria-hidden="true">
@@ -151,20 +168,22 @@
         </li>
 
         <li class="mobile-nav__item">
-          <a
-            href="#services"
-            class="mobile-nav__link"
-          >
-            Services
-            <span class="mobile-nav__arrow" aria-hidden="true">
-              &nearr;
-            </span>
-          </a>
+
+<a
+  href="../services/"
+  class="mobile-nav__link"
+>
+  Services
+  <span class="mobile-nav__arrow" aria-hidden="true">
+    &nearr;
+  </span>
+</a>
+
         </li>
 
         <li class="mobile-nav__item">
           <a
-            href="#featured-projects"
+            href="../work/"
             class="mobile-nav__link"
           >
             Work
@@ -176,7 +195,7 @@
 
         <li class="mobile-nav__item">
           <a
-            href="#about"
+            href="../about/"
             class="mobile-nav__link"
           >
             About
@@ -193,7 +212,7 @@
       <div class="mobile-nav__actions">
 
         <a
-          href="#contact"
+          href="#project-enquiry"
           class="button button--primary mobile-nav__cta"
         >
           Start a Project
@@ -208,7 +227,7 @@
 
 </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
     <section class="contact-hero" aria-labelledby="contact-title">
         <div class="contact-hero__container">
           <div class="contact-hero__content">
@@ -233,17 +252,17 @@
           </div>
           <div class="contact-hero__visual" aria-hidden="true">
     <img
-        src="../assets/images/contact-hero-3d.webp"
+        src="../assets/images/contact-hero-3d-800w.webp"
         alt=""
         class="contact-hero__image"
         loading="eager"
         decoding="async"
-    >
+     width="800" height="533" srcset="../assets/images/contact-hero-3d-480w.webp 480w, ../assets/images/contact-hero-3d-800w.webp 800w" sizes="(min-width: 1024px) 600px, 90vw">
 </div>
         </div>
     </section>
 
-    
+
 
 <!-- =====================================
      PROJECT ENQUIRY SECTION
@@ -330,7 +349,6 @@
                     id="contact-form"
                     action="https://formspree.io/f/xljgpvrz"
                     method="POST"
-                    novalidate
                 >
 
                     <div class="contact-form__grid">
@@ -565,9 +583,7 @@
 
                     <!-- Privacy Notice -->
                     <p class="contact-form__privacy">
-                        Your information will only be
-                        used to review and respond
-                        to your enquiry.
+                        Your details are used to review and respond to your enquiry. Submissions are processed by <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree</a>.
                     </p>
 
 
@@ -611,6 +627,7 @@
                     </button>
 
                 </form>
+<p class="contact-form__fallback">Prefer a direct conversation? <a href="https://wa.me/2347046385898" target="_blank" rel="noopener noreferrer">Message me on WhatsApp</a>.</p>
 
             </div>
 
@@ -824,6 +841,13 @@
 
     </main>
 
+<footer class="site-footer" id="site-footer">
+    <div class="footer-main"><div class="container footer-main__grid">
+      <div class="footer-brand"><a href="../" class="footer-brand__link" aria-label="Wisdom Okobah — Home"><span class="footer-brand__primary">WISDOM.</span><span class="footer-brand__secondary">OKOBAH</span></a><p class="footer-brand__description">Web designer &amp; developer. Helping people turn ideas into useful digital experiences.</p><p class="footer-brand__signature">Design with <em>purpose.</em></p></div>
+      <nav class="footer-nav" aria-label="Footer navigation"><h2 class="footer-heading">Explore</h2><ul class="footer-nav__list"><li><a href="../">Home</a></li><li><a href="../services/">Services</a></li><li><a href="../work/">Work</a></li><li><a href="../about/">About</a></li><li><a href="../contact/">Contact</a></li></ul></nav>
+      <div class="footer-socials"><h2 class="footer-heading">Connect</h2><p class="footer-socials__description">Explore my code or discuss your project.</p><ul class="footer-socials__list"><li><a class="footer-social" href="https://github.com/wiseblaizer-crypto" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li><li><a class="footer-social" href="../contact/">Start a project <span aria-hidden="true">↗</span></a></li></ul><button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false" hidden>Play animations</button></div>
+    </div></div>
+    <div class="footer-bottom"><div class="container footer-bottom__inner"><p class="footer-bottom__copyright">&copy; 2026 Wisdom Okobah. All rights reserved.</p><p class="footer-bottom__note">Independent web designer &amp; developer.</p></div></div>
+  </footer>
 </body>
 </html>
-

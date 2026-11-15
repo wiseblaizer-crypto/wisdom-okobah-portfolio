@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function canAutoplay() {
     return (
       totalSlides > 1 &&
+      document.documentElement.classList.contains("motion-enabled") &&
       !isHovered &&
       !isFocused &&
       isVisible &&
@@ -286,6 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "visibilitychange",
     startAutoplay
   );
+  document.addEventListener("motionchange", startAutoplay);
 
   /* ---------------------------------------
      PAUSE WHEN SLIDER IS OFFSCREEN

@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function canAnimate() {
       return (
         visible &&
+        document.documentElement.classList.contains("motion-enabled") &&
         !document.hidden &&
         !reducedMotion.matches &&
         !hovered &&
@@ -398,6 +399,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.hidden ? stop() : start();
       }
     );
+    document.addEventListener("motionchange", () => {
+      canAnimate() ? start() : stop();
+    });
 
     reducedMotion.addEventListener(
       "change",
