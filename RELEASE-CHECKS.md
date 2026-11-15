@@ -10,7 +10,7 @@ Verified locally on 15 November 2026 against the generated production build.
 - Both variable font families loaded successfully; no console errors in the final font check.
 - Thirteen interaction checks passed: keyboard skip link and menu, Contact navigation, short landscape menu, carousel and case-study links, saved animation controls, reduced-motion override, empty-form rejection, failed/successful/timed-out submissions, missing-page handling, no-JavaScript navigation/native validation, and enlarged text.
 - Form tests intercepted network requests. No real enquiries were sent.
-- Production checker validates 328 local references, metadata, image dimensions, fonts, and asset budgets.
+- Production checker validates 333 local references, including social preview images, metadata, image dimensions, fonts, and asset budgets.
 - Existing external case-study destinations and the Formspree privacy page returned HTTP 200 during verification.
 
 ## Asset results
@@ -18,7 +18,7 @@ Verified locally on 15 November 2026 against the generated production build.
 - Five full-page project previews: 71.06 MB of originals to 2.18 MB for their largest displayed variants (approximately 97% smaller).
 - Header logo: 1.10 MB PNG to approximately 12 KB WebP.
 - Display fonts: 3.37 MB of static TTF sources to approximately 124 KB across two subset variable WOFF2 files.
-- Complete production artifact: approximately 6.34 MB, including responsive variants and font licenses. Original source assets are excluded from deployment.
+- Complete production artifact: approximately 6.42 MB, including responsive variants, social preview imagery, and font licenses. Original source assets are excluded from deployment.
 
 ## Performance evidence and limits
 

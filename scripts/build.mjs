@@ -51,6 +51,6 @@ for (const route of routes) {
     }
   }
 }
-for (const file of ["404.html", "robots.txt", "sitemap.xml"]) await copyAsset(file);
+for (const file of ["404.html", "robots.txt", "sitemap.xml", "assets/images/logo/og-image.jpg"]) await copyAsset(file);
 await writeFile(path.join(out, ".nojekyll"), "");
 console.log("Built five pages and copied " + copied.size + " referenced assets to dist/.");

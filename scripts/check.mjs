@@ -30,6 +30,7 @@ for (const [page, html] of documents) {
   assert.equal(new Set(ids).size, ids.length, page + " has duplicate IDs");
   assert(html.includes('href="#main-content"') && html.includes('id="main-content"'), page + " needs a skip link");
   assert(html.includes('rel="canonical"') && html.includes('property="og:image"'), page + " lacks metadata");
+  await verifyReference(html.match(/property="og:image" content="([^"]+)"/)[1], page);
   assert(html.includes('<footer class="site-footer"'), page + " lacks footer navigation");
   for (const match of html.matchAll(/<(a|link|img|script)\b[^>]*>/g)) {
     const ref = match[0].match(/\b(?:href|src)="([^"]+)"/)?.[1];
